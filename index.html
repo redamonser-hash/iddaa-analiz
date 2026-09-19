@@ -2,1117 +2,550 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>İddaa Analiz Botu 26/27</title>
 
 <style>
 *{box-sizing:border-box}
-
 body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#0f172a;
-color:#e5e7eb;
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f2f4f7;
+  color:#17202a;
 }
-
 header{
-background:#111827;
-padding:20px 12px;
-text-align:center;
-border-bottom:1px solid #334155;
+  background:#111827;
+  color:white;
+  padding:16px;
+  text-align:center;
 }
-
-h1{
-margin:0;
-font-size:23px;
-}
-
-.sub{
-margin-top:7px;
-color:#94a3b8;
-font-size:14px;
-}
-
-.container{
-max-width:1000px;
-margin:auto;
-padding:14px;
-}
-
+h1{margin:0;font-size:22px}
+.wrap{max-width:900px;margin:auto;padding:10px}
 .controls{
-display:flex;
-flex-wrap:wrap;
-gap:8px;
-margin-bottom:12px;
+  background:white;
+  padding:10px;
+  border-radius:12px;
+  margin-bottom:10px;
 }
-
-button,
-input,
-select{
-border:1px solid #334155;
-background:#1e293b;
-color:white;
-border-radius:10px;
-padding:13px;
-font-size:15px;
+button,select,input{
+  width:100%;
+  padding:11px;
+  margin:4px 0;
+  border:1px solid #ddd;
+  border-radius:8px;
+  background:white;
 }
-
 button{
-cursor:pointer;
+  background:#111827;
+  color:white;
+  font-weight:bold;
 }
-
 .date{
-flex:1;
-min-width:160px;
+  display:flex;
+  gap:6px;
 }
-
-.search{
-flex:1;
-min-width:180px;
-}
-
+.date button{width:50%}
 .status{
-background:#172033;
-border:1px solid #334155;
-border-radius:10px;
-padding:12px;
-margin:12px 0;
-color:#cbd5e1;
+  padding:9px;
+  background:#e8f4ff;
+  border-radius:8px;
+  margin-bottom:10px;
+  font-size:13px;
 }
-
 .league{
-background:#111827;
-border:1px solid #334155;
-border-radius:12px;
-overflow:hidden;
-margin-bottom:14px;
+  margin-top:12px;
+  font-weight:bold;
+  font-size:17px;
 }
-
-.league-title{
-background:#1e293b;
-padding:14px;
-font-weight:bold;
-font-size:16px;
-}
-
 .match{
-padding:14px;
-border-top:1px solid #263244;
+  background:white;
+  border-radius:12px;
+  margin:8px 0;
+  padding:12px;
+  box-shadow:0 2px 7px #0001;
 }
-
-.match-row{
-display:flex;
-justify-content:space-between;
-gap:10px;
-}
-
 .teams{
-font-weight:bold;
-font-size:15px;
-line-height:1.6;
+  font-size:16px;
+  font-weight:bold;
 }
-
 .time{
-color:#93c5fd;
-white-space:nowrap;
+  color:#555;
+  font-size:13px;
+  margin-bottom:7px;
 }
-
-.score{
-color:#fbbf24;
-margin-top:6px;
-}
-
-.info{
-margin-top:8px;
-color:#94a3b8;
-font-size:12px;
-}
-
 .analysis{
-margin-top:9px;
-background:#0b1220;
-border-radius:8px;
-padding:10px;
-font-size:13px;
+  margin-top:10px;
+  padding:10px;
+  background:#f7f8fa;
+  border-radius:8px;
+  font-size:13px;
+  line-height:1.5;
 }
-
-.empty{
-padding:35px 10px;
-text-align:center;
-color:#94a3b8;
+.tag{
+  display:inline-block;
+  background:#e5e7eb;
+  padding:4px 7px;
+  border-radius:6px;
+  margin:2px;
 }
-
-.loading{
-padding:35px;
-text-align:center;
-}
-
-.error{
-background:#3f1d1d;
-color:#fecaca;
-padding:14px;
-border-radius:10px;
-line-height:1.5;
-}
-
-@media(max-width:600px){
-
-.controls{
-display:block;
-}
-
-.controls button,
-.controls input,
-.controls select{
-width:100%;
-margin-bottom:8px;
-}
-
-.match-row{
-align-items:flex-start;
-}
-
-h1{
-font-size:21px;
-}
-
-}
+.good{background:#dff7e5}
+.warn{background:#fff3cd}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>⚽ İddaa Analiz Botu 26/27</h1>
-<div class="sub">Maçkolik verileri • Otomatik lig ve maç listesi</div>
+  <h1>⚽ İddaa Analiz Botu 26/27</h1>
+  <div style="font-size:12px;margin-top:5px">
+    Maçkolik verileri • Otomatik analiz
+  </div>
 </header>
 
-<div class="container">
+<div class="wrap">
 
 <div class="controls">
 
-<button onclick="previousDay()">
-◀ Önceki Gün
-</button>
-
-<input
-id="date"
-class="date"
-type="date"
-onchange="loadMatches()"
->
-
-<button onclick="today()">
-Bugün
-</button>
-
-<button onclick="nextDay()">
-Sonraki Gün ▶
-</button>
-
+<div class="date">
+<button onclick="changeDay(-1)">◀ Önceki</button>
+<button onclick="changeDay(1)">Sonraki ▶</button>
 </div>
 
-<div class="controls">
+<input id="search"
+       placeholder="🔎 Takım ara..."
+       oninput="render()">
 
-<input
-id="search"
-class="search"
-type="text"
-placeholder="🔎 Takım veya lig ara..."
-onkeyup="renderMatches()"
->
-
-<select id="leagueFilter" onchange="renderMatches()">
-<option value="">Tüm Ligler</option>
+<select id="league" onchange="render()">
+<option value="">🏆 Tüm Ligler</option>
 </select>
 
-<button onclick="loadMatches()">
-🔄 Yenile
-</button>
+<button onclick="loadData()">🔄 Maçları Yenile</button>
 
 </div>
 
 <div id="status" class="status">
-Hazırlanıyor...
+Veriler hazırlanıyor...
 </div>
 
-<div id="content">
-<div class="loading">
-Maçlar yükleniyor...
-</div>
-</div>
+<div id="matches"></div>
 
 </div>
 
 <script>
 
-var allMatches=[];
-var allLeagues=[];
-
-
-/* TARİH */
+var currentDate = new Date();
+var allMatches = [];
+var competitions = {};
 
 function pad(n){
-
-if(n<10){
-return "0"+n;
+  return n < 10 ? "0"+n : ""+n;
 }
 
-return ""+n;
+function dateString(d){
+  return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
 }
 
-
-function formatDate(d){
-
-return d.getFullYear()+"-"+
-pad(d.getMonth()+1)+"-"+
-pad(d.getDate());
-
+function changeDay(n){
+  currentDate.setDate(currentDate.getDate()+n);
+  loadData();
 }
 
-
-function today(){
-
-var d=new Date();
-
-document.getElementById("date").value=formatDate(d);
-
-loadMatches();
-
+function esc(s){
+  if(s===null || s===undefined) return "";
+  return String(s)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;");
 }
-
-
-function previousDay(){
-
-changeDay(-1);
-
-}
-
-
-function nextDay(){
-
-changeDay(1);
-
-}
-
-
-function changeDay(amount){
-
-var input=document.getElementById("date");
-
-var d;
-
-if(input.value){
-
-d=new Date(input.value+"T12:00:00");
-
-}else{
-
-d=new Date();
-
-}
-
-d.setDate(d.getDate()+amount);
-
-input.value=formatDate(d);
-
-loadMatches();
-
-}
-
-
-/* HTML GÜVENLİĞİ */
-
-function esc(value){
-
-if(value===null || value===undefined){
-return "";
-}
-
-return String(value)
-.replace(/&/g,"&amp;")
-.replace(/</g,"&lt;")
-.replace(/>/g,"&gt;")
-.replace(/"/g,"&quot;")
-.replace(/'/g,"&#039;");
-
-}
-
-
-/* OBJE KONTROLÜ */
-
-function isObject(x){
-
-return x &&
-typeof x==="object" &&
-!Array.isArray(x);
-
-}
-
-
-/* MAÇ ADI */
-
-function getTeams(m){
-
-var home="";
-var away="";
-
-if(m.homeTeam){
-
-if(typeof m.homeTeam==="string"){
-home=m.homeTeam;
-}else{
-home=m.homeTeam.name ||
-m.homeTeam.teamName ||
-"";
-}
-
-}
-
-if(m.awayTeam){
-
-if(typeof m.awayTeam==="string"){
-away=m.awayTeam;
-}else{
-away=m.awayTeam.name ||
-m.awayTeam.teamName ||
-"";
-}
-
-}
-
-
-if(!home && m.home){
-if(typeof m.home==="string"){
-home=m.home;
-}else{
-home=m.home.name || "";
-}
-}
-
-
-if(!away && m.away){
-if(typeof m.away==="string"){
-away=m.away;
-}else{
-away=m.away.name || "";
-}
-}
-
-
-if((!home || !away) && m.matchName){
-
-var name=String(m.matchName);
-
-var parts=name.split(" - ");
-
-if(parts.length>=2){
-
-home=parts[0];
-
-away=parts.slice(1).join(" - ");
-
-}
-
-}
-
-
-return {
-home:home,
-away:away
-};
-
-}
-
-
-/* LİG */
 
 function getLeague(m){
 
-if(m.competition){
+  if(m.competitionId && competitions[m.competitionId]){
+    var c=competitions[m.competitionId];
 
-if(typeof m.competition==="string"){
-return m.competition;
+    if(c.name && c.country && c.country.name){
+      return c.country.name+" • "+c.name;
+    }
+
+    if(c.name) return c.name;
+  }
+
+  return "Diğer";
 }
-
-if(m.competition.name){
-return m.competition.name;
-}
-
-if(m.competition.title){
-return m.competition.title;
-}
-
-}
-
-if(m.competitionName){
-return m.competitionName;
-}
-
-if(m.league){
-
-if(typeof m.league==="string"){
-return m.league;
-}
-
-if(m.league.name){
-return m.league.name;
-}
-
-if(m.league.title){
-return m.league.title;
-}
-
-}
-
-if(m.leagueName){
-return m.leagueName;
-}
-
-if(m.tournamentName){
-return m.tournamentName;
-}
-
-return "Diğer";
-
-}
-
-
-/* SAAT */
 
 function getTime(m){
 
-var value=
-m.mstUtc ||
-m.matchDate ||
-m.startDate ||
-m.startTime ||
-m.date ||
-"";
+  if(!m.mstUtc) return "--:--";
 
-if(!value){
-return "";
+  var d=new Date(Number(m.mstUtc));
+
+  return pad(d.getHours())+":"+pad(d.getMinutes());
 }
-
-var d=new Date(value);
-
-if(!isNaN(d.getTime())){
-
-return d.toLocaleTimeString(
-"tr-TR",
-{
-hour:"2-digit",
-minute:"2-digit",
-timeZone:"Europe/Istanbul"
-}
-);
-
-}
-
-var text=String(value);
-
-var found=text.match(/(\d{1,2}):(\d{2})/);
-
-if(found){
-
-return pad(parseInt(found[1],10))+":"+found[2];
-
-}
-
-return text;
-
-}
-
-
-/* SKOR */
 
 function getScore(m){
 
-var home="";
-var away="";
+  if(!m.score) return "";
 
+  var h=m.score.home;
+  var a=m.score.away;
 
-if(m.score){
+  if(h!=="" && h!==null && h!==undefined &&
+     a!=="" && a!==null && a!==undefined){
 
-if(m.score.home!==undefined){
-home=m.score.home;
+    return h+" - "+a;
+  }
+
+  return "";
 }
 
-if(m.score.away!==undefined){
-away=m.score.away;
+function isFinished(m){
+
+  var s=(m.state||"").toLowerCase();
+
+  return s==="post" ||
+         s==="finished" ||
+         s==="final";
 }
 
-if(m.score.homeScore!==undefined){
-home=m.score.homeScore;
+function getTeamName(m,home){
+
+  if(home){
+    return m.homeTeam && m.homeTeam.name ?
+      m.homeTeam.name : "Ev Sahibi";
+  }
+
+  return m.awayTeam && m.awayTeam.name ?
+    m.awayTeam.name : "Deplasman";
 }
-
-if(m.score.awayScore!==undefined){
-away=m.score.awayScore;
-}
-
-}
-
-
-if(home==="" && m.homeScore!==undefined){
-home=m.homeScore;
-}
-
-if(away==="" && m.awayScore!==undefined){
-away=m.awayScore;
-}
-
-
-return {
-home:home,
-away:away
-};
-
-}
-
-
-/* MAÇLARI JSON İÇİNDEN BUL */
-
-function findMatches(data){
-
-var result=[];
-
-function walk(node){
-
-if(!node){
-return;
-}
-
-if(Array.isArray(node)){
-
-for(var i=0;i<node.length;i++){
-
-walk(node[i]);
-
-}
-
-return;
-
-}
-
-
-if(!isObject(node)){
-return;
-}
-
 
 /*
-Maç objesi olduğunu anlamaya çalışıyoruz.
+  JSON içinde oran alanı farklı yerlerde bulunabilir.
+  Bu yüzden bütün nesneyi tarıyoruz.
 */
+function findOdds(obj,result){
 
-var teams=getTeams(node);
+  if(!obj || typeof obj!=="object") return;
 
-var looksLikeMatch=
-(node.matchName) ||
-(node.homeTeam && node.awayTeam) ||
-(node.home && node.away);
+  for(var key in obj){
 
+    var val=obj[key];
 
-if(looksLikeMatch &&
-(teams.home || teams.away)){
+    if(
+      typeof val==="number" &&
+      val>=1.01 &&
+      val<=100
+    ){
+      var k=key.toLowerCase();
 
-result.push(node);
+      if(
+        k.indexOf("home")>=0 ||
+        k.indexOf("draw")>=0 ||
+        k.indexOf("away")>=0
+      ){
+        result[key]=val;
+      }
+    }
 
-return;
-
+    if(typeof val==="object"){
+      findOdds(val,result);
+    }
+  }
 }
 
+function oddsAnalysis(m){
 
-/*
-Alt objeleri tara.
-*/
+  var o={};
+  findOdds(m,o);
 
-for(var key in node){
+  var home=null;
+  var draw=null;
+  var away=null;
 
-if(node.hasOwnProperty(key)){
+  for(var k in o){
 
-walk(node[key]);
+    var key=k.toLowerCase();
 
+    if(
+      home===null &&
+      key.indexOf("home")>=0
+    ) home=o[k];
+
+    if(
+      draw===null &&
+      key.indexOf("draw")>=0
+    ) draw=o[k];
+
+    if(
+      away===null &&
+      key.indexOf("away")>=0
+    ) away=o[k];
+  }
+
+  if(home && draw && away){
+
+    var ih=1/home;
+    var ix=1/draw;
+    var ia=1/away;
+
+    var total=ih+ix+ia;
+
+    var ph=Math.round(ih/total*100);
+    var px=Math.round(ix/total*100);
+    var pa=Math.round(ia/total*100);
+
+    return {
+      text:
+        "1X2 oranları bulundu: "+
+        "1 ≈ %"+ph+
+        " | X ≈ %"+px+
+        " | 2 ≈ %"+pa,
+      found:true
+    };
+  }
+
+  return {
+    text:"1X2 oranı bu veri kaynağında bu maç için bulunamadı.",
+    found:false
+  };
 }
 
+function basicAnalysis(m){
+
+  var home=getTeamName(m,true);
+  var away=getTeamName(m,false);
+
+  var score=getScore(m);
+
+  var html="";
+
+  html+="<b>📊 Analiz</b><br>";
+
+  html+="🏠 Ev sahibi: "+esc(home)+"<br>";
+  html+="✈️ Deplasman: "+esc(away)+"<br>";
+
+  if(score){
+
+    html+="<span class='tag good'>Skor: "+
+      esc(score)+"</span>";
+
+  }else{
+
+    html+="<span class='tag warn'>Maç henüz başlamadı / skor yok</span>";
+  }
+
+  var oa=oddsAnalysis(m);
+
+  html+="<br><br>💰 "+oa.text;
+
+  if(m.iddaaCode){
+    html+="<br>🎫 İddaa Kodu: "+
+      esc(m.iddaaCode);
+  }
+
+  html+="<br><br>";
+
+  if(!score){
+
+    html+=
+      "ℹ️ Takım geçmişi ve oran verileri yeterli olduğunda "+
+      "form, gol ortalaması, KG ve Üst/Alt analizleri burada gösterilecektir.";
+
+  }else{
+
+    html+=
+      "ℹ️ Maç sonucu veri kaynağından alınmıştır. "+
+      "Geçmiş istatistik bulunmadan tahmin yüzdesi üretilmez.";
+  }
+
+  return html;
 }
 
+function render(){
+
+  var box=document.getElementById("matches");
+
+  var search=
+    document.getElementById("search").value
+    .toLowerCase();
+
+  var league=
+    document.getElementById("league").value;
+
+  box.innerHTML="";
+
+  var groups={};
+
+  for(var i=0;i<allMatches.length;i++){
+
+    var m=allMatches[i];
+
+    var home=getTeamName(m,true);
+    var away=getTeamName(m,false);
+
+    var text=(home+" "+away).toLowerCase();
+
+    var lg=getLeague(m);
+
+    if(search && text.indexOf(search)<0)
+      continue;
+
+    if(league && lg!==league)
+      continue;
+
+    if(!groups[lg])
+      groups[lg]=[];
+
+    groups[lg].push(m);
+  }
+
+  var names=[];
+
+  for(var g in groups)
+    names.push(g);
+
+  names.sort();
+
+  if(names.length===0){
+
+    box.innerHTML=
+      "<div class='match'>"+
+      "Bu kriterlere uygun maç bulunamadı."+
+      "</div>";
+
+    return;
+  }
+
+  for(var x=0;x<names.length;x++){
+
+    var leagueName=names[x];
+
+    box.innerHTML+=
+      "<div class='league'>🏆 "+
+      esc(leagueName)+
+      "</div>";
+
+    var arr=groups[leagueName];
+
+    arr.sort(function(a,b){
+      return Number(a.mstUtc||0)-
+             Number(b.mstUtc||0);
+    });
+
+    for(var j=0;j<arr.length;j++){
+
+      var m=arr[j];
+
+      var home=getTeamName(m,true);
+      var away=getTeamName(m,false);
+
+      var score=getScore(m);
+
+      box.innerHTML+=
+        "<div class='match'>"+
+
+        "<div class='time'>"+
+        "🕒 "+getTime(m)+
+        (score ? " • "+esc(score) : "")+
+        "</div>"+
+
+        "<div class='teams'>"+
+        esc(home)+
+        " <span style='color:#888'>vs</span> "+
+        esc(away)+
+        "</div>"+
+
+        "<div class='analysis'>"+
+        basicAnalysis(m)+
+        "</div>"+
+
+        "</div>";
+    }
+  }
 }
 
-walk(data);
+function updateLeagueList(){
 
-return result;
+  var select=document.getElementById("league");
 
+  var old=select.value;
+
+  select.innerHTML=
+    "<option value=''>🏆 Tüm Ligler</option>";
+
+  var list=[];
+
+  for(var i=0;i<allMatches.length;i++){
+
+    var n=getLeague(allMatches[i]);
+
+    if(list.indexOf(n)<0)
+      list.push(n);
+  }
+
+  list.sort();
+
+  for(var j=0;j<list.length;j++){
+
+    var opt=document.createElement("option");
+
+    opt.value=list[j];
+    opt.textContent=list[j];
+
+    select.appendChild(opt);
+  }
+
+  select.value=old;
 }
 
+function loadData(){
 
-/* VERİYİ DÜZENLE */
+  var status=document.getElementById("status");
 
-function prepareMatches(json){
+  status.innerHTML=
+    "⏳ "+dateString(currentDate)+
+    " verileri yükleniyor...";
 
-var raw=[];
+  allMatches=[];
+  competitions={};
 
-if(
-json &&
-json.data &&
-json.data.matches
-){
+  var file=
+    "data/"+dateString(currentDate)+".json";
 
-if(Array.isArray(json.data.matches)){
+  var xhr=new XMLHttpRequest();
 
-raw=json.data.matches;
+  xhr.open("GET",file,true);
 
-}else{
+  xhr.onreadystatechange=function(){
 
-for(var key in json.data.matches){
+    if(xhr.readyState!==4) return;
 
-if(json.data.matches.hasOwnProperty(key)){
+    if(xhr.status>=200 && xhr.status<300){
 
-raw.push(json.data.matches[key]);
+      try{
 
-}
+        var json=JSON.parse(xhr.responseText);
 
-}
+        if(json.data){
 
-}
+          competitions=
+            json.data.competitions || {};
 
-}
+          var obj=
+            json.data.matches || {};
 
+          for(var id in obj){
 
-/*
-Eğer doğrudan bulunamadıysa
-JSON'un tamamını tara.
-*/
+            var m=obj[id];
 
-if(raw.length===0){
+            if(
+              m &&
+              m.homeTeam &&
+              m.awayTeam
+            ){
 
-raw=findMatches(json);
+              allMatches.push(m);
+            }
+          }
 
-}
-
-
-var output=[];
-
-for(var i=0;i<raw.length;i++){
-
-var m=raw[i];
-
-var teams=getTeams(m);
-
-if(!teams.home && !teams.away){
-continue;
-}
-
-var score=getScore(m);
-
-output.push({
-
-home:teams.home || "Ev Sahibi",
-
-away:teams.away || "Deplasman",
-
-league:getLeague(m),
-
-time:getTime(m),
-
-scoreHome:score.home,
-
-scoreAway:score.away
-
-});
-
-}
-
-return output;
-
-}
-
-
-/* FİLTRE */
-
-function createLeagueFilter(){
-
-var select=document.getElementById("leagueFilter");
-
-select.innerHTML=
-'<option value="">Tüm Ligler</option>';
-
-for(var i=0;i<allLeagues.length;i++){
-
-var option=document.createElement("option");
-
-option.value=allLeagues[i];
-
-option.textContent=allLeagues[i];
-
-select.appendChild(option);
-
-}
-
-}
-
-
-/* ANALİZ */
-
-function makeAnalysis(m){
-
-if(
-m.scoreHome!=="" &&
-m.scoreAway!==""
-){
-
-var h=parseInt(m.scoreHome,10);
-var a=parseInt(m.scoreAway,10);
-
-if(!isNaN(h) && !isNaN(a)){
-
-if(h>a){
-return "Ev sahibi önde.";
-}
-
-if(a>h){
-return "Deplasman önde.";
-}
-
-return "Skor eşit.";
-}
-
-}
-
-return "Maç başlamadı veya sonuç bilgisi bulunmuyor.";
-
-}
-
-
-/* MAÇLARI GÖSTER */
-
-function renderMatches(){
-
-var content=document.getElementById("content");
-
-var search=
-document.getElementById("search").value
-.toLowerCase()
-.trim();
-
-var league=
-document.getElementById("leagueFilter").value;
-
-var filtered=[];
-
-for(var i=0;i<allMatches.length;i++){
-
-var m=allMatches[i];
-
-var text=
-(
-m.home+" "+
-m.away+" "+
-m.league
-).toLowerCase();
-
-if(search && text.indexOf(search)===-1){
-continue;
-}
-
-if(league && m.league!==league){
-continue;
-}
-
-filtered.push(m);
-
-}
-
-
-if(filtered.length===0){
-
-content.innerHTML=
-'<div class="empty">'+
-'Bu tarih için maç bulunamadı.'+
-'</div>';
-
-document.getElementById("status").innerHTML=
-"📅 "+esc(document.getElementById("date").value)+
-" • 0 maç";
-
-return;
-
-}
-
-
-/* LİGLERE AYIR */
-
-var groups={};
-
-for(var j=0;j<filtered.length;j++){
-
-var match=filtered[j];
-
-if(!groups[match.league]){
-groups[match.league]=[];
-}
-
-groups[match.league].push(match);
-
-}
-
-
-var names=[];
-
-for(var leagueName in groups){
-
-if(groups.hasOwnProperty(leagueName)){
-names.push(leagueName);
-}
-
-}
-
-names.sort();
-
-
-var html="";
-
-
-for(var x=0;x<names.length;x++){
-
-var ln=names[x];
-
-html+=
-'<div class="league">'+
-'<div class="league-title">'+
-'🏆 '+esc(ln)+
-'</div>';
-
-
-var list=groups[ln];
-
-for(var y=0;y<list.length;y++){
-
-var m=list[y];
-
-var score="";
-
-if(
-m.scoreHome!=="" ||
-m.scoreAway!==""
-){
-
-score=
-"⚽ "+
-esc(m.scoreHome)+
-" - "+
-esc(m.scoreAway);
-
-}else{
-
-score="⚽ Skor yok";
-
-}
-
-
-html+=
-'<div class="match">'+
-
-'<div class="match-row">'+
-
-'<div class="teams">'+
-esc(m.home)+
-'<br>'+
-esc(m.away)+
-'</div>'+
-
-'<div class="time">'+
-esc(m.time || "--:--")+
-'</div>'+
-
-'</div>'+
-
-'<div class="score">'+
-score+
-'</div>'+
-
-'<div class="info">'+
-"Maçkolik verisi"+
-'</div>'+
-
-'<div class="analysis">'+
-"📊 <b>Analiz:</b> "+
-esc(makeAnalysis(m))+
-'</div>'+
-
-'</div>';
-
-}
-
-
-html+="</div>";
-
-}
-
-
-content.innerHTML=html;
-
-
-document.getElementById("status").innerHTML=
-"📅 "+
-esc(document.getElementById("date").value)+
-" • "+
-filtered.length+
-" maç • "+
-names.length+
-" lig";
-
-}
-
-
-/* VERİYİ YÜKLE */
-
-function loadMatches(){
-
-var date=
-document.getElementById("date").value;
-
-if(!date){
-
-today();
-
-return;
-
-}
-
-
-document.getElementById("content").innerHTML=
-'<div class="loading">⏳ Maçlar yükleniyor...</div>';
-
-document.getElementById("status").innerHTML=
-"📡 "+esc(date)+" verileri alınıyor...";
-
-
-var url=
-"data/"+date+".json?x="+new Date().getTime();
-
-
-var xhr=new XMLHttpRequest();
-
-
-xhr.open("GET",url,true);
-
-
-xhr.onreadystatechange=function(){
-
-if(xhr.readyState!==4){
-return;
-}
-
-
-if(xhr.status!==200){
-
-document.getElementById("content").innerHTML=
-'<div class="error">'+
-'❌ Veri dosyası okunamadı.<br><br>'+
-'HTTP kodu: '+xhr.status+
-'</div>';
-
-return;
-
-}
-
-
-try{
-
-var json=JSON.parse(xhr.responseText);
-
-allMatches=prepareMatches(json);
-
-
-/*
-Ligleri otomatik oluştur.
-*/
-
-var map={};
-
-for(var i=0;i<allMatches.length;i++){
-
-map[allMatches[i].league]=true;
-
-}
-
-allLeagues=[];
-
-for(var key in map){
-
-if(map.hasOwnProperty(key)){
-allLeagues.push(key);
-}
-
-}
-
-allLeagues.sort();
-
-createLeagueFilter();
-
-renderMatches();
-
-
-}catch(error){
-
-document.getElementById("content").innerHTML=
-'<div class="error">'+
-'❌ JSON okunamadı.<br><br>'+
-esc(error.message)+
-'</div>';
-
-}
-
-};
-
-xhr.onerror=function(){
-
-document.getElementById("content").innerHTML=
-'<div class="error">'+
-'❌ İnternet veya veri bağlantısı hatası.'+
-'</div>';
-
-};
-
-
-xhr.send();
-
-}
-
-
-/* BAŞLAT */
-
-window.onload=function(){
-
-var d=new Date();
-
-document.getElementById("date").value=
-formatDate(d);
-
-loadMatches();
-
-};
-
-
-/* BUGÜNÜ 5 DAKİKADA BİR YENİLE */
-
-setInterval(function(){
-
-var current=
-formatDate(new Date());
-
-var selected=
-document.getElementById("date").value;
-
-if(current===selected){
-
-loadMatches();
-
-}
-
-},300000);
-
-</script>
-
-</body>
-</html>
+          update
