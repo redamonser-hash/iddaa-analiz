@@ -1,277 +1,481 @@
+
 <!doctype html>
 <html lang="tr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0b1220">
 <title>İddaa Analiz Botu 26/27</title>
+
 <style>
-:root{--bg:#0b1220;--card:#121c2e;--muted:#91a0b7;--text:#f5f7fb;--accent:#35d07f;--line:#233149;--warn:#ffc857}
 *{box-sizing:border-box}
-body{margin:0;background:linear-gradient(180deg,#09111e,#0d1625);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-header{position:sticky;top:0;z-index:5;background:#0b1220ee;padding:16px;border-bottom:1px solid var(--line)}
-h1{font-size:20px;margin:0 0 4px}.sub{font-size:12px;color:var(--muted)}
-main{padding:14px;max-width:760px;margin:auto}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:12px}
-label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
-select,input,button{width:100%;border:1px solid var(--line);border-radius:11px;padding:11px;background:#0d1728;color:var(--text);font-size:14px}
-button{background:var(--accent);color:#06130c;border:0;font-weight:800}
-.secondary{background:#1a2940;color:var(--text)}
-.match{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.team{text-align:center;flex:1;font-weight:750}.vs{color:var(--muted);font-size:12px}
-.tabs{display:flex;gap:8px;overflow:auto;margin-bottom:12px}
-.tabs button{min-width:max-content;padding:9px 13px}
-.tabs .active{background:var(--accent);color:#06130c}
-.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.kpi div{background:#0d1728;border-radius:12px;padding:10px;text-align:center}
-.num{font-size:18px;font-weight:800}.small{font-size:11px;color:var(--muted)}
-.row{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
-.row:last-child{border-bottom:0}
-.badge{display:inline-block;padding:4px 8px;border-radius:999px;background:#183b2a;color:#72e9a7;font-size:11px;font-weight:700}
-.muted{color:var(--muted)}
-footer{color:var(--muted);font-size:11px;text-align:center;padding:10px 0 28px}
-@media(max-width:520px){.grid{grid-template-columns:1fr}.kpi{grid-template-columns:repeat(2,1fr)}}
+body{
+margin:0;
+background:#09111e;
+color:#f5f7fb;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif
+}
+header{
+padding:18px;
+background:#0e192b;
+position:sticky;
+top:0;
+z-index:5;
+border-bottom:1px solid #26344b
+}
+h1{margin:0;font-size:21px}
+.sub{color:#91a0b7;font-size:12px;margin-top:4px}
+main{max-width:760px;margin:auto;padding:14px}
+.card{
+background:#121e31;
+border:1px solid #26344b;
+border-radius:16px;
+padding:14px;
+margin-bottom:12px
+}
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px
+}
+label{
+display:block;
+color:#91a0b7;
+font-size:12px;
+margin:0 0 6px
+}
+select,input,button{
+width:100%;
+padding:12px;
+border-radius:11px;
+border:1px solid #2b3b55;
+background:#0d1728;
+color:#fff;
+font-size:14px
+}
+button{
+background:#35d07f;
+color:#06130c;
+font-weight:800;
+border:0
+}
+.match{
+display:grid;
+grid-template-columns:1fr 40px 1fr;
+align-items:center;
+gap:8px
+}
+.team{text-align:center;font-weight:800}
+.vs{text-align:center;color:#91a0b7}
+.kpi{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:8px;
+margin-top:12px
+}
+.kpi div{
+background:#0d1728;
+border-radius:12px;
+padding:10px;
+text-align:center
+}
+.num{font-size:18px;font-weight:800}
+.small{font-size:11px;color:#91a0b7}
+.row{
+display:flex;
+justify-content:space-between;
+gap:10px;
+padding:9px 0;
+border-bottom:1px solid #26344b
+}
+.row:last-child{border:0}
+.badge{
+padding:4px 8px;
+border-radius:99px;
+background:#173a29;
+color:#71e6a5;
+font-size:11px;
+font-weight:700
+}
+.notice{
+font-size:12px;
+color:#ffc857
+}
+@media(max-width:520px){
+.grid{grid-template-columns:1fr}
+.kpi{grid-template-columns:repeat(2,1fr)}
+}
 </style>
 </head>
 
 <body>
+
 <header>
 <h1>⚽ İddaa Analiz Botu 26/27</h1>
-<div class="sub">Mobil uyumlu analiz paneli • Tahminler istatistikseldir, garanti değildir.</div>
+<div class="sub">Lig → takım → rakip seç → analiz ekranı</div>
 </header>
 
 <main>
 
 <div class="card">
+
 <div class="grid">
+
 <div>
 <label>Lig</label>
-<select id="league">
-<option>Süper Lig</option>
-<option>1. Lig</option>
-<option>Premier League</option>
-<option>La Liga</option>
-<option>Serie A</option>
-<option>Bundesliga</option>
-<option>Ligue 1</option>
-</select>
+<select id="league" onchange="loadTeams()"></select>
 </div>
 
 <div>
 <label>Maç tarihi</label>
 <input id="date" type="date">
 </div>
+
+<div>
+<label>Ev sahibi</label>
+<select id="home"></select>
 </div>
 
-<div style="height:10px"></div>
-<button onclick="analyze()">🔎 Analiz Et</button>
+<div>
+<label>Deplasman</label>
+<select id="away"></select>
 </div>
 
-<div class="tabs">
-<button class="active" onclick="tab(this,'overview')">Genel</button>
-<button class="secondary" onclick="tab(this,'goals')">Gol</button>
-<button class="secondary" onclick="tab(this,'corners')">Korner</button>
-<button class="secondary" onclick="tab(this,'squads')">Kadro</button>
 </div>
 
-<section id="overview">
+<br>
 
-<div class="card">
+<button onclick="analyze()">🔎 MAÇI ANALİZ ET</button>
+
+</div>
+
+
+<div id="result" class="card">
+
 <div class="match">
-<div class="team" id="home">Galatasaray</div>
-<div class="vs">VS</div>
-<div class="team" id="away">Fenerbahçe</div>
-</div>
 
-<div style="height:12px"></div>
+<div class="team" id="rh">Ev Sahibi</div>
+
+<div class="vs">VS</div>
+
+<div class="team" id="ra">Deplasman</div>
+
+</div>
 
 <div class="kpi">
-<div><div class="num">58%</div><div class="small">Ev galibiyeti</div></div>
-<div><div class="num">27%</div><div class="small">Beraberlik</div></div>
-<div><div class="num">15%</div><div class="small">Dep. galibiyeti</div></div>
+
+<div>
+<div class="num" id="win1">58%</div>
+<div class="small">Ev</div>
 </div>
+
+<div>
+<div class="num" id="draw">27%</div>
+<div class="small">Beraberlik</div>
 </div>
+
+<div>
+<div class="num" id="win2">15%</div>
+<div class="small">Dep.</div>
+</div>
+
+</div>
+
+</div>
+
 
 <div class="card">
-<b>📊 Sonuç marketleri</b>
+
+<b>📊 Maç Analizi</b>
 
 <div class="row">
-<span>İlk yarı</span>
-<strong>1: 43% • X: 39% • 2: 18%</strong>
+<span>İlk yarı sonucu</span>
+<strong>1 %43 • X %39 • 2 %18</strong>
 </div>
 
 <div class="row">
 <span>Maç sonucu</span>
-<strong>1: 58% • X: 27% • 2: 15%</strong>
-</div>
-
-<div class="row">
-<span>KG</span>
-<strong>Var 56% • Yok 44%</strong>
+<strong id="ms">1 %58 • X %27 • 2 %15</strong>
 </div>
 
 <div class="row">
 <span>2.5 gol</span>
-<strong>Üst 61% • Alt 39%</strong>
+<strong>Üst %61 • Alt %39</strong>
 </div>
-</div>
-
-<div class="card">
-<b>🧠 Form özeti</b>
 
 <div class="row">
-<span>Ev takım son 5</span>
+<span>KG</span>
+<strong>Var %56 • Yok %44</strong>
+</div>
+
+<div class="row">
+<span>İlk yarı korner</span>
+<strong>4.5 Üst %57 • 5.5 Üst %43</strong>
+</div>
+
+<div class="row">
+<span>Toplam korner</span>
+<strong>8.5 Üst %63 • 9.5 Üst %51</strong>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<b>👥 Takım Durumu</b>
+
+<div class="row">
+<span>Ev formu</span>
 <span class="badge">3G 1B 1M</span>
 </div>
 
 <div class="row">
-<span>Dep. takım son 5</span>
+<span>Deplasman formu</span>
 <span class="badge">2G 1B 2M</span>
 </div>
 
 <div class="row">
-<span>Ortalama gol</span>
+<span>Gol ortalaması</span>
 <strong>2.8</strong>
 </div>
-</div>
 
-</section>
-
-<section id="goals" style="display:none">
-
-<div class="card">
-<b>🥅 Gol analizi</b>
-
-<div class="row"><span>0.5 Üst</span><strong>92%</strong></div>
-<div class="row"><span>1.5 Üst</span><strong>78%</strong></div>
-<div class="row"><span>2.5 Üst</span><strong>61%</strong></div>
-<div class="row"><span>3.5 Üst</span><strong>39%</strong></div>
-<div class="row"><span>KG Var</span><strong>56%</strong></div>
-<div class="row"><span>KG Yok</span><strong>44%</strong></div>
-
-</div>
-</section>
-
-<section id="corners" style="display:none">
-
-<div class="card">
-<b>🚩 Korner analizi</b>
-
-<div class="kpi">
-<div><div class="num">5.4</div><div class="small">Ev 1Y korner</div></div>
-<div><div class="num">4.1</div><div class="small">Dep. 1Y korner</div></div>
-<div><div class="num">9.5</div><div class="small">Toplam ort.</div></div>
-</div>
-
-<div class="row">
-<span>İlk yarı 4.5 Üst</span>
-<strong>57%</strong>
-</div>
-
-<div class="row">
-<span>İlk yarı 5.5 Üst</span>
-<strong>43%</strong>
-</div>
-
-<div class="row">
-<span>Toplam 8.5 Üst</span>
-<strong>63%</strong>
-</div>
-
-<div class="row">
-<span>Toplam 9.5 Üst</span>
-<strong>51%</strong>
-</div>
-
-</div>
-</section>
-
-<section id="squads" style="display:none">
-
-<div class="card">
-<b>👥 Kadro / sezon hareketleri</b>
-
-<div class="row">
-<span>Ev sahibi</span>
-<span class="muted">Güncel veri bağlantısı bekleniyor</span>
-</div>
-
-<div class="row">
-<span>Deplasman</span>
-<span class="muted">Güncel veri bağlantısı bekleniyor</span>
-</div>
-
-<div class="row">
-<span>Yükselen / düşen</span>
-<span class="muted">Lig seçimine göre gösterilecek</span>
-</div>
-
-<p class="small">
-Bu sürüm arayüz prototipidir. Canlı kadro, transfer, sakatlık ve fikstür verileri için futbol veri API'si bağlanmalıdır.
-</p>
-
-</div>
-</section>
-
-<div class="card">
-<b>⚙️ Veri durumu</b>
-
-<p class="small">
-Şu an demo istatistikleri gösteriliyor. Canlı 2026/27 verilerini kullanmak için API bağlantısı gerekir.
+<p class="notice">
+⚠️ Bu yüzdeler şu an demo modelidir. Canlı 2026/27 istatistikleri için veri API'si bağlanmalıdır.
 </p>
 
 </div>
 
-<footer>
-İstatistiksel analiz aracıdır; bahis sonucu veya kazanç garantisi vermez.
-</footer>
+
+<div class="card">
+
+<b>📅 Maç Seçimi</b>
+
+<p class="small">
+Seçtiğin ligdeki bütün takımlar listeden gelir.
+Ev sahibi ve deplasman takımını seçerek analiz oluşturabilirsin.
+</p>
+
+</div>
 
 </main>
 
+
 <script>
 
-document.getElementById('date').value=new Date().toISOString().slice(0,10);
+const L={
 
-function tab(btn,id){
+"Süper Lig":[
+"Amedspor",
+"Antalyaspor",
+"Beşiktaş",
+"Bodrum FK",
+"Çaykur Rizespor",
+"Eyüpspor",
+"Fenerbahçe",
+"Galatasaray",
+"Gaziantep FK",
+"Gençlerbirliği",
+"Göztepe",
+"İstanbul Başakşehir",
+"Kasımpaşa",
+"Kayserispor",
+"Konyaspor",
+"Samsunspor",
+"Trabzonspor",
+"Erzurumspor"
+],
 
-document.querySelectorAll('.tabs button').forEach(x=>{
-x.classList.remove('active');
-x.classList.add('secondary');
-});
+"1. Lig":[
+"Adana Demirspor",
+"Altınordu",
+"Amedspor",
+"Bandırmaspor",
+"Boluspor",
+"Bursaspor",
+"Çorum FK",
+"Erokspor",
+"Erzurumspor",
+"Iğdır FK",
+"İstanbulspor",
+"Keçiörengücü",
+"Manisa FK",
+"Mardin 1969 Spor",
+"Muğlaspor",
+"Pendikspor",
+"Sakaryaspor",
+"Serik Belediyespor",
+"Şanlıurfaspor",
+"Ümraniyespor"
+],
 
-btn.classList.add('active');
-btn.classList.remove('secondary');
+"Premier League":[
+"AFC Bournemouth",
+"Arsenal",
+"Aston Villa",
+"Brentford",
+"Brighton & Hove Albion",
+"Chelsea",
+"Coventry City",
+"Crystal Palace",
+"Everton",
+"Fulham",
+"Hull City",
+"Ipswich Town",
+"Leeds United",
+"Liverpool",
+"Manchester City",
+"Manchester United",
+"Newcastle United",
+"Nottingham Forest",
+"Sunderland",
+"Tottenham Hotspur"
+],
 
-['overview','goals','corners','squads'].forEach(x=>{
-document.getElementById(x).style.display=x===id?'block':'none'
-});
+"La Liga":[
+"Alavés",
+"Athletic Club",
+"Atlético Madrid",
+"Barcelona",
+"Celta Vigo",
+"Deportivo La Coruña",
+"Elche",
+"Espanyol",
+"Getafe",
+"Girona",
+"Málaga",
+"Mallorca",
+"Osasuna",
+"Racing Santander",
+"Rayo Vallecano",
+"Real Betis",
+"Real Madrid",
+"Real Sociedad",
+"Sevilla",
+"Villarreal"
+],
+
+"Serie A":[
+"Atalanta",
+"Bologna",
+"Cagliari",
+"Como",
+"Fiorentina",
+"Frosinone",
+"Genoa",
+"Inter",
+"Juventus",
+"Lazio",
+"Lecce",
+"Milan",
+"Monza",
+"Napoli",
+"Parma",
+"Roma",
+"Sassuolo",
+"Torino",
+"Udinese",
+"Venezia"
+],
+
+"Bundesliga":[
+"Augsburg",
+"Bayer Leverkusen",
+"Bayern Münih",
+"Borussia Dortmund",
+"Borussia Mönchengladbach",
+"Eintracht Frankfurt",
+"Elversberg",
+"Freiburg",
+"Hamburg",
+"Heidenheim",
+"Hoffenheim",
+"Mainz 05",
+"RB Leipzig",
+"Schalke 04",
+"St. Pauli",
+"Stuttgart",
+"Union Berlin",
+"Werder Bremen",
+"Wolfsburg",
+"Paderborn"
+],
+
+"Ligue 1":[
+"Angers",
+"Auxerre",
+"Brest",
+"Le Havre",
+"Le Mans",
+"Lens",
+"Lille",
+"Lorient",
+"Lyon",
+"Marseille",
+"Monaco",
+"Nice",
+"Paris FC",
+"PSG",
+"Rennes",
+"Strasbourg",
+"Toulouse",
+"Troyes"
+]
+
+};
+
+
+const league=document.getElementById("league");
+const home=document.getElementById("home");
+const away=document.getElementById("away");
+
+
+league.innerHTML=Object.keys(L)
+.map(x=>`<option>${x}</option>`)
+.join("");
+
+
+document.getElementById("date").value=
+new Date().toISOString().slice(0,10);
+
+
+function loadTeams(){
+
+let teams=L[league.value];
+
+home.innerHTML=
+teams.map(x=>`<option>${x}</option>`).join("");
+
+away.innerHTML=
+teams.map(x=>`<option>${x}</option>`).join("");
+
+if(teams.length>1){
+away.selectedIndex=1;
+}
+
+document.querySelector(".sub").textContent=
+league.value+" • 2026/27 • "+teams.length+" takım";
 
 }
+
 
 function analyze(){
 
-const league=document.getElementById('league').value;
+document.getElementById("rh").textContent=
+home.value;
 
-const names={
-'Süper Lig':['Galatasaray','Fenerbahçe'],
-'1. Lig':['Erokspor','Sakaryaspor'],
-'Premier League':['Arsenal','Chelsea'],
-'La Liga':['Barcelona','Atlético Madrid'],
-'Serie A':['Inter','Milan'],
-'Bundesliga':['Bayern Münih','Dortmund'],
-'Ligue 1':['PSG','Marseille']
-};
+document.getElementById("ra").textContent=
+away.value;
 
-[
-document.getElementById('home').textContent,
-document.getElementById('away').textContent
-]=names[league]||['Ev Sahibi','Deplasman'];
-
-document.querySelector('.sub').textContent=
-league+' • 2026/27 analiz ekranı • Demo veri';
+document.getElementById("result")
+.scrollIntoView({
+behavior:"smooth"
+});
 
 }
+
+
+loadTeams();
 
 </script>
 
