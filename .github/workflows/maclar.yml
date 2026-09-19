@@ -22,19 +22,23 @@ jobs:
 
           for i in 0 1 2 3 4 5 6 7
           do
-            TAR=$(date -u -d "+$i day" +"%d/%m/%Y")
-            DOSYA=$(date -u -d "+$i day" +"%Y-%m-%d")
+            TAR=$(date -u -d "+$i day" +"%Y-%m-%d")
+            DOSYA="$TAR.json"
 
             echo "Cekiliyor: $TAR"
 
             curl -L --retry 3 \
               -A "Mozilla/5.0" \
-              "http://goapi.mackolik.com/livedata?date=$TAR" \
-              -o "data/$DOSYA.json" || true
+              -H "Accept: application/json" \
+              "https://www.mackolik.com/perform/p0/ajax/components/competition/livescores/json?sports%5B%5D=Soccer&matchDate=$TAR" \
+              -o "data/$DOSYA"
 
-            if [ ! -s "data/$DOSYA.json" ]; then
-              echo '{"m":[]}' > "data/$DOSYA.json"
+            if ! jq empty "data/$DOSYA" 2>/dev/null; then
+              echo "Gecersiz JSON geldi: $TAR"
+              echo '{"data":{"matches":{}}}' > "data/$DOSYA"
             fi
+
+            echo "Dosya hazir: data/$DOSYA"
           done
 
       - name: Degisiklikleri kaydet
@@ -45,6 +49,6 @@ jobs:
           git add data/
 
           git diff --cached --quiet || \
-          git commit -m "Mac verilerini guncelle"
+          git commit -m "Mackolik mac verilerini guncelle"
 
           git push
