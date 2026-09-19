@@ -1,34 +1,6 @@
 {
   "date": "2026-09-22",
   "odds": {
-    "5rwb0bvbmyf336qywlqzgyal0": {
-      "Maç Sonucu MBS 3": [
-        {
-          "secenek": "1",
-          "oran": "1.19"
-        },
-        {
-          "secenek": "X",
-          "oran": "4.10"
-        },
-        {
-          "secenek": "2",
-          "oran": "8.08"
-        },
-        {
-          "secenek": "1",
-          "oran": "1.19"
-        },
-        {
-          "secenek": "X",
-          "oran": "4.10"
-        },
-        {
-          "secenek": "2",
-          "oran": "8.08"
-        }
-      ]
-    },
     "9vsl46ms2dwww2zjshhc3faj8": {
       "Maç Sonucu MBS 3": [
         {
@@ -134,6 +106,34 @@
         {
           "secenek": "Yok",
           "oran": "1.64"
+        }
+      ]
+    },
+    "5rwb0bvbmyf336qywlqzgyal0": {
+      "Maç Sonucu MBS 3": [
+        {
+          "secenek": "1",
+          "oran": "1.19"
+        },
+        {
+          "secenek": "X",
+          "oran": "4.10"
+        },
+        {
+          "secenek": "2",
+          "oran": "8.08"
+        },
+        {
+          "secenek": "1",
+          "oran": "1.19"
+        },
+        {
+          "secenek": "X",
+          "oran": "4.10"
+        },
+        {
+          "secenek": "2",
+          "oran": "8.08"
         }
       ]
     }
