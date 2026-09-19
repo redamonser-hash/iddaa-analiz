@@ -1,4 +1,4 @@
-           name: Mackolik Mac ve Oran Verileri
+    name: Mackolik Mac ve Oran Verileri
 
 on:
   workflow_dispatch:
@@ -515,4 +515,13 @@ jobs:
           git commit -m "Mackolik mac ve oran verilerini guncelle"
 
           git push       
-                            
+
+
+          
+              
+                                 
+
+              
+                          
+
+          
