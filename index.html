@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -69,11 +68,14 @@ background:#172033;
 }
 
 .datebar button{
-font-size:18px;
+font-size:20px;
+width:80px;
 }
 
 #dateText{
 font-weight:bold;
+font-size:20px;
+text-align:center;
 }
 
 .container{
@@ -187,29 +189,22 @@ color:#94a3b8;
 
 .tag{
 display:inline-block;
-padding:5px 8px;
+padding:6px 9px;
 border-radius:6px;
 background:#334155;
 margin:3px;
 font-size:12px;
 }
 
-.green{
-color:#4ade80;
-}
-
-.yellow{
-color:#facc15;
-}
-
-.red{
-color:#f87171;
-}
-
 .empty{
 padding:30px;
 text-align:center;
 color:#94a3b8;
+}
+
+.loading{
+text-align:center;
+padding:20px;
 }
 
 @media(max-width:600px){
@@ -278,7 +273,7 @@ oninput="render()"
 <div class="container">
 
 <div id="status" class="status">
-Veriler yükleniyor...
+⏳ Veriler yükleniyor...
 </div>
 
 <div id="matches"></div>
@@ -308,9 +303,19 @@ var MONTHS = [
 "Aralık"
 ];
 
+
+/* =========================
+   TARİH
+========================= */
+
 function pad(n){
-return n < 10 ? "0" + n : "" + n;
+
+return n < 10
+? "0" + n
+: "" + n;
+
 }
+
 
 function dateString(){
 
@@ -322,6 +327,7 @@ return selectedDate.getFullYear()
 
 }
 
+
 function prettyDate(){
 
 return selectedDate.getDate()
@@ -332,24 +338,36 @@ return selectedDate.getDate()
 
 }
 
+
 function changeDate(days){
 
 selectedDate.setDate(
 selectedDate.getDate() + days
 );
 
+document.getElementById("dateText").innerText =
+prettyDate();
+
 loadData();
 
 }
+
 
 document.getElementById("dateText").innerText =
 prettyDate();
 
 
+/* =========================
+   VERİ YÜKLEME
+========================= */
+
 function loadData(){
 
 document.getElementById("status").innerText =
-"⏳ Veriler yükleniyor...";
+"⏳ Maçlar yükleniyor...";
+
+document.getElementById("matches").innerHTML =
+'<div class="loading">⏳ Veriler hazırlanıyor...</div>';
 
 var d = dateString();
 
@@ -363,15 +381,26 @@ true
 
 xhr.onreadystatechange = function(){
 
-if(xhr.readyState !== 4) return;
+if(xhr.readyState !== 4){
+
+return;
+
+}
 
 if(xhr.status !== 200){
+
+allMatches = [];
+competitions = {};
 
 document.getElementById("status").innerText =
 "⚠️ Bu tarih için maç verisi bulunamadı.";
 
-allMatches = [];
-render();
+document.getElementById("matches").innerHTML =
+'<div class="empty">'
++
+"Bu tarihte veri bulunamadı."
++
+'</div>';
 
 return;
 
@@ -379,45 +408,56 @@ return;
 
 try{
 
-var json = JSON.parse(xhr.responseText);
+var json =
+JSON.parse(xhr.responseText);
 
-allMatches =
-json.data &&
-json.data.matches
+
+/*
+================================
+MAÇLARI DÜZELT
+================================
+*/
+
+allMatches = normalizeMatches(
+json.data
 ? json.data.matches
-: [];
+: null
+);
 
-competitions = {};
 
-if(
-json.data &&
-json.data.competitions
-){
+/*
+================================
+LİGLERİ DÜZELT
+================================
+*/
 
-for(
-var i=0;
-i<json.data.competitions.length;
-i++
-){
+competitions = normalizeCompetitions(
+json.data
+? json.data.competitions
+: null
+);
 
-var c = json.data.competitions[i];
-
-competitions[c.id] =
-c.name ||
-c.competitionName ||
-"Diğer";
-
-}
-
-}
 
 loadOdds();
 
 }
+
 catch(e){
 
+console.log(e);
+
+allMatches = [];
+competitions = {};
+
 document.getElementById("status").innerText =
-"❌ Maç verisi okunamadı.";
+"❌ JSON verisi okunamadı.";
+
+document.getElementById("matches").innerHTML =
+'<div class="empty">'
++
+"Veri okunurken hata oluştu."
++
+'</div>';
 
 }
 
@@ -427,6 +467,222 @@ xhr.send();
 
 }
 
+
+/* =========================
+   MAÇ VERİSİNİ ARRAY YAP
+========================= */
+
+function normalizeMatches(data){
+
+var result = [];
+
+if(!data){
+
+return result;
+
+}
+
+
+/*
+Zaten array ise
+*/
+
+if(Array.isArray(data)){
+
+return data;
+
+}
+
+
+/*
+Obje ise
+*/
+
+if(typeof data === "object"){
+
+for(var key in data){
+
+if(
+data.hasOwnProperty(key)
+){
+
+var item = data[key];
+
+
+/*
+Bazı yapılarda kayıt
+array içinde olabilir
+*/
+
+if(Array.isArray(item)){
+
+for(
+var j=0;
+j<item.length;
+j++
+){
+
+if(item[j]){
+
+result.push(
+item[j]
+);
+
+}
+
+}
+
+}
+else if(item){
+
+/*
+İçinde matches varsa
+*/
+
+if(
+item.matches &&
+Array.isArray(item.matches)
+){
+
+for(
+var k=0;
+k<item.matches.length;
+k++
+){
+
+if(item.matches[k]){
+
+result.push(
+item.matches[k]
+);
+
+}
+
+}
+
+}
+else{
+
+result.push(item);
+
+}
+
+}
+
+}
+
+}
+
+}
+
+return result;
+
+}
+
+
+/* =========================
+   LİG VERİSİNİ NORMALLEŞTİR
+========================= */
+
+function normalizeCompetitions(data){
+
+var result = {};
+
+if(!data){
+
+return result;
+
+}
+
+
+/*
+Array
+*/
+
+if(Array.isArray(data)){
+
+for(
+var i=0;
+i<data.length;
+i++
+){
+
+var c = data[i];
+
+if(!c) continue;
+
+var id =
+c.id ||
+c.competitionId;
+
+if(id){
+
+result[id] =
+c.name ||
+c.competitionName ||
+c.title ||
+"Diğer";
+
+}
+
+}
+
+return result;
+
+}
+
+
+/*
+Object
+*/
+
+if(typeof data === "object"){
+
+for(var key in data){
+
+if(
+!data.hasOwnProperty(key)
+){
+
+continue;
+
+}
+
+var c = data[key];
+
+if(!c){
+
+continue;
+
+}
+
+if(typeof c === "string"){
+
+result[key] = c;
+
+}
+else{
+
+result[key] =
+c.name ||
+c.competitionName ||
+c.title ||
+"Diğer";
+
+}
+
+}
+
+}
+
+return result;
+
+}
+
+
+/* =========================
+   ORANLAR
+========================= */
 
 function loadOdds(){
 
@@ -442,17 +698,30 @@ true
 
 xhr.onreadystatechange = function(){
 
-if(xhr.readyState !== 4) return;
+if(xhr.readyState !== 4){
+
+return;
+
+}
+
+allOdds = {};
+
 
 if(xhr.status === 200){
 
 try{
 
-var json = JSON.parse(xhr.responseText);
+var json =
+JSON.parse(xhr.responseText);
+
+if(json){
 
 allOdds =
 json.odds ||
+json.data ||
 {};
+
+}
 
 }
 catch(e){
@@ -462,11 +731,7 @@ allOdds = {};
 }
 
 }
-else{
 
-allOdds = {};
-
-}
 
 fillLeagues();
 
@@ -474,19 +739,26 @@ render();
 
 };
 
+
 xhr.send();
 
 }
 
+
+/* =========================
+   LİG FİLTRESİ
+========================= */
 
 function fillLeagues(){
 
 var select =
 document.getElementById("league");
 
-var old = select.value;
+var old =
+select.value;
 
 var leagues = {};
+
 
 for(
 var i=0;
@@ -494,31 +766,53 @@ i<allMatches.length;
 i++
 ){
 
-var m = allMatches[i];
+var m =
+allMatches[i];
 
-var id = m.competitionId;
+if(!m){
+
+continue;
+
+}
+
+var id =
+m.competitionId ||
+m.competitionID ||
+m.leagueId;
 
 if(id){
 
 leagues[id] =
 competitions[id] ||
+m.competitionName ||
 "Diğer";
 
 }
 
 }
 
+
 select.innerHTML =
 '<option value="">🏆 Tüm Ligler</option>';
+
 
 for(
 var key in leagues
 ){
 
+if(
+!leagues.hasOwnProperty(key)
+){
+
+continue;
+
+}
+
 var option =
 document.createElement("option");
 
 option.value = key;
+
 option.textContent =
 leagues[key];
 
@@ -526,7 +820,9 @@ select.appendChild(option);
 
 }
 
+
 select.value = old;
+
 
 document.getElementById("status").innerText =
 "✅ "
@@ -537,23 +833,240 @@ document.getElementById("status").innerText =
 }
 
 
+/* =========================
+   ORAN BUL
+========================= */
+
 function getOdds(match){
 
-if(!match) return [];
+if(!match){
+
+return [];
+
+}
 
 var id =
-String(match.id);
+String(
+match.id ||
+match.matchId ||
+match.eventId ||
+""
+);
 
-return allOdds[id]
-|| allOdds[match.id]
-|| [];
+
+/*
+En yaygın yapı:
+{
+  "12345": [...]
+}
+*/
+
+if(
+allOdds &&
+allOdds[id]
+){
+
+return normalizeOdds(
+allOdds[id]
+);
 
 }
 
 
+/*
+Sayısal key
+*/
+
+if(
+allOdds &&
+allOdds[match.id]
+){
+
+return normalizeOdds(
+allOdds[match.id]
+);
+
+}
+
+
+/*
+Bazı JSON yapılarda
+matches dizisi olabilir
+*/
+
+if(
+Array.isArray(allOdds)
+){
+
+for(
+var i=0;
+i<allOdds.length;
+i++
+){
+
+var item =
+allOdds[i];
+
+if(!item){
+
+continue;
+
+}
+
+var itemId =
+String(
+item.matchId ||
+item.id ||
+item.eventId ||
+""
+);
+
+if(
+itemId === id
+){
+
+return normalizeOdds(
+item.odds ||
+item.markets ||
+item.market ||
+[]
+);
+
+}
+
+}
+
+}
+
+
+return [];
+
+}
+
+
+/* =========================
+   ORANLARI NORMALLEŞTİR
+========================= */
+
+function normalizeOdds(data){
+
+if(!data){
+
+return [];
+
+}
+
+
+/*
+Array ise
+*/
+
+if(Array.isArray(data)){
+
+return data;
+
+}
+
+
+/*
+Object market yapısı
+*/
+
+if(typeof data === "object"){
+
+var result = [];
+
+for(var key in data){
+
+if(
+!data.hasOwnProperty(key)
+){
+
+continue;
+
+}
+
+var item =
+data[key];
+
+if(!item){
+
+continue;
+
+}
+
+
+/*
+Zaten market objesi
+*/
+
+if(
+item.market ||
+item.name ||
+item.title ||
+item.baslik
+){
+
+result.push(item);
+
+}
+else if(
+Array.isArray(item)
+){
+
+result.push({
+
+market:key,
+
+options:item
+
+});
+
+}
+else if(
+item.options ||
+item.secenekler ||
+item.values ||
+item.items
+){
+
+result.push({
+
+market:key,
+
+options:
+item.options ||
+item.secenekler ||
+item.values ||
+item.items
+
+});
+
+}
+
+}
+
+return result;
+
+}
+
+
+return [];
+
+}
+
+
+/* =========================
+   TEMİZ METİN
+========================= */
+
 function cleanName(name){
 
-if(!name) return "";
+if(!name){
+
+return "";
+
+}
 
 return String(name)
 .toLowerCase()
@@ -568,12 +1081,27 @@ return String(name)
 }
 
 
-function findMarket(odds,names){
+/* =========================
+   MARKET BUL
+========================= */
 
-if(!odds || !odds.length)
+function findMarket(
+odds,
+names
+){
+
+if(
+!odds ||
+!odds.length
+){
+
 return null;
 
+}
+
+
 var wanted = [];
+
 
 for(
 var i=0;
@@ -587,6 +1115,7 @@ cleanName(names[i])
 
 }
 
+
 for(
 var i=0;
 i<odds.length;
@@ -599,8 +1128,10 @@ odds[i].market ||
 odds[i].name ||
 odds[i].baslik ||
 odds[i].title ||
+odds[i].marketName ||
 ""
 );
+
 
 for(
 var j=0;
@@ -620,14 +1151,24 @@ return odds[i];
 
 }
 
+
 return null;
 
 }
 
 
+/* =========================
+   SEÇENEKLERİ AL
+========================= */
+
 function getOptions(market){
 
-if(!market) return [];
+if(!market){
+
+return [];
+
+}
+
 
 var list =
 market.options ||
@@ -637,10 +1178,16 @@ market.values ||
 market.items ||
 [];
 
-if(!Array.isArray(list))
+
+if(!Array.isArray(list)){
+
 return [];
 
+}
+
+
 var result = [];
+
 
 for(
 var i=0;
@@ -648,9 +1195,16 @@ i<list.length;
 i++
 ){
 
-var item = list[i];
+var item =
+list[i];
 
-if(!item) continue;
+
+if(!item){
+
+continue;
+
+}
+
 
 var name =
 item.secenek ||
@@ -658,39 +1212,77 @@ item.name ||
 item.key ||
 item.label ||
 item.option ||
+item.selection ||
 "";
+
 
 var odd =
 item.oran ||
 item.odd ||
 item.value ||
 item.price ||
+item.odds ||
 "";
 
-if(name === "") continue;
+
+if(
+name === ""
+){
+
+continue;
+
+}
+
 
 var num =
 parseFloat(
 String(odd)
-.replace(",", ".")
+.replace(",",".")
 );
 
+
+if(
+isNaN(num)
+){
+
+continue;
+
+}
+
+
+if(num <= 1){
+
+continue;
+
+}
+
+
 result.push({
+
 name:name,
+
 odd:num
+
 });
 
 }
+
 
 return result;
 
 }
 
 
+/* =========================
+   TEKRARLARI SİL
+========================= */
+
 function uniqueOptions(list){
 
 var result = [];
+
 var seen = {};
+
 
 for(
 var i=0;
@@ -699,9 +1291,10 @@ i++
 ){
 
 var key =
-list[i].name
+cleanName(list[i].name)
 + "_"
 + list[i].odd;
+
 
 if(!seen[key]){
 
@@ -715,14 +1308,20 @@ list[i]
 
 }
 
+
 return result;
 
 }
 
 
+/* =========================
+   OLASILIK
+========================= */
+
 function probability(list){
 
 var valid = [];
+
 
 for(
 var i=0;
@@ -735,16 +1334,24 @@ list[i].odd &&
 list[i].odd > 1
 ){
 
-valid.push(list[i]);
+valid.push(
+list[i]
+);
 
 }
 
 }
 
-if(!valid.length)
+
+if(!valid.length){
+
 return [];
 
+}
+
+
 var total = 0;
+
 
 for(
 var i=0;
@@ -757,7 +1364,9 @@ total +=
 
 }
 
+
 var result = [];
+
 
 for(
 var i=0;
@@ -767,31 +1376,48 @@ i++
 
 result.push({
 
-name:valid[i].name,
+name:
+valid[i].name,
 
-odd:valid[i].odd,
+odd:
+valid[i].odd,
 
 prob:
+(
 (1 / valid[i].odd)
 /
 total
-* 100
+) * 100
 
 });
 
 }
+
 
 return result;
 
 }
 
 
+/* =========================
+   EN YÜKSEK
+========================= */
+
 function bestOption(list){
 
-if(!list || !list.length)
+if(
+!list ||
+!list.length
+){
+
 return null;
 
-var best = list[0];
+}
+
+
+var best =
+list[0];
+
 
 for(
 var i=1;
@@ -804,42 +1430,71 @@ list[i].prob >
 best.prob
 ){
 
-best = list[i];
+best =
+list[i];
 
 }
 
 }
+
 
 return best;
 
 }
 
 
-function marketHtml(title,list){
+/* =========================
+   MARKET GÖSTER
+========================= */
 
-if(!list || !list.length)
+function marketHtml(
+title,
+list
+){
+
+if(
+!list ||
+!list.length
+){
+
 return "";
+
+}
+
 
 var probs =
 probability(
 uniqueOptions(list)
 );
 
-if(!probs.length)
+
+if(
+!probs.length
+){
+
 return "";
 
+}
+
+
 var html = "";
+
 
 html +=
 '<div class="section">';
 
+
 html +=
 '<div class="sectionTitle">'
-+ title
-+ '</div>';
++
+title
++
+'</div>';
+
 
 html +=
 '<div class="market">';
+
 
 for(
 var i=0;
@@ -847,40 +1502,64 @@ i<probs.length;
 i++
 ){
 
-var p = probs[i];
+var p =
+probs[i];
+
 
 var cls =
 p.prob >= 50
 ? "option best"
 : "option";
 
+
 html +=
 '<div class="' + cls + '">';
 
+
 html +=
 '<span>'
-+ p.name
-+ '</span>';
++
+p.name
++
+'</span>';
+
 
 html +=
 '<strong>'
-+ p.odd.toFixed(2)
-+ ' • '
-+ p.prob.toFixed(0)
-+ '%'
-+ '</strong>';
++
+p.odd.toFixed(2)
++
+" • "
++
+p.prob.toFixed(0)
++
+"%"
++
+'</strong>';
+
 
 html +=
 '</div>';
 
 }
 
-html += "</div></div>";
+
+html +=
+'</div>';
+
+
+html +=
+'</div>';
+
 
 return html;
 
 }
 
+
+/* =========================
+   TAKIM GOL OLASILIĞI
+========================= */
 
 function getTeamGoalProbability(
 odds,
@@ -895,17 +1574,33 @@ odds,
 teamPrefix
 + " "
 + threshold
-+ " Alt/Üst"
++ " Alt/Üst",
+
+teamPrefix
++ " "
++ threshold
++ " Altı/Üstü",
+
+teamPrefix
++ " "
++ threshold
++ " Alt / Üst"
 ]
 );
 
-if(!market)
+
+if(!market){
+
 return null;
+
+}
+
 
 var probs =
 probability(
 getOptions(market)
 );
+
 
 for(
 var i=0;
@@ -913,9 +1608,14 @@ i<probs.length;
 i++
 ){
 
+var name =
+cleanName(
+probs[i].name
+);
+
+
 if(
-cleanName(probs[i].name)
-.indexOf("ust") !== -1
+name.indexOf("ust") !== -1
 ){
 
 return probs[i].prob / 100;
@@ -924,10 +1624,15 @@ return probs[i].prob / 100;
 
 }
 
+
 return null;
 
 }
 
+
+/* =========================
+   BEKLENEN GOL
+========================= */
 
 function expectedGoals(
 odds,
@@ -941,12 +1646,14 @@ teamPrefix,
 "0,5"
 );
 
+
 var p15 =
 getTeamGoalProbability(
 odds,
 teamPrefix,
 "1,5"
 );
+
 
 var p25 =
 getTeamGoalProbability(
@@ -955,55 +1662,76 @@ teamPrefix,
 "2,5"
 );
 
+
 var sum = 0;
 
-var count = 0;
 
 if(p05 !== null){
 
 sum += p05;
-count++;
 
 }
+
 
 if(p15 !== null){
 
 sum += p15;
-count++;
 
 }
+
 
 if(p25 !== null){
 
 sum += p25;
-count++;
 
 }
 
-if(!count)
+
+if(
+p05 === null &&
+p15 === null &&
+p25 === null
+){
+
 return null;
 
+}
+
+
 /*
-Yaklaşık beklenen gol:
-
-P(G>=1)
-+
-P(G>=2)
-+
-P(G>=3)
-
-Bu değer oranlardan yaklaşık
-gol beklentisi çıkarmak için kullanılıyor.
+Oranlardan yaklaşık
+beklenen gol.
 */
+
+if(sum < 0.15){
+
+sum = 0.15;
+
+}
+
+if(sum > 3.5){
+
+sum = 3.5;
+
+}
+
 
 return sum;
 
 }
 
 
-function poisson(lambda,k){
+/* =========================
+   POISSON
+========================= */
+
+function poisson(
+lambda,
+k
+){
 
 var factorial = 1;
+
 
 for(
 var i=2;
@@ -1015,6 +1743,7 @@ factorial *= i;
 
 }
 
+
 return Math.exp(-lambda)
 *
 Math.pow(lambda,k)
@@ -1023,6 +1752,10 @@ factorial;
 
 }
 
+
+/* =========================
+   TAHMİNİ SKOR
+========================= */
 
 function predictedScore(
 homeLambda,
@@ -1038,7 +1771,9 @@ return null;
 
 }
 
+
 var best = null;
+
 
 for(
 var h=0;
@@ -1056,6 +1791,7 @@ var p =
 poisson(homeLambda,h)
 *
 poisson(awayLambda,a);
+
 
 if(
 !best ||
@@ -1078,10 +1814,15 @@ prob:p
 
 }
 
+
 return best;
 
 }
 
+
+/* =========================
+   ANALİZ
+========================= */
 
 function makeAnalysis(
 match,
@@ -1093,44 +1834,65 @@ match.homeTeam ||
 match.home ||
 "Ev Sahibi";
 
+
 var away =
 match.awayTeam ||
 match.away ||
 "Deplasman";
 
+
 var homeName =
 typeof home === "string"
 ? home
-: home.name || "Ev Sahibi";
+: (
+home.name ||
+home.teamName ||
+"Ev Sahibi"
+);
+
 
 var awayName =
 typeof away === "string"
 ? away
-: away.name || "Deplasman";
+: (
+away.name ||
+away.teamName ||
+"Deplasman"
+);
 
 
-/* MAÇ SONUCU */
+/*
+MAÇ SONUCU
+*/
 
 var resultMarket =
 findMarket(
 odds,
-["Maç Sonucu"]
+[
+"Maç Sonucu",
+"Mac Sonucu"
+]
 );
 
 
-/* 2.5 */
+/*
+2.5
+*/
 
 var over25 =
 findMarket(
 odds,
 [
 "2,5 Alt/Üst",
-"2.5 Alt/Üst"
+"2.5 Alt/Üst",
+"2,5 Altı/Üstü"
 ]
 );
 
 
-/* 3.5 */
+/*
+3.5
+*/
 
 var over35 =
 findMarket(
@@ -1138,23 +1900,29 @@ odds,
 [
 "3,5 Alt/Üst",
 "3.5 Alt/Üst",
+"3,5 Altı/Üstü",
 "MS ve 3,5 Alt/Üst"
 ]
 );
 
 
-/* KORNER */
+/*
+KORNER
+*/
 
 var corners =
 findMarket(
 odds,
 [
-"Toplam Korner Aralığı"
+"Toplam Korner Aralığı",
+"Toplam Korner"
 ]
 );
 
 
-/* EN ÇOK KORNER */
+/*
+EN ÇOK KORNER
+*/
 
 var mostCorners =
 findMarket(
@@ -1165,7 +1933,22 @@ odds,
 );
 
 
-/* BEKLENEN GOL */
+/*
+KARŞILIKLI GOL
+*/
+
+var btts =
+findMarket(
+odds,
+[
+"Karşılıklı Gol"
+]
+);
+
+
+/*
+BEKLENEN GOL
+*/
 
 var homeXg =
 expectedGoals(
@@ -1173,16 +1956,13 @@ odds,
 "Ev Sahibi"
 );
 
+
 var awayXg =
 expectedGoals(
 odds,
 "Deplasman"
 );
 
-
-/*
-Skor tahmini
-*/
 
 var score =
 predictedScore(
@@ -1194,80 +1974,140 @@ awayXg
 var html = "";
 
 
-/* TAHMİN */
+/*
+========================
+SKOR
+========================
+*/
 
 if(score){
 
 html +=
 '<div class="analysis">';
 
+
 html +=
 '<div class="prediction">'
-+ "🎯 Tahmini Skor: "
-+ homeName
-+ " "
-+ score.home
-+ " - "
-+ score.away
-+ " "
-+ awayName
-+ '</div>';
++
+"🎯 Tahmini Skor: "
++
+homeName
++
+" "
++
+score.home
++
+" - "
++
+score.away
++
+" "
++
+awayName
++
+'</div>';
+
 
 html +=
 '<div class="small" style="text-align:center">'
 +
-"Oran bazlı matematiksel tahmindir • kesin sonuç değildir"
+"Oran bazlı matematiksel tahmin • kesin sonuç değildir"
 +
 '</div>';
 
-html += "</div>";
+
+html +=
+'</div>';
 
 }
 
 
-/* 1-X-2 */
+/*
+========================
+1-X-2
+========================
+*/
 
-html += marketHtml(
+html +=
+marketHtml(
 "🏆 Maç Sonucu 1-X-2",
 getOptions(resultMarket)
 );
 
 
-/* 2.5 */
+/*
+========================
+2.5
+========================
+*/
 
-html += marketHtml(
+html +=
+marketHtml(
 "⚽ 2,5 Alt / Üst",
 getOptions(over25)
 );
 
 
-/* 3.5 */
+/*
+========================
+3.5
+========================
+*/
 
-html += marketHtml(
+html +=
+marketHtml(
 "🔥 3,5 Alt / Üst",
 getOptions(over35)
 );
 
 
-/* KORNER */
+/*
+========================
+KARŞILIKLI GOL
+========================
+*/
 
-html += marketHtml(
+html +=
+marketHtml(
+"🥅 Karşılıklı Gol",
+getOptions(btts)
+);
+
+
+/*
+========================
+KORNER
+========================
+*/
+
+html +=
+marketHtml(
 "🚩 Toplam Korner",
 getOptions(corners)
 );
 
 
-/* EN ÇOK KORNER */
+/*
+========================
+EN ÇOK KORNER
+========================
+*/
 
-html += marketHtml(
+html +=
+marketHtml(
 "🚩 En Çok Korner",
 getOptions(mostCorners)
 );
 
 
-/* ÖZET */
+/*
+========================
+ANALİZ ÖZETİ
+========================
+*/
 
 var summary = [];
+
 
 if(resultMarket){
 
@@ -1278,19 +2118,23 @@ getOptions(resultMarket)
 )
 );
 
+
 if(r){
 
 summary.push(
 "1-X-2: "
-+ r.name
-+ " (%"
-+ r.prob.toFixed(0)
-+ ")"
++
+r.name
++
+" %"
++
+r.prob.toFixed(0)
 );
 
 }
 
 }
+
 
 if(over25){
 
@@ -1301,19 +2145,23 @@ getOptions(over25)
 )
 );
 
+
 if(r){
 
 summary.push(
 "2.5: "
-+ r.name
-+ " (%"
-+ r.prob.toFixed(0)
-+ ")"
++
+r.name
++
+" %"
++
+r.prob.toFixed(0)
 );
 
 }
 
 }
+
 
 if(over35){
 
@@ -1324,19 +2172,50 @@ getOptions(over35)
 )
 );
 
+
 if(r){
 
 summary.push(
-"3.5: "
-+ r.name
-+ " (%"
-+ r.prob.toFixed(0)
-+ ")"
+"🔥 3.5: "
++
+r.name
++
+" %"
++
+r.prob.toFixed(0)
 );
 
 }
 
 }
+
+
+if(btts){
+
+var r =
+bestOption(
+probability(
+getOptions(btts)
+)
+);
+
+
+if(r){
+
+summary.push(
+"KG: "
++
+r.name
++
+" %"
++
+r.prob.toFixed(0)
+);
+
+}
+
+}
+
 
 if(corners){
 
@@ -1347,29 +2226,37 @@ getOptions(corners)
 )
 );
 
+
 if(r){
 
 summary.push(
-"Korner: "
-+ r.name
-+ " (%"
-+ r.prob.toFixed(0)
-+ ")"
+"🚩 Korner: "
++
+r.name
++
+" %"
++
+r.prob.toFixed(0)
 );
 
 }
 
 }
 
+
 if(summary.length){
 
 html +=
 '<div class="analysis">';
 
+
 html +=
 '<div class="sectionTitle">'
-+ "📊 Analiz Özeti"
-+ '</div>';
++
+"📊 Analiz Özeti"
++
+'</div>';
+
 
 for(
 var i=0;
@@ -1379,12 +2266,16 @@ i++
 
 html +=
 '<div class="tag">'
-+ summary[i]
-+ '</div>';
++
+summary[i]
++
+'</div>';
 
 }
 
-html += "</div>";
+
+html +=
+'</div>';
 
 }
 
@@ -1394,84 +2285,164 @@ return html;
 }
 
 
+/* =========================
+   SAAT
+========================= */
+
 function getMatchTime(match){
 
 var utc =
 match.mstUtc ||
 match.startTime ||
 match.date ||
+match.matchDate ||
 "";
 
-if(!utc)
+
+if(!utc){
+
 return "";
+
+}
+
 
 try{
 
 var d =
 new Date(utc);
 
-if(!isNaN(d.getTime())){
+
+if(
+!isNaN(
+d.getTime()
+)
+){
 
 return pad(d.getHours())
-+ ":"
-+ pad(d.getMinutes());
++
+":"
++
+pad(d.getMinutes());
 
 }
 
 }
 catch(e){}
 
+
 return "";
 
 }
 
 
-function getScore(match){
+/* =========================
+   SKOR
+========================= */
 
-var score = "";
+function getScore(match){
 
 if(
 match.homeScore !== undefined &&
 match.awayScore !== undefined
 ){
 
-score =
+return (
 match.homeScore
-+ " - "
-+ match.awayScore;
++
+" - "
++
+match.awayScore
+);
 
 }
 
-else if(
-match.score
+
+if(
+match.score !== undefined &&
+match.score !== null
 ){
 
-score =
-match.score;
+if(
+typeof match.score === "string"
+){
+
+return match.score;
 
 }
 
-return score;
+if(
+typeof match.score === "object"
+){
+
+var hs =
+match.score.home ||
+match.score.homeScore ||
+"";
+
+
+var as =
+match.score.away ||
+match.score.awayScore ||
+"";
+
+
+if(
+hs !== "" ||
+as !== ""
+){
+
+return hs
++
+" - "
++
+as;
 
 }
 
+}
+
+}
+
+
+return "";
+
+}
+
+
+/* =========================
+   MAÇLARI GÖSTER
+========================= */
 
 function render(){
 
 var box =
 document.getElementById("matches");
 
+
 var search =
 cleanName(
 document.getElementById("search").value
 );
 
+
 var league =
 document.getElementById("league").value;
 
+
 box.innerHTML = "";
 
+
 var count = 0;
+
+
+if(
+!Array.isArray(allMatches)
+){
+
+allMatches = [];
+
+}
+
 
 for(
 var i=0;
@@ -1482,35 +2453,59 @@ i++
 var m =
 allMatches[i];
 
+
+if(!m){
+
+continue;
+
+}
+
+
 var home =
 m.homeTeam ||
 m.home ||
 "";
+
 
 var away =
 m.awayTeam ||
 m.away ||
 "";
 
+
 var homeName =
 typeof home === "string"
 ? home
-: home.name || "";
+: (
+home.name ||
+home.teamName ||
+""
+);
+
 
 var awayName =
 typeof away === "string"
 ? away
-: away.name || "";
+: (
+away.name ||
+away.teamName ||
+""
+);
 
 
-/* ARAMA */
+/*
+ARAMA
+*/
 
 var text =
 cleanName(
 homeName
-+ " "
-+ awayName
++
+" "
++
+awayName
 );
+
 
 if(
 search &&
@@ -1522,25 +2517,38 @@ continue;
 }
 
 
-/* LİG */
+/*
+LİG
+*/
+
+var competitionId =
+m.competitionId ||
+m.competitionID ||
+m.leagueId ||
+"";
+
 
 if(
 league &&
-String(m.competitionId)
-!== String(league)
+String(competitionId)
+!==
+String(league)
 ){
 
 continue;
 
 }
 
+
 count++;
 
 
 var leagueName =
-competitions[m.competitionId]
+competitions[competitionId]
 ||
 m.competitionName
+||
+m.leagueName
 ||
 "Diğer";
 
@@ -1553,47 +2561,70 @@ var html =
 '<div class="card">';
 
 
-/* BAŞLIK */
+/*
+BAŞLIK
+*/
 
 html +=
 '<div class="cardHead">';
 
+
 html +=
 '<div class="match">'
-+ homeName
-+ " - "
-+ awayName
-+ '</div>';
++
+homeName
++
+" - "
++
+awayName
++
+'</div>';
+
 
 html +=
 '<div class="league">'
-+ leagueName
-+ " • "
-+ getMatchTime(m)
-+ '</div>';
++
+leagueName
++
+" • "
++
+getMatchTime(m)
++
+'</div>';
+
 
 var scoreText =
 getScore(m);
+
 
 if(scoreText){
 
 html +=
 '<div class="score">'
-+ scoreText
-+ '</div>';
++
+scoreText
++
+'</div>';
 
 }
+
 
 html +=
 '</div>';
 
 
-/* ANALİZ */
+/*
+ANALİZ
+*/
 
 html +=
 '<div class="body">';
 
-if(odds && odds.length){
+
+if(
+odds &&
+odds.length
+){
 
 html +=
 makeAnalysis(
@@ -1614,7 +2645,9 @@ html +=
 }
 
 
-/* İDDAA KODU */
+/*
+İDDAA KODU
+*/
 
 if(m.iddaaCode){
 
@@ -1633,18 +2666,27 @@ m.iddaaCode
 
 }
 
-html +=
-'</div>';
 
 html +=
 '</div>';
+
+
+html +=
+'</div>';
+
 
 box.innerHTML += html;
 
 }
 
 
-if(count === 0){
+/*
+MAÇ YOK
+*/
+
+if(
+count === 0
+){
 
 box.innerHTML =
 '<div class="empty">'
@@ -1657,6 +2699,10 @@ box.innerHTML =
 
 }
 
+
+/* =========================
+   BAŞLAT
+========================= */
 
 loadData();
 
