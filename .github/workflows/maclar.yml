@@ -1,0 +1,50 @@
+name: Mackolik Mac Verileri
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7,37 * * * *"
+
+jobs:
+  maclari-getir:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Repoyu al
+        uses: actions/checkout@v4
+
+      - name: Mac verilerini cek
+        run: |
+          mkdir -p data
+
+          for i in 0 1 2 3 4 5 6 7
+          do
+            TAR=$(date -u -d "+$i day" +"%d/%m/%Y")
+            DOSYA=$(date -u -d "+$i day" +"%Y-%m-%d")
+
+            echo "Cekiliyor: $TAR"
+
+            curl -L --retry 3 \
+              -A "Mozilla/5.0" \
+              "http://goapi.mackolik.com/livedata?date=$TAR" \
+              -o "data/$DOSYA.json" || true
+
+            if [ ! -s "data/$DOSYA.json" ]; then
+              echo '{"m":[]}' > "data/$DOSYA.json"
+            fi
+          done
+
+      - name: Degisiklikleri kaydet
+        run: |
+          git config user.name "iddaa-analiz-bot"
+          git config user.email "actions@github.com"
+
+          git add data/
+
+          git diff --cached --quiet || \
+          git commit -m "Mac verilerini guncelle"
+
+          git push
