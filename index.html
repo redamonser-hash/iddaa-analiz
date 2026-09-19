@@ -10,86 +10,97 @@
 body{
   margin:0;
   font-family:Arial,sans-serif;
-  background:#f2f4f7;
-  color:#17202a;
+  background:#f1f3f6;
+  color:#17202a
 }
 header{
   background:#111827;
   color:white;
-  padding:16px;
-  text-align:center;
+  padding:18px 12px;
+  text-align:center
 }
-h1{margin:0;font-size:22px}
-.wrap{max-width:900px;margin:auto;padding:10px}
-.controls{
+header h1{margin:0;font-size:22px}
+header p{margin:6px 0 0;color:#cbd5e1;font-size:13px}
+
+.panel{
   background:white;
+  margin:10px;
   padding:10px;
   border-radius:12px;
-  margin-bottom:10px;
+  box-shadow:0 2px 8px #0001
 }
+
 button,select,input{
   width:100%;
-  padding:11px;
+  padding:12px;
   margin:4px 0;
-  border:1px solid #ddd;
+  border:1px solid #d1d5db;
   border-radius:8px;
   background:white;
+  font-size:15px
 }
-button{
-  background:#111827;
-  color:white;
-  font-weight:bold;
-}
-.date{
+
+.row{
   display:flex;
-  gap:6px;
+  gap:6px
 }
-.date button{width:50%}
-.status{
-  padding:9px;
-  background:#e8f4ff;
-  border-radius:8px;
-  margin-bottom:10px;
-  font-size:13px;
+.row button{width:50%}
+
+#status{
+  padding:10px;
+  text-align:center;
+  font-weight:bold
 }
-.league{
-  margin-top:12px;
-  font-weight:bold;
-  font-size:17px;
-}
+
 .match{
   background:white;
+  margin:10px;
+  padding:14px;
   border-radius:12px;
-  margin:8px 0;
-  padding:12px;
-  box-shadow:0 2px 7px #0001;
+  box-shadow:0 2px 8px #0001
 }
-.teams{
-  font-size:16px;
-  font-weight:bold;
-}
-.time{
-  color:#555;
+
+.league{
+  color:#2563eb;
   font-size:13px;
-  margin-bottom:7px;
+  font-weight:bold;
+  margin-bottom:8px
 }
+
+.teams{
+  font-size:17px;
+  font-weight:bold;
+  line-height:1.5
+}
+
+.info{
+  color:#64748b;
+  font-size:12px;
+  margin-top:8px
+}
+
 .analysis{
   margin-top:10px;
   padding:10px;
-  background:#f7f8fa;
+  background:#f8fafc;
   border-radius:8px;
   font-size:13px;
-  line-height:1.5;
+  line-height:1.6
 }
-.tag{
+
+.badge{
   display:inline-block;
-  background:#e5e7eb;
   padding:4px 7px;
   border-radius:6px;
-  margin:2px;
+  background:#e5e7eb;
+  margin-right:4px
 }
-.good{background:#dff7e5}
-.warn{background:#fff3cd}
+
+.empty{
+  text-align:center;
+  padding:25px;
+  color:#64748b
+}
 </style>
 </head>
 
@@ -97,455 +108,88 @@ button{
 
 <header>
   <h1>⚽ İddaa Analiz Botu 26/27</h1>
-  <div style="font-size:12px;margin-top:5px">
-    Maçkolik verileri • Otomatik analiz
-  </div>
+  <p>Maçkolik verileri • Otomatik analiz</p>
 </header>
 
-<div class="wrap">
+<div class="panel">
 
-<div class="controls">
+  <div class="row">
+    <button onclick="changeDay(-1)">⬅ Önceki</button>
+    <button onclick="changeDay(1)">Sonraki ➡</button>
+  </div>
 
-<div class="date">
-<button onclick="changeDay(-1)">◀ Önceki</button>
-<button onclick="changeDay(1)">Sonraki ▶</button>
+  <input
+    id="search"
+    placeholder="🔎 Takım ara..."
+    oninput="render()"
+  >
+
+  <select id="league" onchange="render()">
+    <option value="">Tüm Ligler</option>
+  </select>
+
+  <button onclick="loadData()">🔄 Maçları Yenile</button>
+
 </div>
 
-<input id="search"
-       placeholder="🔎 Takım ara..."
-       oninput="render()">
-
-<select id="league" onchange="render()">
-<option value="">🏆 Tüm Ligler</option>
-</select>
-
-<button onclick="loadData()">🔄 Maçları Yenile</button>
-
-</div>
-
-<div id="status" class="status">
-Veriler hazırlanıyor...
-</div>
+<div id="status">⏳ Veriler hazırlanıyor...</div>
 
 <div id="matches"></div>
 
-</div>
-
 <script>
 
-var currentDate = new Date();
+var selectedDate = new Date();
 var allMatches = [];
 var competitions = {};
 
 function pad(n){
-  return n < 10 ? "0"+n : ""+n;
+  return n < 10 ? "0" + n : n;
 }
 
 function dateString(d){
-  return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
+  return d.getFullYear() + "-" +
+         pad(d.getMonth()+1) + "-" +
+         pad(d.getDate());
 }
 
 function changeDay(n){
-  currentDate.setDate(currentDate.getDate()+n);
+  selectedDate.setDate(selectedDate.getDate()+n);
   loadData();
 }
 
-function esc(s){
-  if(s===null || s===undefined) return "";
-  return String(s)
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;");
-}
-
-function getLeague(m){
-
-  if(m.competitionId && competitions[m.competitionId]){
-    var c=competitions[m.competitionId];
-
-    if(c.name && c.country && c.country.name){
-      return c.country.name+" • "+c.name;
-    }
-
-    if(c.name) return c.name;
-  }
-
-  return "Diğer";
-}
-
-function getTime(m){
-
-  if(!m.mstUtc) return "--:--";
-
-  var d=new Date(Number(m.mstUtc));
-
-  return pad(d.getHours())+":"+pad(d.getMinutes());
-}
-
-function getScore(m){
-
-  if(!m.score) return "";
-
-  var h=m.score.home;
-  var a=m.score.away;
-
-  if(h!=="" && h!==null && h!==undefined &&
-     a!=="" && a!==null && a!==undefined){
-
-    return h+" - "+a;
-  }
-
-  return "";
-}
-
-function isFinished(m){
-
-  var s=(m.state||"").toLowerCase();
-
-  return s==="post" ||
-         s==="finished" ||
-         s==="final";
-}
-
-function getTeamName(m,home){
-
-  if(home){
-    return m.homeTeam && m.homeTeam.name ?
-      m.homeTeam.name : "Ev Sahibi";
-  }
-
-  return m.awayTeam && m.awayTeam.name ?
-    m.awayTeam.name : "Deplasman";
-}
-
-/*
-  JSON içinde oran alanı farklı yerlerde bulunabilir.
-  Bu yüzden bütün nesneyi tarıyoruz.
-*/
-function findOdds(obj,result){
-
-  if(!obj || typeof obj!=="object") return;
-
-  for(var key in obj){
-
-    var val=obj[key];
-
-    if(
-      typeof val==="number" &&
-      val>=1.01 &&
-      val<=100
-    ){
-      var k=key.toLowerCase();
-
-      if(
-        k.indexOf("home")>=0 ||
-        k.indexOf("draw")>=0 ||
-        k.indexOf("away")>=0
-      ){
-        result[key]=val;
-      }
-    }
-
-    if(typeof val==="object"){
-      findOdds(val,result);
-    }
-  }
-}
-
-function oddsAnalysis(m){
-
-  var o={};
-  findOdds(m,o);
-
-  var home=null;
-  var draw=null;
-  var away=null;
-
-  for(var k in o){
-
-    var key=k.toLowerCase();
-
-    if(
-      home===null &&
-      key.indexOf("home")>=0
-    ) home=o[k];
-
-    if(
-      draw===null &&
-      key.indexOf("draw")>=0
-    ) draw=o[k];
-
-    if(
-      away===null &&
-      key.indexOf("away")>=0
-    ) away=o[k];
-  }
-
-  if(home && draw && away){
-
-    var ih=1/home;
-    var ix=1/draw;
-    var ia=1/away;
-
-    var total=ih+ix+ia;
-
-    var ph=Math.round(ih/total*100);
-    var px=Math.round(ix/total*100);
-    var pa=Math.round(ia/total*100);
-
-    return {
-      text:
-        "1X2 oranları bulundu: "+
-        "1 ≈ %"+ph+
-        " | X ≈ %"+px+
-        " | 2 ≈ %"+pa,
-      found:true
-    };
-  }
-
-  return {
-    text:"1X2 oranı bu veri kaynağında bu maç için bulunamadı.",
-    found:false
-  };
-}
-
-function basicAnalysis(m){
-
-  var home=getTeamName(m,true);
-  var away=getTeamName(m,false);
-
-  var score=getScore(m);
-
-  var html="";
-
-  html+="<b>📊 Analiz</b><br>";
-
-  html+="🏠 Ev sahibi: "+esc(home)+"<br>";
-  html+="✈️ Deplasman: "+esc(away)+"<br>";
-
-  if(score){
-
-    html+="<span class='tag good'>Skor: "+
-      esc(score)+"</span>";
-
-  }else{
-
-    html+="<span class='tag warn'>Maç henüz başlamadı / skor yok</span>";
-  }
-
-  var oa=oddsAnalysis(m);
-
-  html+="<br><br>💰 "+oa.text;
-
-  if(m.iddaaCode){
-    html+="<br>🎫 İddaa Kodu: "+
-      esc(m.iddaaCode);
-  }
-
-  html+="<br><br>";
-
-  if(!score){
-
-    html+=
-      "ℹ️ Takım geçmişi ve oran verileri yeterli olduğunda "+
-      "form, gol ortalaması, KG ve Üst/Alt analizleri burada gösterilecektir.";
-
-  }else{
-
-    html+=
-      "ℹ️ Maç sonucu veri kaynağından alınmıştır. "+
-      "Geçmiş istatistik bulunmadan tahmin yüzdesi üretilmez.";
-  }
-
-  return html;
-}
-
-function render(){
-
-  var box=document.getElementById("matches");
-
-  var search=
-    document.getElementById("search").value
-    .toLowerCase();
-
-  var league=
-    document.getElementById("league").value;
-
-  box.innerHTML="";
-
-  var groups={};
-
-  for(var i=0;i<allMatches.length;i++){
-
-    var m=allMatches[i];
-
-    var home=getTeamName(m,true);
-    var away=getTeamName(m,false);
-
-    var text=(home+" "+away).toLowerCase();
-
-    var lg=getLeague(m);
-
-    if(search && text.indexOf(search)<0)
-      continue;
-
-    if(league && lg!==league)
-      continue;
-
-    if(!groups[lg])
-      groups[lg]=[];
-
-    groups[lg].push(m);
-  }
-
-  var names=[];
-
-  for(var g in groups)
-    names.push(g);
-
-  names.sort();
-
-  if(names.length===0){
-
-    box.innerHTML=
-      "<div class='match'>"+
-      "Bu kriterlere uygun maç bulunamadı."+
-      "</div>";
-
-    return;
-  }
-
-  for(var x=0;x<names.length;x++){
-
-    var leagueName=names[x];
-
-    box.innerHTML+=
-      "<div class='league'>🏆 "+
-      esc(leagueName)+
-      "</div>";
-
-    var arr=groups[leagueName];
-
-    arr.sort(function(a,b){
-      return Number(a.mstUtc||0)-
-             Number(b.mstUtc||0);
-    });
-
-    for(var j=0;j<arr.length;j++){
-
-      var m=arr[j];
-
-      var home=getTeamName(m,true);
-      var away=getTeamName(m,false);
-
-      var score=getScore(m);
-
-      box.innerHTML+=
-        "<div class='match'>"+
-
-        "<div class='time'>"+
-        "🕒 "+getTime(m)+
-        (score ? " • "+esc(score) : "")+
-        "</div>"+
-
-        "<div class='teams'>"+
-        esc(home)+
-        " <span style='color:#888'>vs</span> "+
-        esc(away)+
-        "</div>"+
-
-        "<div class='analysis'>"+
-        basicAnalysis(m)+
-        "</div>"+
-
-        "</div>";
-    }
-  }
-}
-
-function updateLeagueList(){
-
-  var select=document.getElementById("league");
-
-  var old=select.value;
-
-  select.innerHTML=
-    "<option value=''>🏆 Tüm Ligler</option>";
-
-  var list=[];
-
-  for(var i=0;i<allMatches.length;i++){
-
-    var n=getLeague(allMatches[i]);
-
-    if(list.indexOf(n)<0)
-      list.push(n);
-  }
-
-  list.sort();
-
-  for(var j=0;j<list.length;j++){
-
-    var opt=document.createElement("option");
-
-    opt.value=list[j];
-    opt.textContent=list[j];
-
-    select.appendChild(opt);
-  }
-
-  select.value=old;
+function setStatus(text){
+  document.getElementById("status").innerHTML = text;
 }
 
 function loadData(){
 
-  var status=document.getElementById("status");
+  allMatches = [];
+  competitions = {};
 
-  status.innerHTML=
-    "⏳ "+dateString(currentDate)+
-    " verileri yükleniyor...";
+  document.getElementById("matches").innerHTML = "";
 
-  allMatches=[];
-  competitions={};
+  var tarih = dateString(selectedDate);
 
-  var file=
-    "data/"+dateString(currentDate)+".json";
+  setStatus("⏳ " + tarih + " verileri yükleniyor...");
 
-  var xhr=new XMLHttpRequest();
+  var file =
+    "data/" +
+    tarih +
+    ".json?v=" +
+    new Date().getTime();
 
-  xhr.open("GET",file,true);
+  var xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange=function(){
+  xhr.open("GET", file, true);
 
-    if(xhr.readyState!==4) return;
+  xhr.timeout = 15000;
 
-    if(xhr.status>=200 && xhr.status<300){
+  xhr.onreadystatechange = function(){
+
+    if(xhr.readyState !== 4) return;
+
+    if(xhr.status === 200){
 
       try{
 
-        var json=JSON.parse(xhr.responseText);
-
-        if(json.data){
-
-          competitions=
-            json.data.competitions || {};
-
-          var obj=
-            json.data.matches || {};
-
-          for(var id in obj){
-
-            var m=obj[id];
-
-            if(
-              m &&
-              m.homeTeam &&
-              m.awayTeam
-            ){
-
-              allMatches.push(m);
-            }
-          }
-
-          update
+        var json
