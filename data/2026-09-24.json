@@ -57,10 +57,6 @@
         "code": "DHRKMLL",
         "competitionFormat": "International cup",
         "stage": {
-          "90927": {
-            "id": 90927,
-            "name": ""
-          },
           "90928": {
             "id": 90928,
             "name": ""
@@ -82,13 +78,6 @@
         "code": "KCUL",
         "competitionFormat": "International cup",
         "stage": {
-          "86822": {
-            "id": 86822,
-            "name": "Lig A",
-            "series": {
-              "27141": "Grup A"
-            }
-          },
           "86823": {
             "id": 86823,
             "name": "Lig B",
@@ -149,10 +138,10 @@
             "id": 85626,
             "name": "",
             "series": {
-              "26509": "Grup G",
               "26505": "Grup C",
               "26507": "Grup E",
               "26508": "Grup F",
+              "26509": "Grup G",
               "26510": "Grup H"
             }
           }
@@ -390,8 +379,8 @@
             "id": 97164,
             "name": "Eleme - Ön Eleme",
             "series": {
-              "30076": "Grup 3",
-              "30074": "Grup 1"
+              "30074": "Grup 1",
+              "30076": "Grup 3"
             }
           }
         }
@@ -495,10 +484,6 @@
         "code": "EPLSB",
         "competitionFormat": "Domestic league",
         "stage": {
-          "91639": {
-            "id": 91639,
-            "name": "Küme Düşme Grubu"
-          },
           "91637": {
             "id": 91637,
             "name": "Şampiyona Grubu"
@@ -718,6 +703,27 @@
           }
         }
       },
+      "c0sx6fnhtph1ppbbbrmg6susp": {
+        "id": "c0sx6fnhtph1ppbbbrmg6susp",
+        "name": "Paulista U20",
+        "country": {
+          "id": "2vufyvpoxd9lfl9f6vpp7tz6y",
+          "name": "Brezilya"
+        },
+        "sport": "S",
+        "competitionSlug": "paulista-u20",
+        "seasonSlug": "",
+        "seasonId": "",
+        "countrySlug": "brezilya",
+        "code": "BPU",
+        "competitionFormat": "Domestic league",
+        "stage": {
+          "91882": {
+            "id": 91882,
+            "name": "Son 32 Turu"
+          }
+        }
+      },
       "dd8emmbdxtr6s2f9q1lhu62jc": {
         "id": "dd8emmbdxtr6s2f9q1lhu62jc",
         "name": "Santa Catarina Kupası",
@@ -739,69 +745,66 @@
           }
         }
       },
-      "e1kxdivp5g4cpldgpwvnzl1vv": {
-        "id": "e1kxdivp5g4cpldgpwvnzl1vv",
-        "name": "Ascenso MX",
+      "47ab9wtg48ksd11exck2122js": {
+        "id": "47ab9wtg48ksd11exck2122js",
+        "name": "A Ligi",
         "country": {
-          "id": "5trdr3jf42i20zj1hnkvcytr6",
-          "name": "Meksika"
+          "id": "4bnqn6mt5vyslpxfuqdrcmpgp",
+          "name": "İsrail"
         },
         "sport": "S",
-        "competitionSlug": "ascenso-mx",
+        "competitionSlug": "a-ligi",
         "seasonSlug": "",
         "seasonId": "",
-        "countrySlug": "meksika",
-        "code": "MAM",
+        "countrySlug": "israil",
+        "code": "İAL",
         "competitionFormat": "Domestic league",
         "stage": {
-          "95801": {
-            "id": 95801,
-            "name": "Açılış"
+          "96702": {
+            "id": 96702,
+            "name": "Güney"
           }
         }
       },
-      "dwnygzozltaf27fec17gxayvr": {
-        "id": "dwnygzozltaf27fec17gxayvr",
-        "name": "2. Lig",
+      "bwbb16bizglu0aqhv3uv7vdil": {
+        "id": "bwbb16bizglu0aqhv3uv7vdil",
+        "name": "2. Lig Bölgelerarası",
         "country": {
-          "id": "2uib9hdovpcye4re2l3omr4dl",
-          "name": "Peru"
+          "id": "3bh70jgvc5mn58x0byjkuda17",
+          "name": "İsviçre"
         },
         "sport": "S",
-        "competitionSlug": "2-lig",
+        "competitionSlug": "2-lig-b%C3%B6lgeleraras%C4%B1",
         "seasonSlug": "",
         "seasonId": "",
-        "countrySlug": "peru",
-        "code": "P2L",
+        "countrySlug": "isvi%C3%A7re",
+        "code": "İ2LBL",
         "competitionFormat": "Domestic league",
         "stage": {
-          "93089": {
-            "id": 93089,
-            "name": "Küme Düşme Turu",
-            "series": {
-              "29050": "Grup A"
-            }
+          "96240": {
+            "id": 96240,
+            "name": "Grup 2"
           }
         }
       },
-      "zs18qaehvhg3w1208874zvfa": {
-        "id": "zs18qaehvhg3w1208874zvfa",
-        "name": "1. Lig",
+      "cc9zntdbef14p20gt4ekvnjvs": {
+        "id": "cc9zntdbef14p20gt4ekvnjvs",
+        "name": "3. Lig",
         "country": {
-          "id": "2vn7xzv9g752y1h5ufjzr27i8",
-          "name": "Beyaz Rusya"
+          "id": "7dybe8679n9bgyrcxi383pq3y",
+          "name": "Slovakya"
         },
         "sport": "S",
-        "competitionSlug": "1-lig",
+        "competitionSlug": "3-lig",
         "seasonSlug": "",
         "seasonId": "",
-        "countrySlug": "beyaz-rusya",
-        "code": "B1L",
+        "countrySlug": "slovakya",
+        "code": "S3L",
         "competitionFormat": "Domestic league",
         "stage": {
-          "92034": {
-            "id": 92034,
-            "name": ""
+          "95929": {
+            "id": 95929,
+            "name": "Merkez"
           }
         }
       }
@@ -830,7 +833,7 @@
         "competitionId": "595nsvo7ykvoe690b1e4u5n56",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -874,7 +877,7 @@
         "competitionId": "595nsvo7ykvoe690b1e4u5n56",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -918,7 +921,7 @@
         "competitionId": "595nsvo7ykvoe690b1e4u5n56",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -962,7 +965,7 @@
         "competitionId": "595nsvo7ykvoe690b1e4u5n56",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -1006,7 +1009,7 @@
         "competitionId": "595nsvo7ykvoe690b1e4u5n56",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -1048,7 +1051,7 @@
         "competitionId": "595nsvo7ykvoe690b1e4u5n56",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -1092,7 +1095,7 @@
         "competitionId": "595nsvo7ykvoe690b1e4u5n56",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -1136,7 +1139,7 @@
         "competitionId": "595nsvo7ykvoe690b1e4u5n56",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -1156,2442 +1159,6 @@
         },
         "iddaaCode": 3153488,
         "liveBetting": false
-      },
-      "8q2oq7j2stieqz284lsz275lg": {
-        "id": "8q2oq7j2stieqz284lsz275lg",
-        "rbId": null,
-        "matchName": "Filistin vs Yeni Zelanda",
-        "homeTeam": {
-          "id": "9277i8bnnubzxh74pgxwkjkjv",
-          "name": "Filistin",
-          "slug": "filistin"
-        },
-        "awayTeam": {
-          "id": "bhu61cgwm07e2pik1jqmnztgl",
-          "name": "Yeni Zelanda",
-          "slug": "yeni-zelanda"
-        },
-        "matchSlug": "filistin-vs-yeni-zelanda",
-        "seriesId": null,
-        "stageId": 90928,
-        "formatId": null,
-        "sortOrder": 10,
-        "mstUtc": 1790242200000,
-        "competitionId": "cesdwwnxbc5fmajgroc0hqzy2",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "cwpgocxccb4375huahldswt0": {
-        "id": "cwpgocxccb4375huahldswt0",
-        "rbId": null,
-        "matchName": "Özbekistan vs İran",
-        "homeTeam": {
-          "id": "elayenut7wtobtmg7hyujzdoe",
-          "name": "Özbekistan",
-          "slug": "%C3%B6zbekistan"
-        },
-        "awayTeam": {
-          "id": "cubclbw5k5gdqdau95bnav0nn",
-          "name": "İran",
-          "slug": "iran"
-        },
-        "matchSlug": "%C3%B6zbekistan-vs-iran",
-        "seriesId": null,
-        "stageId": 90928,
-        "formatId": null,
-        "sortOrder": 14,
-        "mstUtc": 1790258400000,
-        "competitionId": "cesdwwnxbc5fmajgroc0hqzy2",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "2ak2e5blmq6yrwaipvnm6c8wk": {
-        "id": "2ak2e5blmq6yrwaipvnm6c8wk",
-        "rbId": null,
-        "matchName": "San Marino U21 vs Kosova U21",
-        "homeTeam": {
-          "id": "8iduc4wd7psgf9kx00sxf0bay",
-          "name": "San Marino U21",
-          "slug": "san-marino-u21"
-        },
-        "awayTeam": {
-          "id": "32y4upktq0recqqjgdbz3vh8i",
-          "name": "Kosova U21",
-          "slug": "kosova-u21"
-        },
-        "matchSlug": "san-marino-u21-vs-kosova-u21",
-        "seriesId": 26530,
-        "stageId": 85658,
-        "formatId": null,
-        "sortOrder": 17,
-        "mstUtc": 1790274600000,
-        "competitionId": "ili150pwfuf39f7yfdch9lhw",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "b1pn14pajms46wwui7likx5hw": {
-        "id": "b1pn14pajms46wwui7likx5hw",
-        "rbId": null,
-        "matchName": "Belçika U21 vs Belarus U21",
-        "homeTeam": {
-          "id": "69llbugj8m5aoly8p5zcrf4iu",
-          "name": "Belçika U21",
-          "slug": "bel%C3%A7ika-u21"
-        },
-        "awayTeam": {
-          "id": "bcmdsjf6g7m7f8gei63dqiep3",
-          "name": "Belarus U21",
-          "slug": "belarus-u21"
-        },
-        "matchSlug": "bel%C3%A7ika-u21-vs-belarus-u21",
-        "seriesId": 26538,
-        "stageId": 85658,
-        "formatId": null,
-        "sortOrder": 18,
-        "mstUtc": 1790272800000,
-        "competitionId": "ili150pwfuf39f7yfdch9lhw",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "6w6jacu1q38mpnialfxehtx5g": {
-        "id": "6w6jacu1q38mpnialfxehtx5g",
-        "rbId": null,
-        "matchName": "S. Sounders vs Real Salt Lake",
-        "homeTeam": {
-          "id": "3st9rj62b3qnni6uolw0lwaqn",
-          "name": "S. Sounders",
-          "slug": "s-sounders"
-        },
-        "awayTeam": {
-          "id": "29zyafx618w7tvp34n53pzwwb",
-          "name": "Real Salt Lake",
-          "slug": "real-salt-lake"
-        },
-        "matchSlug": "s-sounders-vs-real-salt-lake",
-        "seriesId": null,
-        "stageId": 91907,
-        "formatId": null,
-        "sortOrder": 27,
-        "mstUtc": 1790213400000,
-        "competitionId": "287tckirbfj9nb8ar2k9r60vn",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "68yk5fvtbjprpjgl6psec7dw4": {
-        "id": "68yk5fvtbjprpjgl6psec7dw4",
-        "rbId": null,
-        "matchName": "BAE vs Yemen",
-        "homeTeam": {
-          "id": "b9mwx4b6glg4kgbqgm3uysf3l",
-          "name": "BAE",
-          "slug": "bae"
-        },
-        "awayTeam": {
-          "id": "3opf7l4lm4gvubwg44zvv0ffy",
-          "name": "Yemen",
-          "slug": "yemen"
-        },
-        "matchSlug": "bae-vs-yemen",
-        "seriesId": 26797,
-        "stageId": 86337,
-        "formatId": null,
-        "sortOrder": 28,
-        "mstUtc": 1790265300000,
-        "competitionId": "6yeu4m8ey7hcaa5wuf6oe81iw",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "69ideulvgrk8u0w0ngnm37itw": {
-        "id": "69ideulvgrk8u0w0ngnm37itw",
-        "rbId": null,
-        "matchName": "Katar vs Bahreyn",
-        "homeTeam": {
-          "id": "ea68amhsn28ijs7bzjuzeqrz6",
-          "name": "Katar",
-          "slug": "katar"
-        },
-        "awayTeam": {
-          "id": "ey32kufpuiqn4154ztyf5kr45",
-          "name": "Bahreyn",
-          "slug": "bahreyn"
-        },
-        "matchSlug": "katar-vs-bahreyn",
-        "seriesId": 26797,
-        "stageId": 86337,
-        "formatId": null,
-        "sortOrder": 29,
-        "mstUtc": 1790272800000,
-        "competitionId": "6yeu4m8ey7hcaa5wuf6oe81iw",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "5g95f79nge393upw9ymi8hbtg": {
-        "id": "5g95f79nge393upw9ymi8hbtg",
-        "rbId": null,
-        "matchName": "Caen vs Rouen",
-        "homeTeam": {
-          "id": "ab80vest6tgco121qtfyphq7c",
-          "name": "Caen",
-          "slug": "caen"
-        },
-        "awayTeam": {
-          "id": "b97a5km6rb42fv858volubsi6",
-          "name": "Rouen",
-          "slug": "rouen"
-        },
-        "matchSlug": "caen-vs-rouen",
-        "seriesId": null,
-        "stageId": 94515,
-        "formatId": null,
-        "sortOrder": 30,
-        "mstUtc": 1790275500000,
-        "competitionId": "1qd0wvt30rlswa4g6nu4na660",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "6rg2apboddyu10joitfm74c9g": {
-        "id": "6rg2apboddyu10joitfm74c9g",
-        "rbId": null,
-        "matchName": "Ben Guerdane vs Stade Tunisien",
-        "homeTeam": {
-          "id": "aoawqe5s20x5bs6ad8lsgry09",
-          "name": "Ben Guerdane",
-          "slug": "ben-guerdane"
-        },
-        "awayTeam": {
-          "id": "404ybbsambuyx0gajvre3kzj6",
-          "name": "Stade Tunisien",
-          "slug": "stade-tunisien"
-        },
-        "matchSlug": "ben-guerdane-vs-stade-tunisien",
-        "seriesId": null,
-        "stageId": 95401,
-        "formatId": null,
-        "sortOrder": 42,
-        "mstUtc": 1790208000000,
-        "competitionId": "f4jc2cc5nq7flaoptpi5ua4k4",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "6q8q5vr4a4m6ncgjjua1sy9sk": {
-        "id": "6q8q5vr4a4m6ncgjjua1sy9sk",
-        "rbId": null,
-        "matchName": "Marsa vs Hammam-Lif",
-        "homeTeam": {
-          "id": "cbkl7ahrcwzkn5a23dbs99msw",
-          "name": "Marsa",
-          "slug": "marsa"
-        },
-        "awayTeam": {
-          "id": "4p804lc5owch1e04wgliwar6r",
-          "name": "Hammam-Lif",
-          "slug": "hammam-lif"
-        },
-        "matchSlug": "marsa-vs-hammam-lif",
-        "seriesId": null,
-        "stageId": 95401,
-        "formatId": null,
-        "sortOrder": 46,
-        "mstUtc": 1790208000000,
-        "competitionId": "f4jc2cc5nq7flaoptpi5ua4k4",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "6qjha2tsmpjth69h1yeql96hg": {
-        "id": "6qjha2tsmpjth69h1yeql96hg",
-        "rbId": null,
-        "matchName": "Progres SE vs Club Africain",
-        "homeTeam": {
-          "id": "9h6b0x2q2pon2kcm65pjz73ry",
-          "name": "Progres SE",
-          "slug": "progres-se"
-        },
-        "awayTeam": {
-          "id": "9s0ojv8sdlnx3g7ugpyddejlz",
-          "name": "Club Africain",
-          "slug": "club-africain"
-        },
-        "matchSlug": "progres-se-vs-club-africain",
-        "seriesId": null,
-        "stageId": 95401,
-        "formatId": null,
-        "sortOrder": 49,
-        "mstUtc": 1790208000000,
-        "competitionId": "f4jc2cc5nq7flaoptpi5ua4k4",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "ee042zftoxhocfwyydm10by8k": {
-        "id": "ee042zftoxhocfwyydm10by8k",
-        "rbId": null,
-        "matchName": "Dep. Calera vs U. Catolica",
-        "homeTeam": {
-          "id": "hfu6x1260h62zj7xl6cn95hx",
-          "name": "Dep. Calera",
-          "slug": "dep-calera"
-        },
-        "awayTeam": {
-          "id": "7gkwmrw0cjz0m168ouw00z4gy",
-          "name": "U. Catolica",
-          "slug": "u-catolica"
-        },
-        "matchSlug": "dep-calera-vs-u-catolica",
-        "seriesId": null,
-        "stageId": 92459,
-        "formatId": null,
-        "sortOrder": 52,
-        "mstUtc": 1790206200000,
-        "competitionId": "eu2g5j36zzxiazpd729osx0wm",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "eeb5xk9y4s2rhj27334t7rswk": {
-        "id": "eeb5xk9y4s2rhj27334t7rswk",
-        "rbId": null,
-        "matchName": "Dep. Iquique vs CD Antofagasta",
-        "homeTeam": {
-          "id": "4wb893al733feakm9teqqqnlg",
-          "name": "Dep. Iquique",
-          "slug": "dep-iquique"
-        },
-        "awayTeam": {
-          "id": "1f72vqlndphmzn45x0nhdqk3e",
-          "name": "CD Antofagasta",
-          "slug": "cd-antofagasta"
-        },
-        "matchSlug": "dep-iquique-vs-cd-antofagasta",
-        "seriesId": null,
-        "stageId": 92459,
-        "formatId": null,
-        "sortOrder": 53,
-        "mstUtc": 1790206200000,
-        "competitionId": "eu2g5j36zzxiazpd729osx0wm",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "6n0sxxbdotzr33r6kzhhs0nbo": {
-        "id": "6n0sxxbdotzr33r6kzhhs0nbo",
-        "rbId": null,
-        "matchName": "America Cali vs R. Aguilas",
-        "homeTeam": {
-          "id": "8ohqbddhjvcj22wgxxvcladcx",
-          "name": "America Cali",
-          "slug": "america-cali"
-        },
-        "awayTeam": {
-          "id": "64zckvniro8jjvyzul0dfjj0j",
-          "name": "R. Aguilas",
-          "slug": "r-aguilas"
-        },
-        "matchSlug": "america-cali-vs-r-aguilas",
-        "seriesId": null,
-        "stageId": 92307,
-        "formatId": null,
-        "sortOrder": 54,
-        "mstUtc": 1790209800000,
-        "competitionId": "2ty8ihceabty8yddmu31iuuej",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "a9pklc3s2vrfsxbbaf2qcm1p0": {
-        "id": "a9pklc3s2vrfsxbbaf2qcm1p0",
-        "rbId": null,
-        "matchName": "Cerro vs D. Maldonado",
-        "homeTeam": {
-          "id": "36wt93b4b5zsw9qyk6blcj0lx",
-          "name": "Cerro",
-          "slug": "cerro"
-        },
-        "awayTeam": {
-          "id": "dx57pww9amdsyxuwg679gwdhl",
-          "name": "D. Maldonado",
-          "slug": "d-maldonado"
-        },
-        "matchSlug": "cerro-vs-d-maldonado",
-        "seriesId": 30076,
-        "stageId": 97164,
-        "formatId": null,
-        "sortOrder": 57,
-        "mstUtc": 1790204400000,
-        "competitionId": "9r3u0jtuznun4k2ydy39m1sve",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "a9xtj8anuqif2rnm7yqg8ll3o": {
-        "id": "a9xtj8anuqif2rnm7yqg8ll3o",
-        "rbId": null,
-        "matchName": "Montevideo vs CS Cerrito",
-        "homeTeam": {
-          "id": "ehyuxeire7ruxvc4nszvyiktx",
-          "name": "Montevideo",
-          "slug": "montevideo"
-        },
-        "awayTeam": {
-          "id": "bwa0me6b82pljhc5f3tu11p40",
-          "name": "CS Cerrito",
-          "slug": "cs-cerrito"
-        },
-        "matchSlug": "montevideo-vs-cs-cerrito",
-        "seriesId": 30076,
-        "stageId": 97164,
-        "formatId": null,
-        "sortOrder": 58,
-        "mstUtc": 1790204400000,
-        "competitionId": "9r3u0jtuznun4k2ydy39m1sve",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "4d85rey5npnqrggcuevf8htzo": {
-        "id": "4d85rey5npnqrggcuevf8htzo",
-        "rbId": null,
-        "matchName": "Al Nasr Cairo vs Seka El Hadid",
-        "homeTeam": {
-          "id": "dwwqc9c5q2lx7dabnmpe8rjpe",
-          "name": "Al Nasr Cairo",
-          "slug": "al-nasr-cairo"
-        },
-        "awayTeam": {
-          "id": "4qw489yi55ymmliy1c8oweupr",
-          "name": "Seka El Hadid",
-          "slug": "seka-el-hadid"
-        },
-        "matchSlug": "al-nasr-cairo-vs-seka-el-hadid",
-        "seriesId": null,
-        "stageId": 94201,
-        "formatId": null,
-        "sortOrder": 61,
-        "mstUtc": 1790256600000,
-        "competitionId": "dy8zaksw5e9nwrs1p5ss4o1nu",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "4dvujqnw8rjqaogl0d8sxsk5w": {
-        "id": "4dvujqnw8rjqaogl0d8sxsk5w",
-        "rbId": null,
-        "matchName": "Kafr El Zayat vs Mansura",
-        "homeTeam": {
-          "id": "shmvr25wf90xx2ifv0l8yiff",
-          "name": "Kafr El Zayat",
-          "slug": "kafr-el-zayat"
-        },
-        "awayTeam": {
-          "id": "66hv9391vhvnwiyap3idvkvpp",
-          "name": "Mansura",
-          "slug": "mansura"
-        },
-        "matchSlug": "kafr-el-zayat-vs-mansura",
-        "seriesId": null,
-        "stageId": 94201,
-        "formatId": null,
-        "sortOrder": 62,
-        "mstUtc": 1790256600000,
-        "competitionId": "dy8zaksw5e9nwrs1p5ss4o1nu",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "4ejm9m9utqo12fr3sbqoku4gk": {
-        "id": "4ejm9m9utqo12fr3sbqoku4gk",
-        "rbId": null,
-        "matchName": "Kahraba Ism. vs Pharco",
-        "homeTeam": {
-          "id": "5zlswi3fqki2d9z6tbp9xjmzm",
-          "name": "Kahraba Ism.",
-          "slug": "kahraba-ism"
-        },
-        "awayTeam": {
-          "id": "ac28s7fw8w1z6ewv4z67z4b8p",
-          "name": "Pharco",
-          "slug": "pharco"
-        },
-        "matchSlug": "kahraba-ism-vs-pharco",
-        "seriesId": null,
-        "stageId": 94201,
-        "formatId": null,
-        "sortOrder": 63,
-        "mstUtc": 1790256600000,
-        "competitionId": "dy8zaksw5e9nwrs1p5ss4o1nu",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "4e7pkhkcixb6342wq5881d0r8": {
-        "id": "4e7pkhkcixb6342wq5881d0r8",
-        "rbId": null,
-        "matchName": "Masar vs Proxy",
-        "homeTeam": {
-          "id": "12ditpnjkwfws8vzgnswxuxhw",
-          "name": "Masar",
-          "slug": "masar"
-        },
-        "awayTeam": {
-          "id": "5oyahfyv9now49i13ahzh5r84",
-          "name": "Proxy",
-          "slug": "proxy"
-        },
-        "matchSlug": "masar-vs-proxy",
-        "seriesId": null,
-        "stageId": 94201,
-        "formatId": null,
-        "sortOrder": 64,
-        "mstUtc": 1790256600000,
-        "competitionId": "dy8zaksw5e9nwrs1p5ss4o1nu",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "4djzaaqzaj5ghqanifv046f4k": {
-        "id": "4djzaaqzaj5ghqanifv046f4k",
-        "rbId": null,
-        "matchName": "Team vs El Dakhleya",
-        "homeTeam": {
-          "id": "79rawo241qh3jq39axfncr47o",
-          "name": "Team",
-          "slug": "team"
-        },
-        "awayTeam": {
-          "id": "94nnizmzv80n2a1nrde55t8iw",
-          "name": "El Dakhleya",
-          "slug": "el-dakhleya"
-        },
-        "matchSlug": "team-vs-el-dakhleya",
-        "seriesId": null,
-        "stageId": 94201,
-        "formatId": null,
-        "sortOrder": 65,
-        "mstUtc": 1790256600000,
-        "competitionId": "dy8zaksw5e9nwrs1p5ss4o1nu",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "dpik5oxet68l90zr5mq8j50r8": {
-        "id": "dpik5oxet68l90zr5mq8j50r8",
-        "rbId": null,
-        "matchName": "Vancouver vs Inter Toronto",
-        "homeTeam": {
-          "id": "634fcc7n5o5gzu05biddx8yl0",
-          "name": "Vancouver",
-          "slug": "vancouver"
-        },
-        "awayTeam": {
-          "id": "cqthcpums3aas2tdy0qhlkuwa",
-          "name": "Inter Toronto",
-          "slug": "inter-toronto"
-        },
-        "matchSlug": "vancouver-vs-inter-toronto",
-        "seriesId": null,
-        "stageId": 91799,
-        "formatId": null,
-        "sortOrder": 66,
-        "mstUtc": 1790215200000,
-        "competitionId": "6lkj3o21cr4g7bql6tb3fk222",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "4k78ymk295aukzc7kiylcjvh0": {
-        "id": "4k78ymk295aukzc7kiylcjvh0",
-        "rbId": null,
-        "matchName": "Fernando Mora vs Libertad",
-        "homeTeam": {
-          "id": "efr1t05qe0waca9nnctacl3no",
-          "name": "Fernando Mora",
-          "slug": "fernando-mora"
-        },
-        "awayTeam": {
-          "id": "984ibdjplnlwb36kt6wbgwe97",
-          "name": "Libertad",
-          "slug": "libertad"
-        },
-        "matchSlug": "fernando-mora-vs-libertad",
-        "seriesId": null,
-        "stageId": 91900,
-        "formatId": null,
-        "sortOrder": 67,
-        "mstUtc": 1790199000000,
-        "competitionId": "86wrztni4x8tnvq9cr1cetvfu",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "4kgs4dptyc05ub3x30il0h4pg": {
-        "id": "4kgs4dptyc05ub3x30il0h4pg",
-        "rbId": null,
-        "matchName": "Tembetary vs Sportivo Iteno",
-        "homeTeam": {
-          "id": "8v5tea76k9utwjqpq4u2uetey",
-          "name": "Tembetary",
-          "slug": "tembetary"
-        },
-        "awayTeam": {
-          "id": "bs1q9edakednqapxdx1e6gn1p",
-          "name": "Sportivo Iteno",
-          "slug": "sportivo-iteno"
-        },
-        "matchSlug": "tembetary-vs-sportivo-iteno",
-        "seriesId": null,
-        "stageId": 91900,
-        "formatId": null,
-        "sortOrder": 68,
-        "mstUtc": 1790276400000,
-        "competitionId": "86wrztni4x8tnvq9cr1cetvfu",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "5g2kfewt2ejgn7k05otk6r7ro": {
-        "id": "5g2kfewt2ejgn7k05otk6r7ro",
-        "rbId": null,
-        "matchName": "Xelaju vs Antigua",
-        "homeTeam": {
-          "id": "7mtw94t97bm3k3ubk2rxg8ys4",
-          "name": "Xelaju",
-          "slug": "xelaju"
-        },
-        "awayTeam": {
-          "id": "vb4zqon7l05foj8xxnpygn5m",
-          "name": "Antigua",
-          "slug": "antigua"
-        },
-        "matchSlug": "xelaju-vs-antigua",
-        "seriesId": null,
-        "stageId": 95408,
-        "formatId": null,
-        "sortOrder": 71,
-        "mstUtc": 1790215200000,
-        "competitionId": "ae1wva3zrzcp2zd15gpvsntg6",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "88ir8hgqifp39q8azxvp39dzo": {
-        "id": "88ir8hgqifp39q8azxvp39dzo",
-        "rbId": null,
-        "matchName": "Alianza vs Fuerte",
-        "homeTeam": {
-          "id": "afuoxixzmtsj98rh1q644jnvt",
-          "name": "Alianza",
-          "slug": "alianza"
-        },
-        "awayTeam": {
-          "id": "9xexl82aun7asrdt8k28bgavo",
-          "name": "Fuerte",
-          "slug": "fuerte"
-        },
-        "matchSlug": "alianza-vs-fuerte",
-        "seriesId": null,
-        "stageId": 95072,
-        "formatId": null,
-        "sortOrder": 72,
-        "mstUtc": 1790211600000,
-        "competitionId": "ein4fkggto3pdh5msp8huafiq",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "87vjejle423kd9pvdunmfbo5w": {
-        "id": "87vjejle423kd9pvdunmfbo5w",
-        "rbId": null,
-        "matchName": "Angel Firpo vs Cacahuatique",
-        "homeTeam": {
-          "id": "8qy96vlaqa19429wex7bpl3mp",
-          "name": "Angel Firpo",
-          "slug": "angel-firpo"
-        },
-        "awayTeam": {
-          "id": "84fngz7fcvlg9ua1rodkincru",
-          "name": "Cacahuatique",
-          "slug": "cacahuatique"
-        },
-        "matchSlug": "angel-firpo-vs-cacahuatique",
-        "seriesId": null,
-        "stageId": 95072,
-        "formatId": null,
-        "sortOrder": 73,
-        "mstUtc": 1790211600000,
-        "competitionId": "ein4fkggto3pdh5msp8huafiq",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "eo3mm717kcem76hr1yv7u2sd0": {
-        "id": "eo3mm717kcem76hr1yv7u2sd0",
-        "rbId": null,
-        "matchName": "Hapoel Acre vs Hapoel Afula",
-        "homeTeam": {
-          "id": "79a3zlivvugxszs1owm97wboa",
-          "name": "Hapoel Acre",
-          "slug": "hapoel-acre"
-        },
-        "awayTeam": {
-          "id": "dn34douy8swbzraine3p16bu8",
-          "name": "Hapoel Afula",
-          "slug": "hapoel-afula"
-        },
-        "matchSlug": "hapoel-acre-vs-hapoel-afula",
-        "seriesId": null,
-        "stageId": 95335,
-        "formatId": null,
-        "sortOrder": 76,
-        "mstUtc": 1790265600000,
-        "competitionId": "eu6kl6j2w2qg7dg1dlpzo20fc",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "eoq305q2s8ceg5cvv3zq8fnro": {
-        "id": "eoq305q2s8ceg5cvv3zq8fnro",
-        "rbId": null,
-        "matchName": "Ironi Modi'in vs FC Ashdod",
-        "homeTeam": {
-          "id": "3ntt6l4uz9zwv03lm48motsb7",
-          "name": "Ironi Modi'in",
-          "slug": "ironi-modiin"
-        },
-        "awayTeam": {
-          "id": "3xbrfd77vj0zi8vbrnwqz54z",
-          "name": "FC Ashdod",
-          "slug": "fc-ashdod"
-        },
-        "matchSlug": "ironi-modiin-vs-fc-ashdod",
-        "seriesId": null,
-        "stageId": 95335,
-        "formatId": null,
-        "sortOrder": 77,
-        "mstUtc": 1790265600000,
-        "competitionId": "eu6kl6j2w2qg7dg1dlpzo20fc",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "ep1hoqhmy9y0sic2j4k935fro": {
-        "id": "ep1hoqhmy9y0sic2j4k935fro",
-        "rbId": null,
-        "matchName": "M Herzliya vs Kiryat Yam SC",
-        "homeTeam": {
-          "id": "2nzmnww5o90o3hidxkdfjqde6",
-          "name": "M Herzliya",
-          "slug": "m-herzliya"
-        },
-        "awayTeam": {
-          "id": "ed2yxec5l7az5uiszietom39w",
-          "name": "Kiryat Yam SC",
-          "slug": "kiryat-yam-sc"
-        },
-        "matchSlug": "m-herzliya-vs-kiryat-yam-sc",
-        "seriesId": null,
-        "stageId": 95335,
-        "formatId": null,
-        "sortOrder": 78,
-        "mstUtc": 1790265600000,
-        "competitionId": "eu6kl6j2w2qg7dg1dlpzo20fc",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "eoevw2eh463woxrkzt4jma7f8": {
-        "id": "eoevw2eh463woxrkzt4jma7f8",
-        "rbId": null,
-        "matchName": "Rishon LeZion vs M Ahi Nazareth",
-        "homeTeam": {
-          "id": "703fp1eltkpeist01395eac9h",
-          "name": "Rishon LeZion",
-          "slug": "rishon-lezion"
-        },
-        "awayTeam": {
-          "id": "4dyai4349v1dpcgclzetnu8l2",
-          "name": "M Ahi Nazareth",
-          "slug": "m-ahi-nazareth"
-        },
-        "matchSlug": "rishon-lezion-vs-m-ahi-nazareth",
-        "seriesId": null,
-        "stageId": 95335,
-        "formatId": null,
-        "sortOrder": 79,
-        "mstUtc": 1790265600000,
-        "competitionId": "eu6kl6j2w2qg7dg1dlpzo20fc",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "dg76df01hs17g98pd54m38u8k": {
-        "id": "dg76df01hs17g98pd54m38u8k",
-        "rbId": null,
-        "matchName": "Cayman Adaları vs Dominika",
-        "homeTeam": {
-          "id": "ckypeadymrd2akaqkumu3w6ol",
-          "name": "Cayman Adaları",
-          "slug": "cayman-adalar%C4%B1"
-        },
-        "awayTeam": {
-          "id": "1vfo4jep2v606lou5a90mwwow",
-          "name": "Dominika",
-          "slug": "dominika"
-        },
-        "matchSlug": "cayman-adalar%C4%B1-vs-dominika",
-        "seriesId": 27143,
-        "stageId": 86823,
-        "formatId": null,
-        "sortOrder": 93,
-        "mstUtc": 1790295000000,
-        "competitionId": "cu0rmpyff5692eo06ltddjo8a",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856321000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "1ugmakye78pbd4pv9ffujkydw": {
-        "id": "1ugmakye78pbd4pv9ffujkydw",
-        "rbId": null,
-        "matchName": "Haiti vs Trinidad ve Tobago",
-        "homeTeam": {
-          "id": "151psmk1h1c846f2lqmflkx75",
-          "name": "Haiti",
-          "slug": "haiti"
-        },
-        "awayTeam": {
-          "id": "8vxfv3p9ff60t5v4mm1t5si4s",
-          "name": "Trinidad ve Tobago",
-          "slug": "trinidad-ve-tobago"
-        },
-        "matchSlug": "haiti-vs-trinidad-ve-tobago",
-        "seriesId": 27141,
-        "stageId": 86822,
-        "formatId": null,
-        "sortOrder": 94,
-        "mstUtc": 1790295600000,
-        "competitionId": "cu0rmpyff5692eo06ltddjo8a",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856321000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "6km3cekqts2mtzgbarv0uwm50": {
-        "id": "6km3cekqts2mtzgbarv0uwm50",
-        "rbId": null,
-        "matchName": "Atl. Nacional vs Millonarios",
-        "homeTeam": {
-          "id": "6j9bbun984g4ajwa5l7caidll",
-          "name": "Atl. Nacional",
-          "slug": "atl-nacional"
-        },
-        "awayTeam": {
-          "id": "eqbww924pupg9vspauc0h7bt6",
-          "name": "Millonarios",
-          "slug": "millonarios"
-        },
-        "matchSlug": "atl-nacional-vs-millonarios",
-        "seriesId": null,
-        "stageId": 92307,
-        "formatId": null,
-        "sortOrder": 98,
-        "mstUtc": 1790296200000,
-        "competitionId": "2ty8ihceabty8yddmu31iuuej",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856321000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "egx25r1syif3906miko79mnmc": {
-        "id": "egx25r1syif3906miko79mnmc",
-        "rbId": null,
-        "matchName": "A. Oaxaca vs La Paz",
-        "homeTeam": {
-          "id": "dhj7zr190cki1s2mmdkfcyh48",
-          "name": "A. Oaxaca",
-          "slug": "a-oaxaca"
-        },
-        "awayTeam": {
-          "id": "918861af6647wler80fhkvf2s",
-          "name": "La Paz",
-          "slug": "la-paz"
-        },
-        "matchSlug": "a-oaxaca-vs-la-paz",
-        "seriesId": null,
-        "stageId": 95801,
-        "formatId": null,
-        "sortOrder": 99,
-        "mstUtc": 1790298000000,
-        "competitionId": "e1kxdivp5g4cpldgpwvnzl1vv",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856321000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "egjwjwarkqy43pohybg6666tw": {
-        "id": "egjwjwarkqy43pohybg6666tw",
-        "rbId": null,
-        "matchName": "M.D. Zacatecas vs Piratas",
-        "homeTeam": {
-          "id": "5ivtc1gd8ic11uojuvypoozu2",
-          "name": "M.D. Zacatecas",
-          "slug": "md-zacatecas"
-        },
-        "awayTeam": {
-          "id": "adfeijzx5c9bplrvfjmvrksus",
-          "name": "Piratas",
-          "slug": "piratas"
-        },
-        "matchSlug": "md-zacatecas-vs-piratas",
-        "seriesId": null,
-        "stageId": 95801,
-        "formatId": null,
-        "sortOrder": 100,
-        "mstUtc": 1790298000000,
-        "competitionId": "e1kxdivp5g4cpldgpwvnzl1vv",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856321000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "4kqh5ihdvkwpdiav9xb9eef4k": {
-        "id": "4kqh5ihdvkwpdiav9xb9eef4k",
-        "rbId": null,
-        "matchName": "Dep. Recoleta vs Guairena",
-        "homeTeam": {
-          "id": "24h1lehk43heu9nkp3p7co76y",
-          "name": "Dep. Recoleta",
-          "slug": "dep-recoleta"
-        },
-        "awayTeam": {
-          "id": "565kbfxjhrxrn30ihh3x9iwa1",
-          "name": "Guairena",
-          "slug": "guairena"
-        },
-        "matchSlug": "dep-recoleta-vs-guairena",
-        "seriesId": null,
-        "stageId": 91900,
-        "formatId": null,
-        "sortOrder": 101,
-        "mstUtc": 1790285400000,
-        "competitionId": "86wrztni4x8tnvq9cr1cetvfu",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856321000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "7qptae21szgzovljy53dh1ul0": {
-        "id": "7qptae21szgzovljy53dh1ul0",
-        "rbId": null,
-        "matchName": "Çin vs Maldivler",
-        "homeTeam": {
-          "id": "bur06vhektmgozn47md9dptk3",
-          "name": "Çin",
-          "slug": "%C3%A7in"
-        },
-        "awayTeam": {
-          "id": "3odczxzq91h56pjk7k78ywxxk",
-          "name": "Maldivler",
-          "slug": "maldivler"
-        },
-        "matchSlug": "%C3%A7in-vs-maldivler",
-        "seriesId": null,
-        "stageId": 90928,
-        "formatId": null,
-        "sortOrder": 13,
-        "mstUtc": 1790249700000,
-        "competitionId": "cesdwwnxbc5fmajgroc0hqzy2",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "9l725pcz75amyxxmewfcd6zh0": {
-        "id": "9l725pcz75amyxxmewfcd6zh0",
-        "rbId": null,
-        "matchName": "JS El Biar vs CR Belouizdad",
-        "homeTeam": {
-          "id": "bfdqg91ea0s4pbomvojubiw44",
-          "name": "JS El Biar",
-          "slug": "js-el-biar"
-        },
-        "awayTeam": {
-          "id": "8vldgq3nu5tcnv2xyq01pfru7",
-          "name": "CR Belouizdad",
-          "slug": "cr-belouizdad"
-        },
-        "matchSlug": "js-el-biar-vs-cr-belouizdad",
-        "seriesId": null,
-        "stageId": 96131,
-        "formatId": null,
-        "sortOrder": 36,
-        "mstUtc": 1790208000000,
-        "competitionId": "57nu0wygurzkp6fuy5hhrtaa2",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "9kkvupu44ro6uoyw5dvyghwd0": {
-        "id": "9kkvupu44ro6uoyw5dvyghwd0",
-        "rbId": null,
-        "matchName": "US Biskra vs MC Oran",
-        "homeTeam": {
-          "id": "afw5ala5cyutcspnn4xsn161k",
-          "name": "US Biskra",
-          "slug": "us-biskra"
-        },
-        "awayTeam": {
-          "id": "ecxfwfwc6fovtejsy80bug8zy",
-          "name": "MC Oran",
-          "slug": "mc-oran"
-        },
-        "matchSlug": "us-biskra-vs-mc-oran",
-        "seriesId": null,
-        "stageId": 96131,
-        "formatId": null,
-        "sortOrder": 39,
-        "mstUtc": 1790208000000,
-        "competitionId": "57nu0wygurzkp6fuy5hhrtaa2",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "5u2od5t06jd8h6xi7lgfe05jo": {
-        "id": "5u2od5t06jd8h6xi7lgfe05jo",
-        "rbId": null,
-        "matchName": "Municipal vs Suchitepequez",
-        "homeTeam": {
-          "id": "1dqnqxuom6omgjpr2a17gvhk4",
-          "name": "Municipal",
-          "slug": "municipal"
-        },
-        "awayTeam": {
-          "id": "eyz1ydqtat7e2iaprfn4hjeh5",
-          "name": "Suchitepequez",
-          "slug": "suchitepequez"
-        },
-        "matchSlug": "municipal-vs-suchitepequez",
-        "seriesId": null,
-        "stageId": 95408,
-        "formatId": null,
-        "sortOrder": 103,
-        "mstUtc": 1790301600000,
-        "competitionId": "ae1wva3zrzcp2zd15gpvsntg6",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856321000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "5zlbxl8butv3lfr4bnapvrxn8": {
-        "id": "5zlbxl8butv3lfr4bnapvrxn8",
-        "rbId": null,
-        "matchName": "Valletta (K) vs Birkirkara (K)",
-        "homeTeam": {
-          "id": "4fcnirgc8e2mwz3grawl2505w",
-          "name": "Valletta (K)",
-          "slug": "valletta-k"
-        },
-        "awayTeam": {
-          "id": "3yp5s7d7wjp53r8kut1g2c63d",
-          "name": "Birkirkara (K)",
-          "slug": "birkirkara-k"
-        },
-        "matchSlug": "valletta-k-vs-birkirkara-k",
-        "seriesId": null,
-        "stageId": 93222,
-        "formatId": null,
-        "sortOrder": 75,
-        "mstUtc": 1790273700000,
-        "competitionId": "a6gbj8onjshd6slmilmlz1hac",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "9k9wt75sg984rjlnrn74hfx1w": {
-        "id": "9k9wt75sg984rjlnrn74hfx1w",
-        "rbId": null,
-        "matchName": "ES Setif vs JS Kabylie",
-        "homeTeam": {
-          "id": "76ymlcjho3a8thm3xmouqssif",
-          "name": "ES Setif",
-          "slug": "es-setif"
-        },
-        "awayTeam": {
-          "id": "1p0vptu3654utj37hbudw9d5j",
-          "name": "JS Kabylie",
-          "slug": "js-kabylie"
-        },
-        "matchSlug": "es-setif-vs-js-kabylie",
-        "seriesId": null,
-        "stageId": 96131,
-        "formatId": null,
-        "sortOrder": 35,
-        "mstUtc": 1790208000000,
-        "competitionId": "57nu0wygurzkp6fuy5hhrtaa2",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "1hhx8u1nqzilsig8ckj8yjrx0": {
-        "id": "1hhx8u1nqzilsig8ckj8yjrx0",
-        "rbId": null,
-        "matchName": "Mogila vs Aresimi",
-        "homeTeam": {
-          "id": "e36yh194q5l3151254fqqyngr",
-          "name": "Mogila",
-          "slug": "mogila"
-        },
-        "awayTeam": {
-          "id": "57dxnaluea6z1wafhkaova80k",
-          "name": "Aresimi",
-          "slug": "aresimi"
-        },
-        "matchSlug": "mogila-vs-aresimi",
-        "seriesId": null,
-        "stageId": 94712,
-        "formatId": null,
-        "sortOrder": 31,
-        "mstUtc": 1790256600000,
-        "competitionId": "2s73wwpqw1wj2yljv6y6mqa0h",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "52vjg1ek3p0d37mq8mmj6z1uc": {
-        "id": "52vjg1ek3p0d37mq8mmj6z1uc",
-        "rbId": null,
-        "matchName": "Güney Kore vs Ekvador",
-        "homeTeam": {
-          "id": "1yghbv1c71b37eenutbwnvvq",
-          "name": "Güney Kore",
-          "slug": "g%C3%BCney-kore"
-        },
-        "awayTeam": {
-          "id": "2j2402oabiovxw24cnjk9m369",
-          "name": "Ekvador",
-          "slug": "ekvador"
-        },
-        "matchSlug": "g%C3%BCney-kore-vs-ekvador",
-        "seriesId": null,
-        "stageId": 90928,
-        "formatId": null,
-        "sortOrder": 12,
-        "mstUtc": 1790247600000,
-        "competitionId": "cesdwwnxbc5fmajgroc0hqzy2",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "1ut0j4kj2gl34ojz5fokb3x90": {
-        "id": "1ut0j4kj2gl34ojz5fokb3x90",
-        "rbId": null,
-        "matchName": "Kamerun vs Komorlar",
-        "homeTeam": {
-          "id": "b6ojzaz5yyr6dkrj284hrhhs1",
-          "name": "Kamerun",
-          "slug": "kamerun"
-        },
-        "awayTeam": {
-          "id": "i9syypvx4y58uy9r2oxzuisd",
-          "name": "Komorlar",
-          "slug": "komorlar"
-        },
-        "matchSlug": "kamerun-vs-komorlar",
-        "seriesId": 26509,
-        "stageId": 85626,
-        "formatId": null,
-        "sortOrder": 24,
-        "mstUtc": 1790276400000,
-        "competitionId": "ax1yf4nlzqpcji4j8epdgx3zl",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "9li9z9j43gpwykz1rsq73t6ok": {
-        "id": "9li9z9j43gpwykz1rsq73t6ok",
-        "rbId": null,
-        "matchName": "Olympique Akbou vs ES Ben Aknoun",
-        "homeTeam": {
-          "id": "83r92ut8bmai79ejpgl3uu5pm",
-          "name": "Olympique Akbou",
-          "slug": "olympique-akbou"
-        },
-        "awayTeam": {
-          "id": "3zlmduyj7rvsew1s6x2myjwzv",
-          "name": "ES Ben Aknoun",
-          "slug": "es-ben-aknoun"
-        },
-        "matchSlug": "olympique-akbou-vs-es-ben-aknoun",
-        "seriesId": null,
-        "stageId": 96131,
-        "formatId": null,
-        "sortOrder": 37,
-        "mstUtc": 1790208000000,
-        "competitionId": "57nu0wygurzkp6fuy5hhrtaa2",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "6pmxelyuakitp3gr4ayeeacyc": {
-        "id": "6pmxelyuakitp3gr4ayeeacyc",
-        "rbId": null,
-        "matchName": "Etoile Sahel vs CS Sfaxien",
-        "homeTeam": {
-          "id": "8uspwtlw2da5l8x4ga4mtq8fo",
-          "name": "Etoile Sahel",
-          "slug": "etoile-sahel"
-        },
-        "awayTeam": {
-          "id": "1owjf2cxeccbbsfcus5g9nsqr",
-          "name": "CS Sfaxien",
-          "slug": "cs-sfaxien"
-        },
-        "matchSlug": "etoile-sahel-vs-cs-sfaxien",
-        "seriesId": null,
-        "stageId": 95401,
-        "formatId": null,
-        "sortOrder": 45,
-        "mstUtc": 1790208000000,
-        "competitionId": "f4jc2cc5nq7flaoptpi5ua4k4",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "6r53vg2az4h39kcoxuzx90efo": {
-        "id": "6r53vg2az4h39kcoxuzx90efo",
-        "rbId": null,
-        "matchName": "Metlaoui vs ES Zarzis",
-        "homeTeam": {
-          "id": "5gn5kjewqnr9t45abrezl7gjd",
-          "name": "Metlaoui",
-          "slug": "metlaoui"
-        },
-        "awayTeam": {
-          "id": "25ts9gzqoq19m95udz7hjz1d7",
-          "name": "ES Zarzis",
-          "slug": "es-zarzis"
-        },
-        "matchSlug": "metlaoui-vs-es-zarzis",
-        "seriesId": null,
-        "stageId": 95401,
-        "formatId": null,
-        "sortOrder": 47,
-        "mstUtc": 1790208000000,
-        "competitionId": "f4jc2cc5nq7flaoptpi5ua4k4",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "ct2rnr8fsw9s8tocjhza38hlg": {
-        "id": "ct2rnr8fsw9s8tocjhza38hlg",
-        "rbId": null,
-        "matchName": "Atlético vs CD Cuenca Jrs",
-        "homeTeam": {
-          "id": "6n29w56sct2wek5t2xxgqm9zo",
-          "name": "Atlético",
-          "slug": "atl%C3%A9tico"
-        },
-        "awayTeam": {
-          "id": "514uccbxudsmi6ipf0sgjxgr8",
-          "name": "CD Cuenca Jrs",
-          "slug": "cd-cuenca-jrs"
-        },
-        "matchSlug": "atl%C3%A9tico-vs-cd-cuenca-jrs",
-        "seriesId": null,
-        "stageId": 91637,
-        "formatId": null,
-        "sortOrder": 69,
-        "mstUtc": 1790276400000,
-        "competitionId": "bq89wbdvedtov6auzuh6rsv7s",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "ctei5tcyp7nx4y0j4iy2v1xck": {
-        "id": "ctei5tcyp7nx4y0j4iy2v1xck",
-        "rbId": null,
-        "matchName": "Indep. Juniors vs Vinotinto",
-        "homeTeam": {
-          "id": "5670ob6hq7xu5fme0j1jrx5re",
-          "name": "Indep. Juniors",
-          "slug": "indep-juniors"
-        },
-        "awayTeam": {
-          "id": "3a5ewydj1isw3lepwoafns74k",
-          "name": "Vinotinto",
-          "slug": "vinotinto"
-        },
-        "matchSlug": "indep-juniors-vs-vinotinto",
-        "seriesId": null,
-        "stageId": 91637,
-        "formatId": null,
-        "sortOrder": 70,
-        "mstUtc": 1790281800000,
-        "competitionId": "bq89wbdvedtov6auzuh6rsv7s",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "8wzua5q9ymexi4iw5yq2ys2l0": {
-        "id": "8wzua5q9ymexi4iw5yq2ys2l0",
-        "rbId": null,
-        "matchName": "Kongahälla vs Lindome",
-        "homeTeam": {
-          "id": "cvglnodo9vexlx5brwy1fxixq",
-          "name": "Kongahälla",
-          "slug": "kongah%C3%A4lla"
-        },
-        "awayTeam": {
-          "id": "alsum5pd0t3hz4ihe000c8yzs",
-          "name": "Lindome",
-          "slug": "lindome"
-        },
-        "matchSlug": "kongah%C3%A4lla-vs-lindome",
-        "seriesId": null,
-        "stageId": 91720,
-        "formatId": null,
-        "sortOrder": 74,
-        "mstUtc": 1790273700000,
-        "competitionId": "1owhvvge4wlx7e0e431b4vhqx",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "6r5axlsa4p23hfdc3dnhhpzpw": {
-        "id": "6r5axlsa4p23hfdc3dnhhpzpw",
-        "rbId": null,
-        "matchName": "Portoviejo vs 22 de Julio",
-        "homeTeam": {
-          "id": "49mh8p1hkxyv1bzarkeb1ppgq",
-          "name": "Portoviejo",
-          "slug": "portoviejo"
-        },
-        "awayTeam": {
-          "id": "bv7pwdad2afs5ya817cgd16vo",
-          "name": "22 de Julio",
-          "slug": "22-de-julio"
-        },
-        "matchSlug": "portoviejo-vs-22-de-julio",
-        "seriesId": null,
-        "stageId": 91639,
-        "formatId": null,
-        "sortOrder": 102,
-        "mstUtc": 1790285400000,
-        "competitionId": "bq89wbdvedtov6auzuh6rsv7s",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856321000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "5r7eeect5bsnxh2pkb6w1stn8": {
-        "id": "5r7eeect5bsnxh2pkb6w1stn8",
-        "rbId": null,
-        "matchName": "San Marcos vs Est. CNI",
-        "homeTeam": {
-          "id": "6prljbm7ag2zzuomxba0u6d5g",
-          "name": "San Marcos",
-          "slug": "san-marcos"
-        },
-        "awayTeam": {
-          "id": "8lj5w8tzct2xr1mtsb5a4q3xm",
-          "name": "Est. CNI",
-          "slug": "est-cni"
-        },
-        "matchSlug": "san-marcos-vs-est-cni",
-        "seriesId": 29050,
-        "stageId": 93089,
-        "formatId": null,
-        "sortOrder": 104,
-        "mstUtc": 1790294400000,
-        "competitionId": "dwnygzozltaf27fec17gxayvr",
-        "periodId": 14,
-        "periodStart": null,
-        "lastUpdated": 1789856321000,
-        "status": "state",
-        "state": "post",
-        "substate": "fullTime",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": "MS",
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "6wxu5np16p17ivqwsk167vk0k": {
-        "id": "6wxu5np16p17ivqwsk167vk0k",
-        "rbId": null,
-        "matchName": "Japonya vs Uruguay",
-        "homeTeam": {
-          "id": "6duaxcbrofil112qfq4v895go",
-          "name": "Japonya",
-          "slug": "japonya"
-        },
-        "awayTeam": {
-          "id": "9l06impjllgop0gte8fldb4zo",
-          "name": "Uruguay",
-          "slug": "uruguay"
-        },
-        "matchSlug": "japonya-vs-uruguay",
-        "seriesId": null,
-        "stageId": 90928,
-        "formatId": null,
-        "sortOrder": 11,
-        "mstUtc": 1790244300000,
-        "competitionId": "cesdwwnxbc5fmajgroc0hqzy2",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "b36hl3d1rj0dh1g8i9p5aojdg": {
-        "id": "b36hl3d1rj0dh1g8i9p5aojdg",
-        "rbId": null,
-        "matchName": "Romanya U19 vs Macaristan U19",
-        "homeTeam": {
-          "id": "1cgh4bnhff1bzgrjc3mmwgfoo",
-          "name": "Romanya U19",
-          "slug": "romanya-u19"
-        },
-        "awayTeam": {
-          "id": "ew6rya31x0lh96pgjq0mqgedh",
-          "name": "Macaristan U19",
-          "slug": "macaristan-u19"
-        },
-        "matchSlug": "romanya-u19-vs-macaristan-u19",
-        "seriesId": null,
-        "stageId": 92094,
-        "formatId": null,
-        "sortOrder": 60,
-        "mstUtc": 1790258400000,
-        "competitionId": "diyn3s6fyn7w6j58hq7kkzmjt",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "1u018g91k5ovadk6etk2mxxjo": {
-        "id": "1u018g91k5ovadk6etk2mxxjo",
-        "rbId": null,
-        "matchName": "Dominik Cum. vs Nikaragua",
-        "homeTeam": {
-          "id": "2uq1ocokdg5b95fmc6m7sp6md",
-          "name": "Dominik Cum.",
-          "slug": "dominik-cum"
-        },
-        "awayTeam": {
-          "id": "8tdrk99ukper6iqqutevwqech",
-          "name": "Nikaragua",
-          "slug": "nikaragua"
-        },
-        "matchSlug": "dominik-cum-vs-nikaragua",
-        "seriesId": 27141,
-        "stageId": 86822,
-        "formatId": null,
-        "sortOrder": 92,
-        "mstUtc": 1790294400000,
-        "competitionId": "cu0rmpyff5692eo06ltddjo8a",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856321000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "1tgc5t7tltj9l2z24cxjjyjh0": {
-        "id": "1tgc5t7tltj9l2z24cxjjyjh0",
-        "rbId": null,
-        "matchName": "Kosta Rika vs Curaçao",
-        "homeTeam": {
-          "id": "bfgqfm4qa3mal7fll74wd04mu",
-          "name": "Kosta Rika",
-          "slug": "kosta-rika"
-        },
-        "awayTeam": {
-          "id": "3csexoalt9hfesmo2p4619ga4",
-          "name": "Curaçao",
-          "slug": "cura%C3%A7ao"
-        },
-        "matchSlug": "kosta-rika-vs-cura%C3%A7ao",
-        "seriesId": 27141,
-        "stageId": 86822,
-        "formatId": null,
-        "sortOrder": 95,
-        "mstUtc": 1790301600000,
-        "competitionId": "cu0rmpyff5692eo06ltddjo8a",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856321000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
       },
       "c3fhzkemoo9yqhe0rl6gbi8es": {
         "id": "c3fhzkemoo9yqhe0rl6gbi8es",
@@ -3616,7 +1183,7 @@
         "competitionId": "cesdwwnxbc5fmajgroc0hqzy2",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -3658,7 +1225,217 @@
         "competitionId": "cesdwwnxbc5fmajgroc0hqzy2",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "8q2oq7j2stieqz284lsz275lg": {
+        "id": "8q2oq7j2stieqz284lsz275lg",
+        "rbId": null,
+        "matchName": "Filistin vs Yeni Zelanda",
+        "homeTeam": {
+          "id": "9277i8bnnubzxh74pgxwkjkjv",
+          "name": "Filistin",
+          "slug": "filistin"
+        },
+        "awayTeam": {
+          "id": "bhu61cgwm07e2pik1jqmnztgl",
+          "name": "Yeni Zelanda",
+          "slug": "yeni-zelanda"
+        },
+        "matchSlug": "filistin-vs-yeni-zelanda",
+        "seriesId": null,
+        "stageId": 90928,
+        "formatId": null,
+        "sortOrder": 10,
+        "mstUtc": 1790242200000,
+        "competitionId": "cesdwwnxbc5fmajgroc0hqzy2",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "6wxu5np16p17ivqwsk167vk0k": {
+        "id": "6wxu5np16p17ivqwsk167vk0k",
+        "rbId": null,
+        "matchName": "Japonya vs Uruguay",
+        "homeTeam": {
+          "id": "6duaxcbrofil112qfq4v895go",
+          "name": "Japonya",
+          "slug": "japonya"
+        },
+        "awayTeam": {
+          "id": "9l06impjllgop0gte8fldb4zo",
+          "name": "Uruguay",
+          "slug": "uruguay"
+        },
+        "matchSlug": "japonya-vs-uruguay",
+        "seriesId": null,
+        "stageId": 90928,
+        "formatId": null,
+        "sortOrder": 11,
+        "mstUtc": 1790244300000,
+        "competitionId": "cesdwwnxbc5fmajgroc0hqzy2",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "52vjg1ek3p0d37mq8mmj6z1uc": {
+        "id": "52vjg1ek3p0d37mq8mmj6z1uc",
+        "rbId": null,
+        "matchName": "Güney Kore vs Ekvador",
+        "homeTeam": {
+          "id": "1yghbv1c71b37eenutbwnvvq",
+          "name": "Güney Kore",
+          "slug": "g%C3%BCney-kore"
+        },
+        "awayTeam": {
+          "id": "2j2402oabiovxw24cnjk9m369",
+          "name": "Ekvador",
+          "slug": "ekvador"
+        },
+        "matchSlug": "g%C3%BCney-kore-vs-ekvador",
+        "seriesId": null,
+        "stageId": 90928,
+        "formatId": null,
+        "sortOrder": 12,
+        "mstUtc": 1790247600000,
+        "competitionId": "cesdwwnxbc5fmajgroc0hqzy2",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "7qptae21szgzovljy53dh1ul0": {
+        "id": "7qptae21szgzovljy53dh1ul0",
+        "rbId": null,
+        "matchName": "Çin vs Maldivler",
+        "homeTeam": {
+          "id": "bur06vhektmgozn47md9dptk3",
+          "name": "Çin",
+          "slug": "%C3%A7in"
+        },
+        "awayTeam": {
+          "id": "3odczxzq91h56pjk7k78ywxxk",
+          "name": "Maldivler",
+          "slug": "maldivler"
+        },
+        "matchSlug": "%C3%A7in-vs-maldivler",
+        "seriesId": null,
+        "stageId": 90928,
+        "formatId": null,
+        "sortOrder": 13,
+        "mstUtc": 1790249700000,
+        "competitionId": "cesdwwnxbc5fmajgroc0hqzy2",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "cwpgocxccb4375huahldswt0": {
+        "id": "cwpgocxccb4375huahldswt0",
+        "rbId": null,
+        "matchName": "Özbekistan vs İran",
+        "homeTeam": {
+          "id": "elayenut7wtobtmg7hyujzdoe",
+          "name": "Özbekistan",
+          "slug": "%C3%B6zbekistan"
+        },
+        "awayTeam": {
+          "id": "cubclbw5k5gdqdau95bnav0nn",
+          "name": "İran",
+          "slug": "iran"
+        },
+        "matchSlug": "%C3%B6zbekistan-vs-iran",
+        "seriesId": null,
+        "stageId": 90928,
+        "formatId": null,
+        "sortOrder": 14,
+        "mstUtc": 1790258400000,
+        "competitionId": "cesdwwnxbc5fmajgroc0hqzy2",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -3700,7 +1477,7 @@
         "competitionId": "cu0rmpyff5692eo06ltddjo8a",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -3742,7 +1519,91 @@
         "competitionId": "cu0rmpyff5692eo06ltddjo8a",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "2ak2e5blmq6yrwaipvnm6c8wk": {
+        "id": "2ak2e5blmq6yrwaipvnm6c8wk",
+        "rbId": null,
+        "matchName": "San Marino U21 vs Kosova U21",
+        "homeTeam": {
+          "id": "8iduc4wd7psgf9kx00sxf0bay",
+          "name": "San Marino U21",
+          "slug": "san-marino-u21"
+        },
+        "awayTeam": {
+          "id": "32y4upktq0recqqjgdbz3vh8i",
+          "name": "Kosova U21",
+          "slug": "kosova-u21"
+        },
+        "matchSlug": "san-marino-u21-vs-kosova-u21",
+        "seriesId": 26530,
+        "stageId": 85658,
+        "formatId": null,
+        "sortOrder": 17,
+        "mstUtc": 1790274600000,
+        "competitionId": "ili150pwfuf39f7yfdch9lhw",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "b1pn14pajms46wwui7likx5hw": {
+        "id": "b1pn14pajms46wwui7likx5hw",
+        "rbId": null,
+        "matchName": "Belçika U21 vs Belarus U21",
+        "homeTeam": {
+          "id": "69llbugj8m5aoly8p5zcrf4iu",
+          "name": "Belçika U21",
+          "slug": "bel%C3%A7ika-u21"
+        },
+        "awayTeam": {
+          "id": "bcmdsjf6g7m7f8gei63dqiep3",
+          "name": "Belarus U21",
+          "slug": "belarus-u21"
+        },
+        "matchSlug": "bel%C3%A7ika-u21-vs-belarus-u21",
+        "seriesId": 26538,
+        "stageId": 85658,
+        "formatId": null,
+        "sortOrder": 18,
+        "mstUtc": 1790272800000,
+        "competitionId": "ili150pwfuf39f7yfdch9lhw",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -3784,7 +1645,7 @@
         "competitionId": "ax1yf4nlzqpcji4j8epdgx3zl",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -3826,7 +1687,7 @@
         "competitionId": "ax1yf4nlzqpcji4j8epdgx3zl",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -3868,7 +1729,7 @@
         "competitionId": "ax1yf4nlzqpcji4j8epdgx3zl",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -3910,7 +1771,7 @@
         "competitionId": "ax1yf4nlzqpcji4j8epdgx3zl",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -3952,7 +1813,49 @@
         "competitionId": "ax1yf4nlzqpcji4j8epdgx3zl",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "1ut0j4kj2gl34ojz5fokb3x90": {
+        "id": "1ut0j4kj2gl34ojz5fokb3x90",
+        "rbId": null,
+        "matchName": "Kamerun vs Komorlar",
+        "homeTeam": {
+          "id": "b6ojzaz5yyr6dkrj284hrhhs1",
+          "name": "Kamerun",
+          "slug": "kamerun"
+        },
+        "awayTeam": {
+          "id": "i9syypvx4y58uy9r2oxzuisd",
+          "name": "Komorlar",
+          "slug": "komorlar"
+        },
+        "matchSlug": "kamerun-vs-komorlar",
+        "seriesId": 26509,
+        "stageId": 85626,
+        "formatId": null,
+        "sortOrder": 24,
+        "mstUtc": 1790276400000,
+        "competitionId": "ax1yf4nlzqpcji4j8epdgx3zl",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -3994,7 +1897,7 @@
         "competitionId": "ax1yf4nlzqpcji4j8epdgx3zl",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -4036,7 +1939,217 @@
         "competitionId": "ax1yf4nlzqpcji4j8epdgx3zl",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "6w6jacu1q38mpnialfxehtx5g": {
+        "id": "6w6jacu1q38mpnialfxehtx5g",
+        "rbId": null,
+        "matchName": "S. Sounders vs Real Salt Lake",
+        "homeTeam": {
+          "id": "3st9rj62b3qnni6uolw0lwaqn",
+          "name": "S. Sounders",
+          "slug": "s-sounders"
+        },
+        "awayTeam": {
+          "id": "29zyafx618w7tvp34n53pzwwb",
+          "name": "Real Salt Lake",
+          "slug": "real-salt-lake"
+        },
+        "matchSlug": "s-sounders-vs-real-salt-lake",
+        "seriesId": null,
+        "stageId": 91907,
+        "formatId": null,
+        "sortOrder": 27,
+        "mstUtc": 1790213400000,
+        "competitionId": "287tckirbfj9nb8ar2k9r60vn",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "68yk5fvtbjprpjgl6psec7dw4": {
+        "id": "68yk5fvtbjprpjgl6psec7dw4",
+        "rbId": null,
+        "matchName": "BAE vs Yemen",
+        "homeTeam": {
+          "id": "b9mwx4b6glg4kgbqgm3uysf3l",
+          "name": "BAE",
+          "slug": "bae"
+        },
+        "awayTeam": {
+          "id": "3opf7l4lm4gvubwg44zvv0ffy",
+          "name": "Yemen",
+          "slug": "yemen"
+        },
+        "matchSlug": "bae-vs-yemen",
+        "seriesId": 26797,
+        "stageId": 86337,
+        "formatId": null,
+        "sortOrder": 28,
+        "mstUtc": 1790265300000,
+        "competitionId": "6yeu4m8ey7hcaa5wuf6oe81iw",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "69ideulvgrk8u0w0ngnm37itw": {
+        "id": "69ideulvgrk8u0w0ngnm37itw",
+        "rbId": null,
+        "matchName": "Katar vs Bahreyn",
+        "homeTeam": {
+          "id": "ea68amhsn28ijs7bzjuzeqrz6",
+          "name": "Katar",
+          "slug": "katar"
+        },
+        "awayTeam": {
+          "id": "ey32kufpuiqn4154ztyf5kr45",
+          "name": "Bahreyn",
+          "slug": "bahreyn"
+        },
+        "matchSlug": "katar-vs-bahreyn",
+        "seriesId": 26797,
+        "stageId": 86337,
+        "formatId": null,
+        "sortOrder": 29,
+        "mstUtc": 1790272800000,
+        "competitionId": "6yeu4m8ey7hcaa5wuf6oe81iw",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "5g95f79nge393upw9ymi8hbtg": {
+        "id": "5g95f79nge393upw9ymi8hbtg",
+        "rbId": null,
+        "matchName": "Caen vs Rouen",
+        "homeTeam": {
+          "id": "ab80vest6tgco121qtfyphq7c",
+          "name": "Caen",
+          "slug": "caen"
+        },
+        "awayTeam": {
+          "id": "b97a5km6rb42fv858volubsi6",
+          "name": "Rouen",
+          "slug": "rouen"
+        },
+        "matchSlug": "caen-vs-rouen",
+        "seriesId": null,
+        "stageId": 94515,
+        "formatId": null,
+        "sortOrder": 30,
+        "mstUtc": 1790275500000,
+        "competitionId": "1qd0wvt30rlswa4g6nu4na660",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "1hhx8u1nqzilsig8ckj8yjrx0": {
+        "id": "1hhx8u1nqzilsig8ckj8yjrx0",
+        "rbId": null,
+        "matchName": "Mogila vs Aresimi",
+        "homeTeam": {
+          "id": "e36yh194q5l3151254fqqyngr",
+          "name": "Mogila",
+          "slug": "mogila"
+        },
+        "awayTeam": {
+          "id": "57dxnaluea6z1wafhkaova80k",
+          "name": "Aresimi",
+          "slug": "aresimi"
+        },
+        "matchSlug": "mogila-vs-aresimi",
+        "seriesId": null,
+        "stageId": 94712,
+        "formatId": null,
+        "sortOrder": 31,
+        "mstUtc": 1790256600000,
+        "competitionId": "2s73wwpqw1wj2yljv6y6mqa0h",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -4078,7 +2191,7 @@
         "competitionId": "1eruend45vd20g9hbrpiggs5u",
         "periodId": null,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "state",
         "state": "pre",
         "substate": "postponed",
@@ -4120,7 +2233,7 @@
         "competitionId": "1eruend45vd20g9hbrpiggs5u",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -4162,7 +2275,133 @@
         "competitionId": "57nu0wygurzkp6fuy5hhrtaa2",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "9k9wt75sg984rjlnrn74hfx1w": {
+        "id": "9k9wt75sg984rjlnrn74hfx1w",
+        "rbId": null,
+        "matchName": "ES Setif vs JS Kabylie",
+        "homeTeam": {
+          "id": "76ymlcjho3a8thm3xmouqssif",
+          "name": "ES Setif",
+          "slug": "es-setif"
+        },
+        "awayTeam": {
+          "id": "1p0vptu3654utj37hbudw9d5j",
+          "name": "JS Kabylie",
+          "slug": "js-kabylie"
+        },
+        "matchSlug": "es-setif-vs-js-kabylie",
+        "seriesId": null,
+        "stageId": 96131,
+        "formatId": null,
+        "sortOrder": 35,
+        "mstUtc": 1790208000000,
+        "competitionId": "57nu0wygurzkp6fuy5hhrtaa2",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "9l725pcz75amyxxmewfcd6zh0": {
+        "id": "9l725pcz75amyxxmewfcd6zh0",
+        "rbId": null,
+        "matchName": "JS El Biar vs CR Belouizdad",
+        "homeTeam": {
+          "id": "bfdqg91ea0s4pbomvojubiw44",
+          "name": "JS El Biar",
+          "slug": "js-el-biar"
+        },
+        "awayTeam": {
+          "id": "8vldgq3nu5tcnv2xyq01pfru7",
+          "name": "CR Belouizdad",
+          "slug": "cr-belouizdad"
+        },
+        "matchSlug": "js-el-biar-vs-cr-belouizdad",
+        "seriesId": null,
+        "stageId": 96131,
+        "formatId": null,
+        "sortOrder": 36,
+        "mstUtc": 1790208000000,
+        "competitionId": "57nu0wygurzkp6fuy5hhrtaa2",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "9li9z9j43gpwykz1rsq73t6ok": {
+        "id": "9li9z9j43gpwykz1rsq73t6ok",
+        "rbId": null,
+        "matchName": "Olympique Akbou vs ES Ben Aknoun",
+        "homeTeam": {
+          "id": "83r92ut8bmai79ejpgl3uu5pm",
+          "name": "Olympique Akbou",
+          "slug": "olympique-akbou"
+        },
+        "awayTeam": {
+          "id": "3zlmduyj7rvsew1s6x2myjwzv",
+          "name": "ES Ben Aknoun",
+          "slug": "es-ben-aknoun"
+        },
+        "matchSlug": "olympique-akbou-vs-es-ben-aknoun",
+        "seriesId": null,
+        "stageId": 96131,
+        "formatId": null,
+        "sortOrder": 37,
+        "mstUtc": 1790208000000,
+        "competitionId": "57nu0wygurzkp6fuy5hhrtaa2",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -4204,7 +2443,49 @@
         "competitionId": "57nu0wygurzkp6fuy5hhrtaa2",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "9kkvupu44ro6uoyw5dvyghwd0": {
+        "id": "9kkvupu44ro6uoyw5dvyghwd0",
+        "rbId": null,
+        "matchName": "US Biskra vs MC Oran",
+        "homeTeam": {
+          "id": "afw5ala5cyutcspnn4xsn161k",
+          "name": "US Biskra",
+          "slug": "us-biskra"
+        },
+        "awayTeam": {
+          "id": "ecxfwfwc6fovtejsy80bug8zy",
+          "name": "MC Oran",
+          "slug": "mc-oran"
+        },
+        "matchSlug": "us-biskra-vs-mc-oran",
+        "seriesId": null,
+        "stageId": 96131,
+        "formatId": null,
+        "sortOrder": 39,
+        "mstUtc": 1790208000000,
+        "competitionId": "57nu0wygurzkp6fuy5hhrtaa2",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -4246,7 +2527,7 @@
         "competitionId": "57nu0wygurzkp6fuy5hhrtaa2",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -4288,7 +2569,49 @@
         "competitionId": "57nu0wygurzkp6fuy5hhrtaa2",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "6rg2apboddyu10joitfm74c9g": {
+        "id": "6rg2apboddyu10joitfm74c9g",
+        "rbId": null,
+        "matchName": "Ben Guerdane vs Stade Tunisien",
+        "homeTeam": {
+          "id": "aoawqe5s20x5bs6ad8lsgry09",
+          "name": "Ben Guerdane",
+          "slug": "ben-guerdane"
+        },
+        "awayTeam": {
+          "id": "404ybbsambuyx0gajvre3kzj6",
+          "name": "Stade Tunisien",
+          "slug": "stade-tunisien"
+        },
+        "matchSlug": "ben-guerdane-vs-stade-tunisien",
+        "seriesId": null,
+        "stageId": 95401,
+        "formatId": null,
+        "sortOrder": 42,
+        "mstUtc": 1790208000000,
+        "competitionId": "f4jc2cc5nq7flaoptpi5ua4k4",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -4330,7 +2653,7 @@
         "competitionId": "f4jc2cc5nq7flaoptpi5ua4k4",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -4372,7 +2695,133 @@
         "competitionId": "f4jc2cc5nq7flaoptpi5ua4k4",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "6pmxelyuakitp3gr4ayeeacyc": {
+        "id": "6pmxelyuakitp3gr4ayeeacyc",
+        "rbId": null,
+        "matchName": "Etoile Sahel vs CS Sfaxien",
+        "homeTeam": {
+          "id": "8uspwtlw2da5l8x4ga4mtq8fo",
+          "name": "Etoile Sahel",
+          "slug": "etoile-sahel"
+        },
+        "awayTeam": {
+          "id": "1owjf2cxeccbbsfcus5g9nsqr",
+          "name": "CS Sfaxien",
+          "slug": "cs-sfaxien"
+        },
+        "matchSlug": "etoile-sahel-vs-cs-sfaxien",
+        "seriesId": null,
+        "stageId": 95401,
+        "formatId": null,
+        "sortOrder": 45,
+        "mstUtc": 1790208000000,
+        "competitionId": "f4jc2cc5nq7flaoptpi5ua4k4",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "6q8q5vr4a4m6ncgjjua1sy9sk": {
+        "id": "6q8q5vr4a4m6ncgjjua1sy9sk",
+        "rbId": null,
+        "matchName": "Marsa vs Hammam-Lif",
+        "homeTeam": {
+          "id": "cbkl7ahrcwzkn5a23dbs99msw",
+          "name": "Marsa",
+          "slug": "marsa"
+        },
+        "awayTeam": {
+          "id": "4p804lc5owch1e04wgliwar6r",
+          "name": "Hammam-Lif",
+          "slug": "hammam-lif"
+        },
+        "matchSlug": "marsa-vs-hammam-lif",
+        "seriesId": null,
+        "stageId": 95401,
+        "formatId": null,
+        "sortOrder": 46,
+        "mstUtc": 1790208000000,
+        "competitionId": "f4jc2cc5nq7flaoptpi5ua4k4",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "6r53vg2az4h39kcoxuzx90efo": {
+        "id": "6r53vg2az4h39kcoxuzx90efo",
+        "rbId": null,
+        "matchName": "Metlaoui vs ES Zarzis",
+        "homeTeam": {
+          "id": "5gn5kjewqnr9t45abrezl7gjd",
+          "name": "Metlaoui",
+          "slug": "metlaoui"
+        },
+        "awayTeam": {
+          "id": "25ts9gzqoq19m95udz7hjz1d7",
+          "name": "ES Zarzis",
+          "slug": "es-zarzis"
+        },
+        "matchSlug": "metlaoui-vs-es-zarzis",
+        "seriesId": null,
+        "stageId": 95401,
+        "formatId": null,
+        "sortOrder": 47,
+        "mstUtc": 1790208000000,
+        "competitionId": "f4jc2cc5nq7flaoptpi5ua4k4",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -4414,7 +2863,49 @@
         "competitionId": "f4jc2cc5nq7flaoptpi5ua4k4",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "6qjha2tsmpjth69h1yeql96hg": {
+        "id": "6qjha2tsmpjth69h1yeql96hg",
+        "rbId": null,
+        "matchName": "Progres SE vs Club Africain",
+        "homeTeam": {
+          "id": "9h6b0x2q2pon2kcm65pjz73ry",
+          "name": "Progres SE",
+          "slug": "progres-se"
+        },
+        "awayTeam": {
+          "id": "9s0ojv8sdlnx3g7ugpyddejlz",
+          "name": "Club Africain",
+          "slug": "club-africain"
+        },
+        "matchSlug": "progres-se-vs-club-africain",
+        "seriesId": null,
+        "stageId": 95401,
+        "formatId": null,
+        "sortOrder": 49,
+        "mstUtc": 1790208000000,
+        "competitionId": "f4jc2cc5nq7flaoptpi5ua4k4",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -4456,7 +2947,7 @@
         "competitionId": "19y52cjt9hnne14tc70uqk6p5",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -4498,7 +2989,133 @@
         "competitionId": "eu2g5j36zzxiazpd729osx0wm",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "ee042zftoxhocfwyydm10by8k": {
+        "id": "ee042zftoxhocfwyydm10by8k",
+        "rbId": null,
+        "matchName": "Dep. Calera vs U. Catolica",
+        "homeTeam": {
+          "id": "hfu6x1260h62zj7xl6cn95hx",
+          "name": "Dep. Calera",
+          "slug": "dep-calera"
+        },
+        "awayTeam": {
+          "id": "7gkwmrw0cjz0m168ouw00z4gy",
+          "name": "U. Catolica",
+          "slug": "u-catolica"
+        },
+        "matchSlug": "dep-calera-vs-u-catolica",
+        "seriesId": null,
+        "stageId": 92459,
+        "formatId": null,
+        "sortOrder": 52,
+        "mstUtc": 1790206200000,
+        "competitionId": "eu2g5j36zzxiazpd729osx0wm",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "eeb5xk9y4s2rhj27334t7rswk": {
+        "id": "eeb5xk9y4s2rhj27334t7rswk",
+        "rbId": null,
+        "matchName": "Dep. Iquique vs CD Antofagasta",
+        "homeTeam": {
+          "id": "4wb893al733feakm9teqqqnlg",
+          "name": "Dep. Iquique",
+          "slug": "dep-iquique"
+        },
+        "awayTeam": {
+          "id": "1f72vqlndphmzn45x0nhdqk3e",
+          "name": "CD Antofagasta",
+          "slug": "cd-antofagasta"
+        },
+        "matchSlug": "dep-iquique-vs-cd-antofagasta",
+        "seriesId": null,
+        "stageId": 92459,
+        "formatId": null,
+        "sortOrder": 53,
+        "mstUtc": 1790206200000,
+        "competitionId": "eu2g5j36zzxiazpd729osx0wm",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "6n0sxxbdotzr33r6kzhhs0nbo": {
+        "id": "6n0sxxbdotzr33r6kzhhs0nbo",
+        "rbId": null,
+        "matchName": "America Cali vs R. Aguilas",
+        "homeTeam": {
+          "id": "8ohqbddhjvcj22wgxxvcladcx",
+          "name": "America Cali",
+          "slug": "america-cali"
+        },
+        "awayTeam": {
+          "id": "64zckvniro8jjvyzul0dfjj0j",
+          "name": "R. Aguilas",
+          "slug": "r-aguilas"
+        },
+        "matchSlug": "america-cali-vs-r-aguilas",
+        "seriesId": null,
+        "stageId": 92307,
+        "formatId": null,
+        "sortOrder": 54,
+        "mstUtc": 1790209800000,
+        "competitionId": "2ty8ihceabty8yddmu31iuuej",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -4540,7 +3157,7 @@
         "competitionId": "9r3u0jtuznun4k2ydy39m1sve",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -4582,7 +3199,91 @@
         "competitionId": "9r3u0jtuznun4k2ydy39m1sve",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "a9pklc3s2vrfsxbbaf2qcm1p0": {
+        "id": "a9pklc3s2vrfsxbbaf2qcm1p0",
+        "rbId": null,
+        "matchName": "Cerro vs D. Maldonado",
+        "homeTeam": {
+          "id": "36wt93b4b5zsw9qyk6blcj0lx",
+          "name": "Cerro",
+          "slug": "cerro"
+        },
+        "awayTeam": {
+          "id": "dx57pww9amdsyxuwg679gwdhl",
+          "name": "D. Maldonado",
+          "slug": "d-maldonado"
+        },
+        "matchSlug": "cerro-vs-d-maldonado",
+        "seriesId": 30076,
+        "stageId": 97164,
+        "formatId": null,
+        "sortOrder": 57,
+        "mstUtc": 1790204400000,
+        "competitionId": "9r3u0jtuznun4k2ydy39m1sve",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "a9xtj8anuqif2rnm7yqg8ll3o": {
+        "id": "a9xtj8anuqif2rnm7yqg8ll3o",
+        "rbId": null,
+        "matchName": "Montevideo vs CS Cerrito",
+        "homeTeam": {
+          "id": "ehyuxeire7ruxvc4nszvyiktx",
+          "name": "Montevideo",
+          "slug": "montevideo"
+        },
+        "awayTeam": {
+          "id": "bwa0me6b82pljhc5f3tu11p40",
+          "name": "CS Cerrito",
+          "slug": "cs-cerrito"
+        },
+        "matchSlug": "montevideo-vs-cs-cerrito",
+        "seriesId": 30076,
+        "stageId": 97164,
+        "formatId": null,
+        "sortOrder": 58,
+        "mstUtc": 1790204400000,
+        "competitionId": "9r3u0jtuznun4k2ydy39m1sve",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -4624,7 +3325,847 @@
         "competitionId": "diyn3s6fyn7w6j58hq7kkzmjt",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "b36hl3d1rj0dh1g8i9p5aojdg": {
+        "id": "b36hl3d1rj0dh1g8i9p5aojdg",
+        "rbId": null,
+        "matchName": "Romanya U19 vs Macaristan U19",
+        "homeTeam": {
+          "id": "1cgh4bnhff1bzgrjc3mmwgfoo",
+          "name": "Romanya U19",
+          "slug": "romanya-u19"
+        },
+        "awayTeam": {
+          "id": "ew6rya31x0lh96pgjq0mqgedh",
+          "name": "Macaristan U19",
+          "slug": "macaristan-u19"
+        },
+        "matchSlug": "romanya-u19-vs-macaristan-u19",
+        "seriesId": null,
+        "stageId": 92094,
+        "formatId": null,
+        "sortOrder": 60,
+        "mstUtc": 1790258400000,
+        "competitionId": "diyn3s6fyn7w6j58hq7kkzmjt",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "4d85rey5npnqrggcuevf8htzo": {
+        "id": "4d85rey5npnqrggcuevf8htzo",
+        "rbId": null,
+        "matchName": "Al Nasr Cairo vs Seka El Hadid",
+        "homeTeam": {
+          "id": "dwwqc9c5q2lx7dabnmpe8rjpe",
+          "name": "Al Nasr Cairo",
+          "slug": "al-nasr-cairo"
+        },
+        "awayTeam": {
+          "id": "4qw489yi55ymmliy1c8oweupr",
+          "name": "Seka El Hadid",
+          "slug": "seka-el-hadid"
+        },
+        "matchSlug": "al-nasr-cairo-vs-seka-el-hadid",
+        "seriesId": null,
+        "stageId": 94201,
+        "formatId": null,
+        "sortOrder": 61,
+        "mstUtc": 1790256600000,
+        "competitionId": "dy8zaksw5e9nwrs1p5ss4o1nu",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "4dvujqnw8rjqaogl0d8sxsk5w": {
+        "id": "4dvujqnw8rjqaogl0d8sxsk5w",
+        "rbId": null,
+        "matchName": "Kafr El Zayat vs Mansura",
+        "homeTeam": {
+          "id": "shmvr25wf90xx2ifv0l8yiff",
+          "name": "Kafr El Zayat",
+          "slug": "kafr-el-zayat"
+        },
+        "awayTeam": {
+          "id": "66hv9391vhvnwiyap3idvkvpp",
+          "name": "Mansura",
+          "slug": "mansura"
+        },
+        "matchSlug": "kafr-el-zayat-vs-mansura",
+        "seriesId": null,
+        "stageId": 94201,
+        "formatId": null,
+        "sortOrder": 62,
+        "mstUtc": 1790256600000,
+        "competitionId": "dy8zaksw5e9nwrs1p5ss4o1nu",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "4ejm9m9utqo12fr3sbqoku4gk": {
+        "id": "4ejm9m9utqo12fr3sbqoku4gk",
+        "rbId": null,
+        "matchName": "Kahraba Ism. vs Pharco",
+        "homeTeam": {
+          "id": "5zlswi3fqki2d9z6tbp9xjmzm",
+          "name": "Kahraba Ism.",
+          "slug": "kahraba-ism"
+        },
+        "awayTeam": {
+          "id": "ac28s7fw8w1z6ewv4z67z4b8p",
+          "name": "Pharco",
+          "slug": "pharco"
+        },
+        "matchSlug": "kahraba-ism-vs-pharco",
+        "seriesId": null,
+        "stageId": 94201,
+        "formatId": null,
+        "sortOrder": 63,
+        "mstUtc": 1790256600000,
+        "competitionId": "dy8zaksw5e9nwrs1p5ss4o1nu",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "4e7pkhkcixb6342wq5881d0r8": {
+        "id": "4e7pkhkcixb6342wq5881d0r8",
+        "rbId": null,
+        "matchName": "Masar vs Proxy",
+        "homeTeam": {
+          "id": "12ditpnjkwfws8vzgnswxuxhw",
+          "name": "Masar",
+          "slug": "masar"
+        },
+        "awayTeam": {
+          "id": "5oyahfyv9now49i13ahzh5r84",
+          "name": "Proxy",
+          "slug": "proxy"
+        },
+        "matchSlug": "masar-vs-proxy",
+        "seriesId": null,
+        "stageId": 94201,
+        "formatId": null,
+        "sortOrder": 64,
+        "mstUtc": 1790256600000,
+        "competitionId": "dy8zaksw5e9nwrs1p5ss4o1nu",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "4djzaaqzaj5ghqanifv046f4k": {
+        "id": "4djzaaqzaj5ghqanifv046f4k",
+        "rbId": null,
+        "matchName": "Team vs El Dakhleya",
+        "homeTeam": {
+          "id": "79rawo241qh3jq39axfncr47o",
+          "name": "Team",
+          "slug": "team"
+        },
+        "awayTeam": {
+          "id": "94nnizmzv80n2a1nrde55t8iw",
+          "name": "El Dakhleya",
+          "slug": "el-dakhleya"
+        },
+        "matchSlug": "team-vs-el-dakhleya",
+        "seriesId": null,
+        "stageId": 94201,
+        "formatId": null,
+        "sortOrder": 65,
+        "mstUtc": 1790256600000,
+        "competitionId": "dy8zaksw5e9nwrs1p5ss4o1nu",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "dpik5oxet68l90zr5mq8j50r8": {
+        "id": "dpik5oxet68l90zr5mq8j50r8",
+        "rbId": null,
+        "matchName": "Vancouver vs Inter Toronto",
+        "homeTeam": {
+          "id": "634fcc7n5o5gzu05biddx8yl0",
+          "name": "Vancouver",
+          "slug": "vancouver"
+        },
+        "awayTeam": {
+          "id": "cqthcpums3aas2tdy0qhlkuwa",
+          "name": "Inter Toronto",
+          "slug": "inter-toronto"
+        },
+        "matchSlug": "vancouver-vs-inter-toronto",
+        "seriesId": null,
+        "stageId": 91799,
+        "formatId": null,
+        "sortOrder": 66,
+        "mstUtc": 1790215200000,
+        "competitionId": "6lkj3o21cr4g7bql6tb3fk222",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "4k78ymk295aukzc7kiylcjvh0": {
+        "id": "4k78ymk295aukzc7kiylcjvh0",
+        "rbId": null,
+        "matchName": "Fernando Mora vs Libertad",
+        "homeTeam": {
+          "id": "efr1t05qe0waca9nnctacl3no",
+          "name": "Fernando Mora",
+          "slug": "fernando-mora"
+        },
+        "awayTeam": {
+          "id": "984ibdjplnlwb36kt6wbgwe97",
+          "name": "Libertad",
+          "slug": "libertad"
+        },
+        "matchSlug": "fernando-mora-vs-libertad",
+        "seriesId": null,
+        "stageId": 91900,
+        "formatId": null,
+        "sortOrder": 67,
+        "mstUtc": 1790199000000,
+        "competitionId": "86wrztni4x8tnvq9cr1cetvfu",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "4kgs4dptyc05ub3x30il0h4pg": {
+        "id": "4kgs4dptyc05ub3x30il0h4pg",
+        "rbId": null,
+        "matchName": "Tembetary vs Sportivo Iteno",
+        "homeTeam": {
+          "id": "8v5tea76k9utwjqpq4u2uetey",
+          "name": "Tembetary",
+          "slug": "tembetary"
+        },
+        "awayTeam": {
+          "id": "bs1q9edakednqapxdx1e6gn1p",
+          "name": "Sportivo Iteno",
+          "slug": "sportivo-iteno"
+        },
+        "matchSlug": "tembetary-vs-sportivo-iteno",
+        "seriesId": null,
+        "stageId": 91900,
+        "formatId": null,
+        "sortOrder": 68,
+        "mstUtc": 1790276400000,
+        "competitionId": "86wrztni4x8tnvq9cr1cetvfu",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "ct2rnr8fsw9s8tocjhza38hlg": {
+        "id": "ct2rnr8fsw9s8tocjhza38hlg",
+        "rbId": null,
+        "matchName": "Atlético vs CD Cuenca Jrs",
+        "homeTeam": {
+          "id": "6n29w56sct2wek5t2xxgqm9zo",
+          "name": "Atlético",
+          "slug": "atl%C3%A9tico"
+        },
+        "awayTeam": {
+          "id": "514uccbxudsmi6ipf0sgjxgr8",
+          "name": "CD Cuenca Jrs",
+          "slug": "cd-cuenca-jrs"
+        },
+        "matchSlug": "atl%C3%A9tico-vs-cd-cuenca-jrs",
+        "seriesId": null,
+        "stageId": 91637,
+        "formatId": null,
+        "sortOrder": 69,
+        "mstUtc": 1790276400000,
+        "competitionId": "bq89wbdvedtov6auzuh6rsv7s",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "ctei5tcyp7nx4y0j4iy2v1xck": {
+        "id": "ctei5tcyp7nx4y0j4iy2v1xck",
+        "rbId": null,
+        "matchName": "Indep. Juniors vs Vinotinto",
+        "homeTeam": {
+          "id": "5670ob6hq7xu5fme0j1jrx5re",
+          "name": "Indep. Juniors",
+          "slug": "indep-juniors"
+        },
+        "awayTeam": {
+          "id": "3a5ewydj1isw3lepwoafns74k",
+          "name": "Vinotinto",
+          "slug": "vinotinto"
+        },
+        "matchSlug": "indep-juniors-vs-vinotinto",
+        "seriesId": null,
+        "stageId": 91637,
+        "formatId": null,
+        "sortOrder": 70,
+        "mstUtc": 1790281800000,
+        "competitionId": "bq89wbdvedtov6auzuh6rsv7s",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "5g2kfewt2ejgn7k05otk6r7ro": {
+        "id": "5g2kfewt2ejgn7k05otk6r7ro",
+        "rbId": null,
+        "matchName": "Xelaju vs Antigua",
+        "homeTeam": {
+          "id": "7mtw94t97bm3k3ubk2rxg8ys4",
+          "name": "Xelaju",
+          "slug": "xelaju"
+        },
+        "awayTeam": {
+          "id": "vb4zqon7l05foj8xxnpygn5m",
+          "name": "Antigua",
+          "slug": "antigua"
+        },
+        "matchSlug": "xelaju-vs-antigua",
+        "seriesId": null,
+        "stageId": 95408,
+        "formatId": null,
+        "sortOrder": 71,
+        "mstUtc": 1790215200000,
+        "competitionId": "ae1wva3zrzcp2zd15gpvsntg6",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "88ir8hgqifp39q8azxvp39dzo": {
+        "id": "88ir8hgqifp39q8azxvp39dzo",
+        "rbId": null,
+        "matchName": "Alianza vs Fuerte",
+        "homeTeam": {
+          "id": "afuoxixzmtsj98rh1q644jnvt",
+          "name": "Alianza",
+          "slug": "alianza"
+        },
+        "awayTeam": {
+          "id": "9xexl82aun7asrdt8k28bgavo",
+          "name": "Fuerte",
+          "slug": "fuerte"
+        },
+        "matchSlug": "alianza-vs-fuerte",
+        "seriesId": null,
+        "stageId": 95072,
+        "formatId": null,
+        "sortOrder": 72,
+        "mstUtc": 1790211600000,
+        "competitionId": "ein4fkggto3pdh5msp8huafiq",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "87vjejle423kd9pvdunmfbo5w": {
+        "id": "87vjejle423kd9pvdunmfbo5w",
+        "rbId": null,
+        "matchName": "Angel Firpo vs Cacahuatique",
+        "homeTeam": {
+          "id": "8qy96vlaqa19429wex7bpl3mp",
+          "name": "Angel Firpo",
+          "slug": "angel-firpo"
+        },
+        "awayTeam": {
+          "id": "84fngz7fcvlg9ua1rodkincru",
+          "name": "Cacahuatique",
+          "slug": "cacahuatique"
+        },
+        "matchSlug": "angel-firpo-vs-cacahuatique",
+        "seriesId": null,
+        "stageId": 95072,
+        "formatId": null,
+        "sortOrder": 73,
+        "mstUtc": 1790211600000,
+        "competitionId": "ein4fkggto3pdh5msp8huafiq",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "8wzua5q9ymexi4iw5yq2ys2l0": {
+        "id": "8wzua5q9ymexi4iw5yq2ys2l0",
+        "rbId": null,
+        "matchName": "Kongahälla vs Lindome",
+        "homeTeam": {
+          "id": "cvglnodo9vexlx5brwy1fxixq",
+          "name": "Kongahälla",
+          "slug": "kongah%C3%A4lla"
+        },
+        "awayTeam": {
+          "id": "alsum5pd0t3hz4ihe000c8yzs",
+          "name": "Lindome",
+          "slug": "lindome"
+        },
+        "matchSlug": "kongah%C3%A4lla-vs-lindome",
+        "seriesId": null,
+        "stageId": 91720,
+        "formatId": null,
+        "sortOrder": 74,
+        "mstUtc": 1790273700000,
+        "competitionId": "1owhvvge4wlx7e0e431b4vhqx",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "5zlbxl8butv3lfr4bnapvrxn8": {
+        "id": "5zlbxl8butv3lfr4bnapvrxn8",
+        "rbId": null,
+        "matchName": "Valletta (K) vs Birkirkara (K)",
+        "homeTeam": {
+          "id": "4fcnirgc8e2mwz3grawl2505w",
+          "name": "Valletta (K)",
+          "slug": "valletta-k"
+        },
+        "awayTeam": {
+          "id": "3yp5s7d7wjp53r8kut1g2c63d",
+          "name": "Birkirkara (K)",
+          "slug": "birkirkara-k"
+        },
+        "matchSlug": "valletta-k-vs-birkirkara-k",
+        "seriesId": null,
+        "stageId": 93222,
+        "formatId": null,
+        "sortOrder": 75,
+        "mstUtc": 1790273700000,
+        "competitionId": "a6gbj8onjshd6slmilmlz1hac",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "eo3mm717kcem76hr1yv7u2sd0": {
+        "id": "eo3mm717kcem76hr1yv7u2sd0",
+        "rbId": null,
+        "matchName": "Hapoel Acre vs Hapoel Afula",
+        "homeTeam": {
+          "id": "79a3zlivvugxszs1owm97wboa",
+          "name": "Hapoel Acre",
+          "slug": "hapoel-acre"
+        },
+        "awayTeam": {
+          "id": "dn34douy8swbzraine3p16bu8",
+          "name": "Hapoel Afula",
+          "slug": "hapoel-afula"
+        },
+        "matchSlug": "hapoel-acre-vs-hapoel-afula",
+        "seriesId": null,
+        "stageId": 95335,
+        "formatId": null,
+        "sortOrder": 76,
+        "mstUtc": 1790265600000,
+        "competitionId": "eu6kl6j2w2qg7dg1dlpzo20fc",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "eoq305q2s8ceg5cvv3zq8fnro": {
+        "id": "eoq305q2s8ceg5cvv3zq8fnro",
+        "rbId": null,
+        "matchName": "Ironi Modi'in vs FC Ashdod",
+        "homeTeam": {
+          "id": "3ntt6l4uz9zwv03lm48motsb7",
+          "name": "Ironi Modi'in",
+          "slug": "ironi-modiin"
+        },
+        "awayTeam": {
+          "id": "3xbrfd77vj0zi8vbrnwqz54z",
+          "name": "FC Ashdod",
+          "slug": "fc-ashdod"
+        },
+        "matchSlug": "ironi-modiin-vs-fc-ashdod",
+        "seriesId": null,
+        "stageId": 95335,
+        "formatId": null,
+        "sortOrder": 77,
+        "mstUtc": 1790265600000,
+        "competitionId": "eu6kl6j2w2qg7dg1dlpzo20fc",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "ep1hoqhmy9y0sic2j4k935fro": {
+        "id": "ep1hoqhmy9y0sic2j4k935fro",
+        "rbId": null,
+        "matchName": "M Herzliya vs Kiryat Yam SC",
+        "homeTeam": {
+          "id": "2nzmnww5o90o3hidxkdfjqde6",
+          "name": "M Herzliya",
+          "slug": "m-herzliya"
+        },
+        "awayTeam": {
+          "id": "ed2yxec5l7az5uiszietom39w",
+          "name": "Kiryat Yam SC",
+          "slug": "kiryat-yam-sc"
+        },
+        "matchSlug": "m-herzliya-vs-kiryat-yam-sc",
+        "seriesId": null,
+        "stageId": 95335,
+        "formatId": null,
+        "sortOrder": 78,
+        "mstUtc": 1790265600000,
+        "competitionId": "eu6kl6j2w2qg7dg1dlpzo20fc",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "eoevw2eh463woxrkzt4jma7f8": {
+        "id": "eoevw2eh463woxrkzt4jma7f8",
+        "rbId": null,
+        "matchName": "Rishon LeZion vs M Ahi Nazareth",
+        "homeTeam": {
+          "id": "703fp1eltkpeist01395eac9h",
+          "name": "Rishon LeZion",
+          "slug": "rishon-lezion"
+        },
+        "awayTeam": {
+          "id": "4dyai4349v1dpcgclzetnu8l2",
+          "name": "M Ahi Nazareth",
+          "slug": "m-ahi-nazareth"
+        },
+        "matchSlug": "rishon-lezion-vs-m-ahi-nazareth",
+        "seriesId": null,
+        "stageId": 95335,
+        "formatId": null,
+        "sortOrder": 79,
+        "mstUtc": 1790265600000,
+        "competitionId": "eu6kl6j2w2qg7dg1dlpzo20fc",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -4666,7 +4207,7 @@
         "competitionId": "capnw9242hzut00ei9rgfco8n",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -4708,259 +4249,7 @@
         "competitionId": "capnw9242hzut00ei9rgfco8n",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "eekgsnytyb2ive8x6pvjk874k": {
-        "id": "eekgsnytyb2ive8x6pvjk874k",
-        "rbId": null,
-        "matchName": "O'Higgins vs Santa Cruz",
-        "homeTeam": {
-          "id": "8rpjhpm2j1q7p40zfmlqpj8am",
-          "name": "O'Higgins",
-          "slug": "ohiggins"
-        },
-        "awayTeam": {
-          "id": "6n1i99d69ktxseecp7cpfu971",
-          "name": "Santa Cruz",
-          "slug": "santa-cruz"
-        },
-        "matchSlug": "ohiggins-vs-santa-cruz",
-        "seriesId": null,
-        "stageId": 92459,
-        "formatId": null,
-        "sortOrder": 96,
-        "mstUtc": 1790283600000,
-        "competitionId": "eu2g5j36zzxiazpd729osx0wm",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856321000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "eettnunnhw0ws3xqlbimoatxw": {
-        "id": "eettnunnhw0ws3xqlbimoatxw",
-        "rbId": null,
-        "matchName": "Everton DV vs U. de Chile",
-        "homeTeam": {
-          "id": "9dqkgu00tn42928lrrxlis95a",
-          "name": "Everton DV",
-          "slug": "everton-dv"
-        },
-        "awayTeam": {
-          "id": "cdj7tqbsake4a0ks5pwm23t23",
-          "name": "U. de Chile",
-          "slug": "u-de-chile"
-        },
-        "matchSlug": "everton-dv-vs-u-de-chile",
-        "seriesId": null,
-        "stageId": 92459,
-        "formatId": null,
-        "sortOrder": 97,
-        "mstUtc": 1790292600000,
-        "competitionId": "eu2g5j36zzxiazpd729osx0wm",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856321000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "dl8yu6zugl446ny0k9cjn1lhw": {
-        "id": "dl8yu6zugl446ny0k9cjn1lhw",
-        "rbId": null,
-        "matchName": "Farroupilha vs Bage",
-        "homeTeam": {
-          "id": "8qiwixxm21xoobuivdjw24cuw",
-          "name": "Farroupilha",
-          "slug": "farroupilha"
-        },
-        "awayTeam": {
-          "id": "17z5x5jdef5oi2tov0s8kg2j9",
-          "name": "Bage",
-          "slug": "bage"
-        },
-        "matchSlug": "farroupilha-vs-bage",
-        "seriesId": null,
-        "stageId": 90866,
-        "formatId": null,
-        "sortOrder": 85,
-        "mstUtc": 1790200800000,
-        "competitionId": "6oo30txqw5sgut7a3qs1trulr",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "dkxsibiwervaqeh5e23aqoc9g": {
-        "id": "dkxsibiwervaqeh5e23aqoc9g",
-        "rbId": null,
-        "matchName": "Gremio E. Brazil vs Gloria",
-        "homeTeam": {
-          "id": "6u94tnekoz2uycd1s4yo984b",
-          "name": "Gremio E. Brazil",
-          "slug": "gremio-e-brazil"
-        },
-        "awayTeam": {
-          "id": "8sm9zo4aydzxgu8fe7miuqsso",
-          "name": "Gloria",
-          "slug": "gloria"
-        },
-        "matchSlug": "gremio-e-brazil-vs-gloria",
-        "seriesId": null,
-        "stageId": 90866,
-        "formatId": null,
-        "sortOrder": 86,
-        "mstUtc": 1790200800000,
-        "competitionId": "6oo30txqw5sgut7a3qs1trulr",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "dk0h526zq0nnz8pr1wn0tfl78": {
-        "id": "dk0h526zq0nnz8pr1wn0tfl78",
-        "rbId": null,
-        "matchName": "Passo Fundo vs Guarani RS",
-        "homeTeam": {
-          "id": "9y82w0k0dq2f22gygxf8g7ky",
-          "name": "Passo Fundo",
-          "slug": "passo-fundo"
-        },
-        "awayTeam": {
-          "id": "eut48o5m7pnf6iqdsbsqv5yhh",
-          "name": "Guarani RS",
-          "slug": "guarani-rs"
-        },
-        "matchSlug": "passo-fundo-vs-guarani-rs",
-        "seriesId": null,
-        "stageId": 90866,
-        "formatId": null,
-        "sortOrder": 87,
-        "mstUtc": 1790200800000,
-        "competitionId": "6oo30txqw5sgut7a3qs1trulr",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
-        "status": "timestamp",
-        "state": "pre",
-        "substate": "none",
-        "score": {
-          "home": "",
-          "away": "",
-          "ht": null,
-          "agg": null,
-          "pen": null
-        },
-        "statusBoxContent": null,
-        "winner": null,
-        "advancingTeam": null,
-        "redCards": {
-          "home": 0,
-          "away": 0
-        }
-      },
-      "9j069j1rtstl8zbjuwqpyvyfo": {
-        "id": "9j069j1rtstl8zbjuwqpyvyfo",
-        "rbId": null,
-        "matchName": "Auto Esporte vs Cruzeiro Itaporanga",
-        "homeTeam": {
-          "id": "egknj6igjkggowduu15cngs8u",
-          "name": "Auto Esporte",
-          "slug": "auto-esporte"
-        },
-        "awayTeam": {
-          "id": "cmafhvdlfniuc657idq0x8vjm",
-          "name": "Cruzeiro Itaporanga",
-          "slug": "cruzeiro-itaporanga"
-        },
-        "matchSlug": "auto-esporte-vs-cruzeiro-itaporanga",
-        "seriesId": null,
-        "stageId": 91357,
-        "formatId": null,
-        "sortOrder": 90,
-        "mstUtc": 1790202600000,
-        "competitionId": "8djlo7r2fckciymtxczc4v5nu",
-        "periodId": 16,
-        "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -5002,7 +4291,7 @@
         "competitionId": "1al5ph1bfmtp9i2mp990938d0",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -5044,7 +4333,7 @@
         "competitionId": "1al5ph1bfmtp9i2mp990938d0",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -5086,7 +4375,133 @@
         "competitionId": "6oo30txqw5sgut7a3qs1trulr",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "dl8yu6zugl446ny0k9cjn1lhw": {
+        "id": "dl8yu6zugl446ny0k9cjn1lhw",
+        "rbId": null,
+        "matchName": "Farroupilha vs Bage",
+        "homeTeam": {
+          "id": "8qiwixxm21xoobuivdjw24cuw",
+          "name": "Farroupilha",
+          "slug": "farroupilha"
+        },
+        "awayTeam": {
+          "id": "17z5x5jdef5oi2tov0s8kg2j9",
+          "name": "Bage",
+          "slug": "bage"
+        },
+        "matchSlug": "farroupilha-vs-bage",
+        "seriesId": null,
+        "stageId": 90866,
+        "formatId": null,
+        "sortOrder": 85,
+        "mstUtc": 1790200800000,
+        "competitionId": "6oo30txqw5sgut7a3qs1trulr",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "dkxsibiwervaqeh5e23aqoc9g": {
+        "id": "dkxsibiwervaqeh5e23aqoc9g",
+        "rbId": null,
+        "matchName": "Gremio E. Brazil vs Gloria",
+        "homeTeam": {
+          "id": "6u94tnekoz2uycd1s4yo984b",
+          "name": "Gremio E. Brazil",
+          "slug": "gremio-e-brazil"
+        },
+        "awayTeam": {
+          "id": "8sm9zo4aydzxgu8fe7miuqsso",
+          "name": "Gloria",
+          "slug": "gloria"
+        },
+        "matchSlug": "gremio-e-brazil-vs-gloria",
+        "seriesId": null,
+        "stageId": 90866,
+        "formatId": null,
+        "sortOrder": 86,
+        "mstUtc": 1790200800000,
+        "competitionId": "6oo30txqw5sgut7a3qs1trulr",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "dk0h526zq0nnz8pr1wn0tfl78": {
+        "id": "dk0h526zq0nnz8pr1wn0tfl78",
+        "rbId": null,
+        "matchName": "Passo Fundo vs Guarani RS",
+        "homeTeam": {
+          "id": "9y82w0k0dq2f22gygxf8g7ky",
+          "name": "Passo Fundo",
+          "slug": "passo-fundo"
+        },
+        "awayTeam": {
+          "id": "eut48o5m7pnf6iqdsbsqv5yhh",
+          "name": "Guarani RS",
+          "slug": "guarani-rs"
+        },
+        "matchSlug": "passo-fundo-vs-guarani-rs",
+        "seriesId": null,
+        "stageId": 90866,
+        "formatId": null,
+        "sortOrder": 87,
+        "mstUtc": 1790200800000,
+        "competitionId": "6oo30txqw5sgut7a3qs1trulr",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -5128,7 +4543,7 @@
         "competitionId": "cfa8v285yl9w2qo59l9eebh70",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -5170,7 +4585,91 @@
         "competitionId": "cfa8v285yl9w2qo59l9eebh70",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "9j069j1rtstl8zbjuwqpyvyfo": {
+        "id": "9j069j1rtstl8zbjuwqpyvyfo",
+        "rbId": null,
+        "matchName": "Auto Esporte vs Cruzeiro Itaporanga",
+        "homeTeam": {
+          "id": "egknj6igjkggowduu15cngs8u",
+          "name": "Auto Esporte",
+          "slug": "auto-esporte"
+        },
+        "awayTeam": {
+          "id": "cmafhvdlfniuc657idq0x8vjm",
+          "name": "Cruzeiro Itaporanga",
+          "slug": "cruzeiro-itaporanga"
+        },
+        "matchSlug": "auto-esporte-vs-cruzeiro-itaporanga",
+        "seriesId": null,
+        "stageId": 91357,
+        "formatId": null,
+        "sortOrder": 90,
+        "mstUtc": 1790202600000,
+        "competitionId": "8djlo7r2fckciymtxczc4v5nu",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "bzkhcy0c1is2did7nrm40xtzo": {
+        "id": "bzkhcy0c1is2did7nrm40xtzo",
+        "rbId": null,
+        "matchName": "Portuguesa U20 vs Ponte Preta U20",
+        "homeTeam": {
+          "id": "df7x709xjq4tgprrkq457mw84",
+          "name": "Portuguesa U20",
+          "slug": "portuguesa-u20"
+        },
+        "awayTeam": {
+          "id": "6ixdm8edincwkg16w4bgfhes8",
+          "name": "Ponte Preta U20",
+          "slug": "ponte-preta-u20"
+        },
+        "matchSlug": "portuguesa-u20-vs-ponte-preta-u20",
+        "seriesId": null,
+        "stageId": 91882,
+        "formatId": null,
+        "sortOrder": 91,
+        "mstUtc": 1790272800000,
+        "competitionId": "c0sx6fnhtph1ppbbbrmg6susp",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
@@ -5207,12 +4706,180 @@
         "seriesId": null,
         "stageId": 92042,
         "formatId": null,
-        "sortOrder": 91,
+        "sortOrder": 92,
         "mstUtc": 1790200800000,
         "competitionId": "dd8emmbdxtr6s2f9q1lhu62jc",
         "periodId": 16,
         "periodStart": null,
-        "lastUpdated": 1789856201000,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "d7ox9ebxtaepgumq26urpk74k": {
+        "id": "d7ox9ebxtaepgumq26urpk74k",
+        "rbId": null,
+        "matchName": "Holon Yermiy. vs Kfar Saba",
+        "homeTeam": {
+          "id": "8tziswu2u1cvefc8c84p6w2x",
+          "name": "Holon Yermiy.",
+          "slug": "holon-yermiy"
+        },
+        "awayTeam": {
+          "id": "busvnrwwss25anvblujagq5g4",
+          "name": "Kfar Saba",
+          "slug": "kfar-saba"
+        },
+        "matchSlug": "holon-yermiy-vs-kfar-saba",
+        "seriesId": null,
+        "stageId": 96702,
+        "formatId": null,
+        "sortOrder": 93,
+        "mstUtc": 1790267400000,
+        "competitionId": "47ab9wtg48ksd11exck2122js",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "7sdjyg8qyre47k1d4z7kt25n8": {
+        "id": "7sdjyg8qyre47k1d4z7kt25n8",
+        "rbId": null,
+        "matchName": "Bôle vs Champagne",
+        "homeTeam": {
+          "id": "f5fkgufo8kxr1x55rhg3tc81d",
+          "name": "Bôle",
+          "slug": "b%C3%B4le"
+        },
+        "awayTeam": {
+          "id": "e0varc6d0t21jlhm7me1bp250",
+          "name": "Champagne",
+          "slug": "champagne"
+        },
+        "matchSlug": "b%C3%B4le-vs-champagne",
+        "seriesId": null,
+        "stageId": 96240,
+        "formatId": null,
+        "sortOrder": 94,
+        "mstUtc": 1790273700000,
+        "competitionId": "bwbb16bizglu0aqhv3uv7vdil",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "8iurzvbkbgifeqwqgue89lxjo": {
+        "id": "8iurzvbkbgifeqwqgue89lxjo",
+        "rbId": null,
+        "matchName": "Saint-Blaise vs Bosna",
+        "homeTeam": {
+          "id": "a3iz45nt0nsx3zc4aq0cut3pw",
+          "name": "Saint-Blaise",
+          "slug": "saint-blaise"
+        },
+        "awayTeam": {
+          "id": "cwy4qjol6a58f16551muezaj8",
+          "name": "Bosna",
+          "slug": "bosna"
+        },
+        "matchSlug": "saint-blaise-vs-bosna",
+        "seriesId": null,
+        "stageId": 96240,
+        "formatId": null,
+        "sortOrder": 95,
+        "mstUtc": 1790273700000,
+        "competitionId": "bwbb16bizglu0aqhv3uv7vdil",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
+        "status": "timestamp",
+        "state": "pre",
+        "substate": "none",
+        "score": {
+          "home": "",
+          "away": "",
+          "ht": null,
+          "agg": null,
+          "pen": null
+        },
+        "statusBoxContent": null,
+        "winner": null,
+        "advancingTeam": null,
+        "redCards": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "h8z0yo29hnsjkra22f3vkydw": {
+        "id": "h8z0yo29hnsjkra22f3vkydw",
+        "rbId": null,
+        "matchName": "Podkonice vs Ružomberok II",
+        "homeTeam": {
+          "id": "b1lg1q7q1vi8rg11bm49kvkoa",
+          "name": "Podkonice",
+          "slug": "podkonice"
+        },
+        "awayTeam": {
+          "id": "dx7xvxo4jeh019hyv896wqych",
+          "name": "Ružomberok II",
+          "slug": "ru%C5%BEomberok-ii"
+        },
+        "matchSlug": "podkonice-vs-ru%C5%BEomberok-ii",
+        "seriesId": null,
+        "stageId": 95929,
+        "formatId": null,
+        "sortOrder": 96,
+        "mstUtc": 1790256600000,
+        "competitionId": "cc9zntdbef14p20gt4ekvnjvs",
+        "periodId": 16,
+        "periodStart": null,
+        "lastUpdated": 1789882911000,
         "status": "timestamp",
         "state": "pre",
         "substate": "none",
